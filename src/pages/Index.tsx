@@ -44,7 +44,7 @@ const Index = () => {
           <div className="relative flex items-center justify-center min-h-[90vh]">
             
             {/* Central Patito Logo - GRANDE CENTRADO */}
-            <div className="relative z-20 flex flex-col items-center">
+            <div className="relative z-10 flex flex-col items-center">
               <div className="animate-float">
                 <img 
                   src={patitoHero} 
@@ -65,7 +65,7 @@ const Index = () => {
             </div>
 
             {/* Bubble Navigation Menu - Circular Layout Around Central Duck */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
               <div className="relative w-[90vmin] h-[90vmin] max-w-[800px] max-h-[800px] pointer-events-auto">
                 {/* Top - 0 degrees */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-float">
