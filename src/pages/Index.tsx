@@ -68,7 +68,7 @@ const Index = () => {
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
               <div className="relative w-[100vmin] h-[100vmin] max-w-[850px] max-h-[850px] pointer-events-auto">
                 {/* Top - 0 degrees */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-float">
+                <div className="absolute top-[-5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-float">
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
                     <DuckMenuButton 
                       icon={Video} 
@@ -79,7 +79,7 @@ const Index = () => {
                 </div>
 
                 {/* Top Right - 45 degrees */}
-                <div className="absolute top-[14.6%] right-[14.6%] transform translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.2s' }}>
+                <div className="absolute top-[10%] right-[10%] transform translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.2s' }}>
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
                     <DuckMenuButton 
                       icon={Theater} 
@@ -145,7 +145,7 @@ const Index = () => {
                 </div>
 
                 {/* Top Left - 315 degrees */}
-                <div className="absolute top-[14.6%] left-[14.6%] transform -translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '1.4s' }}>
+                <div className="absolute top-[10%] left-[10%] transform -translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '1.4s' }}>
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
                     <DuckMenuButton 
                       icon={Camera} 
