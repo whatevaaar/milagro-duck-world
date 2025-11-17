@@ -17,6 +17,17 @@ import {
 } from "lucide-react";
 import patitoHero from "@/assets/patito-hero.jpg";
 import forestBackground from "@/assets/forest-background.jpg";
+import patito1 from "@/assets/patito-1.png";
+import patito2 from "@/assets/patito-2.jpg";
+import patito3 from "@/assets/patito-3.jpg";
+import patito4 from "@/assets/patito-4.jpg";
+import patito5 from "@/assets/patito-5.jpg";
+import patito6 from "@/assets/patito-6.jpg";
+import patito7 from "@/assets/patito-7.jpg";
+import patito8 from "@/assets/patito-8.png";
+import patito9 from "@/assets/patito-9.jpg";
+import patitoVideo1 from "@/assets/patito-video-1.mp4";
+import patitoVideo2 from "@/assets/patito-video-2.mp4";
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -177,14 +188,16 @@ const Index = () => {
         <section id="fotos" className="scroll-mt-20">
           <SectionCard title="📸 Galería de Fotos" description="¡Mira todas las aventuras del Patito Milagro!">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
+              {[patito1, patito2, patito3, patito4, patito5, patito6, patito7, patito8, patito9].map((img, i) => (
                 <div 
                   key={i}
                   className="aspect-square bg-muted rounded-3xl border-4 border-primary/20 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.4)] cursor-pointer"
                 >
-                  <div className="w-full h-full flex items-center justify-center text-6xl">
-                    🦆
-                  </div>
+                  <img 
+                    src={img} 
+                    alt={`Patito Milagro ${i + 1}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               ))}
             </div>
@@ -195,12 +208,18 @@ const Index = () => {
         <section id="videos" className="scroll-mt-20">
           <SectionCard title="🎬 Videos del Patito" description="¡Disfruta de los mejores momentos en video!">
             <div className="grid md:grid-cols-2 gap-6">
-              {[1, 2, 3, 4].map((i) => (
+              {[patitoVideo1, patitoVideo2].map((video, i) => (
                 <div 
                   key={i}
-                  className="aspect-video bg-muted rounded-3xl border-4 border-accent/30 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.4)] cursor-pointer flex items-center justify-center"
+                  className="aspect-video bg-muted rounded-3xl border-4 border-accent/30 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.4)]"
                 >
-                  <Video className="w-20 h-20 text-accent" />
+                  <video 
+                    src={video}
+                    controls
+                    className="w-full h-full object-cover"
+                  >
+                    Tu navegador no soporta el elemento de video.
+                  </video>
                 </div>
               ))}
             </div>
