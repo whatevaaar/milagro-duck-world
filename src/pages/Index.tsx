@@ -43,6 +43,13 @@ const Index = () => {
         <div className="container mx-auto px-4 py-12 relative z-10">
           <div className="relative flex items-center justify-center min-h-[90vh] pt-12">
             
+            {/* Title above the duck */}
+            <div className="absolute top-[8%] left-1/2 transform -translate-x-1/2 text-center z-40">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.8)] bg-white/80 rounded-3xl px-6 py-3 inline-block">
+                Patito Milagro
+              </h1>
+            </div>
+            
             {/* Central Patito Logo - GRANDE CENTRADO */}
             <div className="relative z-10 flex flex-col items-center">
               <div className="animate-float">
@@ -51,13 +58,6 @@ const Index = () => {
                   alt="Patito Milagro"
                   className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-[0_30px_60px_-15px_hsl(45_100%_51%/0.6)] border-8 border-primary/40 bg-white/90"
                 />
-              </div>
-              
-              {/* Title below the duck */}
-              <div className="text-center -mt-6">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.8)] bg-white/80 rounded-3xl px-6 py-3 inline-block">
-                  Patito Milagro
-                </h1>
               </div>
             </div>
             
