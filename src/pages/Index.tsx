@@ -41,7 +41,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-accent/40 via-background/30 to-background/50 backdrop-blur-[2px]" />
         
         <div className="container mx-auto px-4 py-12 relative z-10">
-          <div className="relative flex items-center justify-center min-h-[90vh] pt-20">
+          <div className="relative flex items-center justify-center min-h-[90vh]">
             
             {/* Central Patito Logo - GRANDE CENTRADO */}
             <div className="relative z-10 flex flex-col items-center">
@@ -52,17 +52,17 @@ const Index = () => {
                   className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-[0_30px_60px_-15px_hsl(45_100%_51%/0.6)] border-8 border-primary/40 bg-white/90"
                 />
               </div>
-            </div>
-
-            {/* Title below everything - outside the circle */}
-            <div className="absolute bottom-[5%] left-1/2 transform -translate-x-1/2 text-center z-40">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.8)] bg-white/80 rounded-3xl px-6 py-3 inline-block">
-                Patito Milagro
-              </h1>
+              
+              {/* Title below the duck */}
+              <div className="text-center mt-6">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.8)] bg-white/80 rounded-3xl px-6 py-3 inline-block">
+                  Patito Milagro
+                </h1>
+              </div>
             </div>
             
             {/* Subtitle in bottom left */}
-            <div className="absolute bottom-[5%] left-[5%] z-40">
+            <div className="absolute bottom-[10%] left-[5%] z-40">
               <p className="text-base md:text-lg text-foreground font-bold bg-white/70 rounded-2xl px-4 py-2 inline-block">
                 Un mundo de felicidad y ternura ✨🦆💛
               </p>
