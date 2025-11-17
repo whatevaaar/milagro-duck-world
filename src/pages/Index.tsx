@@ -1,6 +1,7 @@
-import { DuckButton } from "@/components/DuckButton";
+import { DuckMenuButton } from "@/components/DuckMenuButton";
 import { MusicPlayer } from "@/components/MusicPlayer";
 import { SectionCard } from "@/components/SectionCard";
+import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { 
   Camera, 
@@ -11,7 +12,8 @@ import {
   Mail,
   Calendar,
   Star,
-  Sparkles
+  Sparkles,
+  ShoppingBag
 } from "lucide-react";
 import patitoHero from "@/assets/patito-hero.jpg";
 
@@ -24,71 +26,93 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-accent via-background to-muted">
       <MusicPlayer />
       
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero Section with Navigation */}
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-accent/30 to-transparent" />
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="text-center space-y-8">
-            <div className="animate-float">
+        
+        <div className="container mx-auto px-4 py-8 relative z-10">
+          {/* Header with Logo */}
+          <div className="text-center mb-8">
+            <div className="inline-block animate-float">
               <img 
                 src={patitoHero} 
                 alt="Patito Milagro"
-                className="w-full max-w-2xl mx-auto rounded-[3rem] shadow-[0_20px_50px_-12px_hsl(45_100%_51%/0.4)] border-8 border-primary/30"
+                className="w-48 h-48 object-cover rounded-full shadow-[0_20px_50px_-12px_hsl(45_100%_51%/0.4)] border-8 border-primary/30"
               />
             </div>
-            
-            <h1 className="text-6xl md:text-8xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.5)] animate-bounce">
+            <h1 className="text-4xl md:text-6xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.5)] mt-4">
               ¡Bienvenidos al Mundo de<br />
               <span className="text-secondary">Patito Milagro!</span>
             </h1>
-            
-            <p className="text-2xl md:text-3xl text-foreground font-bold max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-foreground font-bold max-w-3xl mx-auto mt-4">
               Un lugar lleno de alegría, amor y magia ✨🦆💛
             </p>
+          </div>
 
-            {/* Duck-shaped Navigation Buttons */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto pt-12">
-              <DuckButton 
+          {/* Duck-shaped Navigation Menu */}
+          <div className="bg-card/80 backdrop-blur-sm rounded-[3rem] border-4 border-primary/30 shadow-[0_12px_40px_-8px_hsl(45_100%_51%/0.4)] p-8 mb-8">
+            <h2 className="text-3xl font-bold text-center text-primary mb-8">
+              🦆 Menú de Navegación 🦆
+            </h2>
+            <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-6 justify-items-center">
+              <DuckMenuButton 
                 icon={Camera} 
                 label="Fotos" 
                 onClick={() => scrollToSection("fotos")}
               />
-              <DuckButton 
+              <DuckMenuButton 
                 icon={Video} 
                 label="Videos" 
                 onClick={() => scrollToSection("videos")}
               />
-              <DuckButton 
+              <DuckMenuButton 
                 icon={Theater} 
                 label="Obra" 
                 onClick={() => scrollToSection("obra")}
               />
-              <DuckButton 
-                icon={Heart} 
-                label="Donar" 
-                onClick={() => scrollToSection("donaciones")}
-              />
-              <DuckButton 
-                icon={Target} 
-                label="Misión" 
-                onClick={() => scrollToSection("mision")}
-              />
-              <DuckButton 
-                icon={Mail} 
-                label="Contacto" 
-                onClick={() => scrollToSection("contacto")}
-              />
-              <DuckButton 
+              <DuckMenuButton 
                 icon={Calendar} 
                 label="Funciones" 
                 onClick={() => scrollToSection("funciones")}
               />
-              <DuckButton 
+              <DuckMenuButton 
+                icon={ShoppingBag} 
+                label="Tienda" 
+                onClick={() => scrollToSection("tienda")}
+              />
+              <DuckMenuButton 
+                icon={Heart} 
+                label="Donar" 
+                onClick={() => scrollToSection("donaciones")}
+              />
+              <DuckMenuButton 
+                icon={Target} 
+                label="Misión" 
+                onClick={() => scrollToSection("mision")}
+              />
+              <DuckMenuButton 
+                icon={Mail} 
+                label="Contacto" 
+                onClick={() => scrollToSection("contacto")}
+              />
+              <DuckMenuButton 
                 icon={Sparkles} 
                 label="Sorpresas" 
                 onClick={() => scrollToSection("sorpresas")}
               />
             </div>
+          </div>
+
+          {/* Welcome Message */}
+          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-[3rem] border-4 border-primary/30 p-8 text-center shadow-[0_8px_20px_-4px_hsl(45_100%_51%/0.3)]">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              ¡Hola Amiguitos! 👋
+            </h2>
+            <p className="text-xl text-foreground leading-relaxed max-w-4xl mx-auto">
+              Estoy muy feliz de que estén aquí. En este mundo mágico encontrarán 
+              fotos, videos, nuestra obra de teatro, y muchas sorpresas más. 
+              ¡También pueden comprar playeras, peluches y juguetes del Patito Milagro! 🎉
+            </p>
           </div>
         </div>
 
@@ -182,6 +206,72 @@ const Index = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </SectionCard>
+        </section>
+
+        {/* Tienda Section */}
+        <section id="tienda" className="scroll-mt-20">
+          <SectionCard title="🛍️ Tienda del Patito Milagro" description="¡Llévate un pedacito de magia a casa!">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <ProductCard 
+                name="Playera del Patito"
+                price="$299 MXN"
+                emoji="👕"
+                description="Playera de algodón suave con el adorable Patito Milagro"
+              />
+              <ProductCard 
+                name="Peluche Patito"
+                price="$499 MXN"
+                emoji="🧸"
+                description="Peluche súper suave y abrazable del Patito Milagro"
+              />
+              <ProductCard 
+                name="Juguetes Patito"
+                price="$199 MXN"
+                emoji="🎪"
+                description="Set de juguetes para divertirse con el Patito"
+              />
+              <ProductCard 
+                name="Boletos Obra"
+                price="$150 MXN"
+                emoji="🎭"
+                description="Boletos para la obra de teatro del Patito Milagro"
+              />
+              <ProductCard 
+                name="Gorra del Patito"
+                price="$249 MXN"
+                emoji="🧢"
+                description="Gorra ajustable con bordado del Patito Milagro"
+              />
+              <ProductCard 
+                name="Mochila Patito"
+                price="$399 MXN"
+                emoji="🎒"
+                description="Mochila escolar con diseño del Patito Milagro"
+              />
+              <ProductCard 
+                name="Libro para Colorear"
+                price="$99 MXN"
+                emoji="📚"
+                description="Libro con dibujos del Patito para colorear"
+              />
+              <ProductCard 
+                name="Taza Mágica"
+                price="$179 MXN"
+                emoji="☕"
+                description="Taza con diseño que cambia con el calor"
+              />
+            </div>
+            
+            <div className="mt-8 text-center">
+              <Button 
+                size="lg" 
+                className="px-12 py-8 text-2xl font-bold bg-primary hover:bg-primary/90 rounded-3xl shadow-[0_12px_30px_-8px_hsl(45_100%_51%/0.4)] transform transition-all hover:scale-105"
+              >
+                <ShoppingBag className="w-8 h-8 mr-3" />
+                Ver Todo el Catálogo
+              </Button>
             </div>
           </SectionCard>
         </section>
