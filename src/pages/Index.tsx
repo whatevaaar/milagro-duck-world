@@ -66,7 +66,7 @@ const Index = () => {
 
             {/* Bubble Navigation Menu - Circular Layout Around Central Duck */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
-              <div className="relative w-[90vmin] h-[90vmin] max-w-[800px] max-h-[800px] pointer-events-auto">
+              <div className="relative w-[120vmin] h-[120vmin] max-w-[1000px] max-h-[1000px] pointer-events-auto">
                 {/* Top - 0 degrees */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-float">
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
