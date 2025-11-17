@@ -41,15 +41,15 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-accent/40 via-background/30 to-background/50 backdrop-blur-[2px]" />
         
         <div className="container mx-auto px-4 py-12 relative z-10">
-          <div className="relative flex items-start justify-center pt-8 min-h-[85vh]">
+          <div className="relative flex items-start justify-center pt-8 min-h-[90vh]">
             
-            {/* Central Patito Logo - GRANDE */}
+            {/* Central Patito Logo - GRANDE (tamaño original) */}
             <div className="relative z-20 -mt-8">
               <div className="animate-float">
                 <img 
                   src={patitoHero} 
                   alt="Patito Milagro"
-                  className="w-72 h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] object-cover rounded-full shadow-[0_30px_60px_-15px_hsl(45_100%_51%/0.6)] border-8 border-primary/40 bg-white/90"
+                  className="w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] object-cover rounded-full shadow-[0_30px_60px_-15px_hsl(45_100%_51%/0.6)] border-8 border-primary/40 bg-white/90"
                 />
               </div>
               
