@@ -105,7 +105,7 @@ const Index = () => {
                 </div>
 
                 {/* Bottom Right (Videos moved here) - next to Donaciones */}
-                <div className="absolute bottom-[2%] right-[35%] transform translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.7s' }}>
+                <div className="absolute bottom-[2%] left-[60%] transform -translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.7s' }}>
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
                     <DuckMenuButton 
                       icon={Video} 
