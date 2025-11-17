@@ -43,8 +43,8 @@ const Index = () => {
         <div className="container mx-auto px-4 py-12 relative z-10">
           <div className="relative flex items-center justify-center min-h-[90vh]">
             
-            {/* Central Patito Logo - GRANDE (tamaño original) - CENTRADO */}
-            <div className="relative z-20">
+            {/* Central Patito Logo - GRANDE CENTRADO */}
+            <div className="relative z-20 flex flex-col items-center">
               <div className="animate-float">
                 <img 
                   src={patitoHero} 
@@ -66,10 +66,10 @@ const Index = () => {
 
             {/* Bubble Navigation Menu - Circular Layout Around Central Duck */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="relative pointer-events-auto" style={{ width: '800px', height: '800px' }}>
+              <div className="relative w-[90vmin] h-[90vmin] max-w-[800px] max-h-[800px] pointer-events-auto">
                 {/* Top - 0 degrees */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-float">
-                  <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-primary/30">
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
                     <DuckMenuButton 
                       icon={Video} 
                       label="Videos" 
@@ -80,7 +80,7 @@ const Index = () => {
 
                 {/* Top Right - 45 degrees */}
                 <div className="absolute top-[14.6%] right-[14.6%] transform translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.2s' }}>
-                  <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-accent/30">
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
                     <DuckMenuButton 
                       icon={Theater} 
                       label="Obra" 
@@ -91,7 +91,7 @@ const Index = () => {
 
                 {/* Right - 90 degrees */}
                 <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.4s' }}>
-                  <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-secondary/30">
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-secondary/30">
                     <DuckMenuButton 
                       icon={Calendar} 
                       label="Funciones" 
@@ -102,7 +102,7 @@ const Index = () => {
 
                 {/* Bottom Right - 135 degrees */}
                 <div className="absolute bottom-[14.6%] right-[14.6%] transform translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '0.6s' }}>
-                  <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-primary/30">
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
                     <DuckMenuButton 
                       icon={ShoppingBag} 
                       label="Tienda" 
@@ -113,7 +113,7 @@ const Index = () => {
 
                 {/* Bottom - 180 degrees */}
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.8s' }}>
-                  <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-accent/30">
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
                     <DuckMenuButton 
                       icon={Heart} 
                       label="Donaciones" 
@@ -124,7 +124,7 @@ const Index = () => {
 
                 {/* Bottom Left - 225 degrees */}
                 <div className="absolute bottom-[14.6%] left-[14.6%] transform -translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '1s' }}>
-                  <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-secondary/30">
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-secondary/30">
                     <DuckMenuButton 
                       icon={Target} 
                       label="Misión" 
@@ -135,7 +135,7 @@ const Index = () => {
 
                 {/* Left - 270 degrees */}
                 <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '1.2s' }}>
-                  <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-primary/30">
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
                     <DuckMenuButton 
                       icon={Mail} 
                       label="Contacto" 
@@ -146,7 +146,7 @@ const Index = () => {
 
                 {/* Top Left - 315 degrees */}
                 <div className="absolute top-[14.6%] left-[14.6%] transform -translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '1.4s' }}>
-                  <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-accent/30">
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
                     <DuckMenuButton 
                       icon={Camera} 
                       label="Fotos" 
