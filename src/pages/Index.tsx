@@ -40,25 +40,25 @@ const Index = () => {
         {/* Overlay for better readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-accent/40 via-background/30 to-background/50 backdrop-blur-[2px]" />
         
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="relative flex items-center justify-center min-h-[80vh]">
+        <div className="container mx-auto px-4 py-12 relative z-10">
+          <div className="relative flex items-start justify-center pt-8 min-h-[85vh]">
             
             {/* Central Patito Logo - GRANDE */}
-            <div className="relative z-20">
+            <div className="relative z-20 -mt-8">
               <div className="animate-float">
                 <img 
                   src={patitoHero} 
                   alt="Patito Milagro"
-                  className="w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] object-cover rounded-full shadow-[0_30px_60px_-15px_hsl(45_100%_51%/0.6)] border-8 border-primary/40 bg-white/90"
+                  className="w-72 h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] object-cover rounded-full shadow-[0_30px_60px_-15px_hsl(45_100%_51%/0.6)] border-8 border-primary/40 bg-white/90"
                 />
               </div>
               
               {/* Title below the duck */}
-              <div className="text-center mt-8">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.8)] bg-white/80 rounded-3xl px-8 py-4 inline-block">
+              <div className="text-center mt-6">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.8)] bg-white/80 rounded-3xl px-8 py-4 inline-block">
                   Patito Milagro
                 </h1>
-                <p className="text-xl md:text-2xl text-foreground font-bold mt-4 bg-white/70 rounded-2xl px-6 py-3 inline-block">
+                <p className="text-lg md:text-xl text-foreground font-bold mt-3 bg-white/70 rounded-2xl px-6 py-3 inline-block">
                   Un mundo de felicidad y ternura ✨🦆💛
                 </p>
               </div>
@@ -122,7 +122,7 @@ const Index = () => {
               </div>
 
               {/* Bottom Left */}
-              <div className="absolute bottom-[15%] left-[18%] transform -translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '0.2s' }}>
+              <div className="absolute bottom-[20%] left-[18%] transform -translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '0.2s' }}>
                 <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-secondary/30">
                   <DuckMenuButton 
                     icon={Heart} 
@@ -133,7 +133,7 @@ const Index = () => {
               </div>
 
               {/* Bottom Center Left */}
-              <div className="absolute bottom-[8%] left-[35%] transform -translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.4s' }}>
+              <div className="absolute bottom-[12%] left-[35%] transform -translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.4s' }}>
                 <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-primary/30">
                   <DuckMenuButton 
                     icon={Target} 
@@ -144,7 +144,7 @@ const Index = () => {
               </div>
 
               {/* Bottom Center Right */}
-              <div className="absolute bottom-[8%] right-[35%] transform translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '0.6s' }}>
+              <div className="absolute bottom-[12%] right-[35%] transform translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '0.6s' }}>
                 <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-accent/30">
                   <DuckMenuButton 
                     icon={Mail} 
@@ -155,7 +155,7 @@ const Index = () => {
               </div>
 
               {/* Bottom Right */}
-              <div className="absolute bottom-[15%] right-[18%] transform translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.8s' }}>
+              <div className="absolute bottom-[20%] right-[18%] transform translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.8s' }}>
                 <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-secondary/30">
                   <DuckMenuButton 
                     icon={Sparkles} 
