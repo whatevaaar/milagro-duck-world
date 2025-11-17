@@ -54,7 +54,7 @@ const Index = () => {
               </div>
               
               {/* Title below the duck */}
-              <div className="text-center mt-6">
+              <div className="text-center mt-4">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.8)] bg-white/80 rounded-3xl px-6 py-3 inline-block">
                   Patito Milagro
                 </h1>
