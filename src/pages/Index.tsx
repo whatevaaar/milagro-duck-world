@@ -16,6 +16,7 @@ import {
   ShoppingBag
 } from "lucide-react";
 import patitoHero from "@/assets/patito-hero.jpg";
+import forestBackground from "@/assets/forest-background.jpg";
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -26,99 +27,152 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-accent via-background to-muted">
       <MusicPlayer />
       
-      {/* Hero Section with Navigation */}
-      <section className="relative min-h-screen flex flex-col overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/30 to-transparent" />
+      {/* Hero Section with Circular Navigation */}
+      <section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `url(${forestBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Overlay for better readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/40 via-background/30 to-background/50 backdrop-blur-[2px]" />
         
-        <div className="container mx-auto px-4 py-8 relative z-10">
-          {/* Header with Logo */}
-          <div className="text-center mb-8">
-            <div className="inline-block animate-float">
-              <img 
-                src={patitoHero} 
-                alt="Patito Milagro"
-                className="w-48 h-48 object-cover rounded-full shadow-[0_20px_50px_-12px_hsl(45_100%_51%/0.4)] border-8 border-primary/30"
-              />
+        <div className="container mx-auto px-4 py-20 relative z-10">
+          <div className="relative flex items-center justify-center min-h-[80vh]">
+            
+            {/* Central Patito Logo - GRANDE */}
+            <div className="relative z-20">
+              <div className="animate-float">
+                <img 
+                  src={patitoHero} 
+                  alt="Patito Milagro"
+                  className="w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] object-cover rounded-full shadow-[0_30px_60px_-15px_hsl(45_100%_51%/0.6)] border-8 border-primary/40 bg-white/90"
+                />
+              </div>
+              
+              {/* Title below the duck */}
+              <div className="text-center mt-8">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.8)] bg-white/80 rounded-3xl px-8 py-4 inline-block">
+                  Patito Milagro
+                </h1>
+                <p className="text-xl md:text-2xl text-foreground font-bold mt-4 bg-white/70 rounded-2xl px-6 py-3 inline-block">
+                  Un mundo de felicidad y ternura ✨🦆💛
+                </p>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.5)] mt-4">
-              ¡Bienvenidos al Mundo de<br />
-              <span className="text-secondary">Patito Milagro!</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-foreground font-bold max-w-3xl mx-auto mt-4">
-              Un lugar lleno de alegría, amor y magia ✨🦆💛
-            </p>
-          </div>
 
-          {/* Duck-shaped Navigation Menu */}
-          <div className="bg-card/80 backdrop-blur-sm rounded-[3rem] border-4 border-primary/30 shadow-[0_12px_40px_-8px_hsl(45_100%_51%/0.4)] p-8 mb-8">
-            <h2 className="text-3xl font-bold text-center text-primary mb-8">
-              🦆 Menú de Navegación 🦆
-            </h2>
-            <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-6 justify-items-center">
-              <DuckMenuButton 
-                icon={Camera} 
-                label="Fotos" 
-                onClick={() => scrollToSection("fotos")}
-              />
-              <DuckMenuButton 
-                icon={Video} 
-                label="Videos" 
-                onClick={() => scrollToSection("videos")}
-              />
-              <DuckMenuButton 
-                icon={Theater} 
-                label="Obra" 
-                onClick={() => scrollToSection("obra")}
-              />
-              <DuckMenuButton 
-                icon={Calendar} 
-                label="Funciones" 
-                onClick={() => scrollToSection("funciones")}
-              />
-              <DuckMenuButton 
-                icon={ShoppingBag} 
-                label="Tienda" 
-                onClick={() => scrollToSection("tienda")}
-              />
-              <DuckMenuButton 
-                icon={Heart} 
-                label="Donar" 
-                onClick={() => scrollToSection("donaciones")}
-              />
-              <DuckMenuButton 
-                icon={Target} 
-                label="Misión" 
-                onClick={() => scrollToSection("mision")}
-              />
-              <DuckMenuButton 
-                icon={Mail} 
-                label="Contacto" 
-                onClick={() => scrollToSection("contacto")}
-              />
-              <DuckMenuButton 
-                icon={Sparkles} 
-                label="Sorpresas" 
-                onClick={() => scrollToSection("sorpresas")}
-              />
+            {/* Bubble Navigation Menu - Around the duck */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              {/* Top Left */}
+              <div className="absolute top-[10%] left-[15%] transform -translate-x-1/2 -translate-y-1/2 animate-float">
+                <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-primary/30">
+                  <DuckMenuButton 
+                    icon={Camera} 
+                    label="Fotos" 
+                    onClick={() => scrollToSection("fotos")}
+                  />
+                </div>
+              </div>
+
+              {/* Top Center */}
+              <div className="absolute top-[5%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 animate-bounce">
+                <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-accent/30">
+                  <DuckMenuButton 
+                    icon={Video} 
+                    label="Videos" 
+                    onClick={() => scrollToSection("videos")}
+                  />
+                </div>
+              </div>
+
+              {/* Top Right */}
+              <div className="absolute top-[10%] right-[15%] transform translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.5s' }}>
+                <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-secondary/30">
+                  <DuckMenuButton 
+                    icon={Theater} 
+                    label="Obra" 
+                    onClick={() => scrollToSection("obra")}
+                  />
+                </div>
+              </div>
+
+              {/* Middle Left */}
+              <div className="absolute top-[50%] left-[8%] transform -translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.3s' }}>
+                <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-primary/30">
+                  <DuckMenuButton 
+                    icon={Calendar} 
+                    label="Funciones" 
+                    onClick={() => scrollToSection("funciones")}
+                  />
+                </div>
+              </div>
+
+              {/* Middle Right */}
+              <div className="absolute top-[50%] right-[8%] transform translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.7s' }}>
+                <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-accent/30">
+                  <DuckMenuButton 
+                    icon={ShoppingBag} 
+                    label="Tienda" 
+                    onClick={() => scrollToSection("tienda")}
+                  />
+                </div>
+              </div>
+
+              {/* Bottom Left */}
+              <div className="absolute bottom-[15%] left-[18%] transform -translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '0.2s' }}>
+                <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-secondary/30">
+                  <DuckMenuButton 
+                    icon={Heart} 
+                    label="Donar" 
+                    onClick={() => scrollToSection("donaciones")}
+                  />
+                </div>
+              </div>
+
+              {/* Bottom Center Left */}
+              <div className="absolute bottom-[8%] left-[35%] transform -translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.4s' }}>
+                <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-primary/30">
+                  <DuckMenuButton 
+                    icon={Target} 
+                    label="Misión" 
+                    onClick={() => scrollToSection("mision")}
+                  />
+                </div>
+              </div>
+
+              {/* Bottom Center Right */}
+              <div className="absolute bottom-[8%] right-[35%] transform translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '0.6s' }}>
+                <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-accent/30">
+                  <DuckMenuButton 
+                    icon={Mail} 
+                    label="Contacto" 
+                    onClick={() => scrollToSection("contacto")}
+                  />
+                </div>
+              </div>
+
+              {/* Bottom Right */}
+              <div className="absolute bottom-[15%] right-[18%] transform translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.8s' }}>
+                <div className="bg-white/90 rounded-full p-4 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-4 border-secondary/30">
+                  <DuckMenuButton 
+                    icon={Sparkles} 
+                    label="Sorpresas" 
+                    onClick={() => scrollToSection("sorpresas")}
+                  />
+                </div>
+              </div>
             </div>
-          </div>
 
-          {/* Welcome Message */}
-          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-[3rem] border-4 border-primary/30 p-8 text-center shadow-[0_8px_20px_-4px_hsl(45_100%_51%/0.3)]">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              ¡Hola Amiguitos! 👋
-            </h2>
-            <p className="text-xl text-foreground leading-relaxed max-w-4xl mx-auto">
-              Estoy muy feliz de que estén aquí. En este mundo mágico encontrarán 
-              fotos, videos, nuestra obra de teatro, y muchas sorpresas más. 
-              ¡También pueden comprar playeras, peluches y juguetes del Patito Milagro! 🎉
-            </p>
           </div>
         </div>
 
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-primary/30 rounded-full animate-float blur-xl" />
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-secondary/30 rounded-full animate-bounce blur-xl" />
+        {/* Decorative floating elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float blur-xl" />
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-secondary/20 rounded-full animate-bounce blur-xl" />
+        <div className="absolute top-1/2 right-20 w-24 h-24 bg-accent/20 rounded-full animate-float blur-xl" style={{ animationDelay: '1s' }} />
       </section>
 
       {/* Sections */}
