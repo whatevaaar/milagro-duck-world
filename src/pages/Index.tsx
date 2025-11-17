@@ -41,7 +41,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-accent/40 via-background/30 to-background/50 backdrop-blur-[2px]" />
         
         <div className="container mx-auto px-4 py-12 relative z-10">
-          <div className="relative flex items-center justify-center min-h-[90vh]">
+          <div className="relative flex items-center justify-center min-h-[90vh] pt-12">
             
             {/* Central Patito Logo - GRANDE CENTRADO */}
             <div className="relative z-10 flex flex-col items-center">
