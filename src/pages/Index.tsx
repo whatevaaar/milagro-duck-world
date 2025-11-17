@@ -71,8 +71,20 @@ const Index = () => {
             {/* Bubble Navigation Menu - Circular Layout Around Central Duck */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
               <div className="relative w-[100vmin] h-[100vmin] max-w-[850px] max-h-[850px] pointer-events-auto">
-                {/* Top Right - 45 degrees */}
-                <div className="absolute top-[10%] right-[10%] transform translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.2s' }}>
+                
+                {/* Top Left - Fotos (con palomita) */}
+                <div className="absolute top-[14.6%] left-[14.6%] transform -translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0s' }}>
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
+                    <DuckMenuButton 
+                      icon={Camera} 
+                      label="Fotos" 
+                      onClick={() => scrollToSection("fotos")}
+                    />
+                  </div>
+                </div>
+
+                {/* Top Right - Obra (con palomita) */}
+                <div className="absolute top-[14.6%] right-[14.6%] transform translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.2s' }}>
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
                     <DuckMenuButton 
                       icon={Theater} 
@@ -82,63 +94,8 @@ const Index = () => {
                   </div>
                 </div>
 
-                {/* Right - 90 degrees */}
-                <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.4s' }}>
-                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-secondary/30">
-                    <DuckMenuButton 
-                      icon={Calendar} 
-                      label="Funciones" 
-                      onClick={() => scrollToSection("funciones")}
-                    />
-                  </div>
-                </div>
-
-                {/* Bottom Right - 135 degrees */}
-                <div className="absolute bottom-[14.6%] right-[14.6%] transform translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '0.6s' }}>
-                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
-                    <DuckMenuButton 
-                      icon={ShoppingBag} 
-                      label="Tienda" 
-                      onClick={() => scrollToSection("tienda")}
-                    />
-                  </div>
-                </div>
-
-                {/* Bottom Right (Videos moved here) - next to Donaciones */}
-                <div className="absolute bottom-[2%] left-[60%] transform -translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.7s' }}>
-                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
-                    <DuckMenuButton 
-                      icon={Video} 
-                      label="Videos" 
-                      onClick={() => scrollToSection("videos")}
-                    />
-                  </div>
-                </div>
-
-                {/* Bottom - 180 degrees */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '0.8s' }}>
-                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
-                    <DuckMenuButton 
-                      icon={Heart} 
-                      label="Donaciones" 
-                      onClick={() => scrollToSection("donaciones")}
-                    />
-                  </div>
-                </div>
-
-                {/* Bottom Left - 225 degrees */}
-                <div className="absolute bottom-[14.6%] left-[14.6%] transform -translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '1s' }}>
-                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-secondary/30">
-                    <DuckMenuButton 
-                      icon={Target} 
-                      label="Misión" 
-                      onClick={() => scrollToSection("mision")}
-                    />
-                  </div>
-                </div>
-
-                {/* Left - 270 degrees */}
-                <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '1.2s' }}>
+                {/* Left - Contacto (con palomita) */}
+                <div className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.4s' }}>
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
                     <DuckMenuButton 
                       icon={Mail} 
@@ -148,13 +105,57 @@ const Index = () => {
                   </div>
                 </div>
 
-                {/* Top Left - 315 degrees */}
-                <div className="absolute top-[14.6%] left-[14.6%] transform -translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '1.4s' }}>
+                {/* Right - Funciones (con palomita) */}
+                <div className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.6s' }}>
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-secondary/30">
+                    <DuckMenuButton 
+                      icon={Calendar} 
+                      label="Funciones" 
+                      onClick={() => scrollToSection("funciones")}
+                    />
+                  </div>
+                </div>
+
+                {/* Bottom Left - Misión */}
+                <div className="absolute bottom-[14.6%] left-[14.6%] transform -translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '0.8s' }}>
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-secondary/30">
+                    <DuckMenuButton 
+                      icon={Target} 
+                      label="Misión" 
+                      onClick={() => scrollToSection("mision")}
+                    />
+                  </div>
+                </div>
+
+                {/* Bottom Right - Tienda (con palomita) */}
+                <div className="absolute bottom-[14.6%] right-[14.6%] transform translate-x-1/2 translate-y-1/2 animate-bounce" style={{ animationDelay: '1s' }}>
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
+                    <DuckMenuButton 
+                      icon={ShoppingBag} 
+                      label="Tienda" 
+                      onClick={() => scrollToSection("tienda")}
+                    />
+                  </div>
+                </div>
+
+                {/* Bottom Center Right - Donaciones */}
+                <div className="absolute bottom-[5%] right-[28%] transform translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '1.2s' }}>
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
                     <DuckMenuButton 
-                      icon={Camera} 
-                      label="Fotos" 
-                      onClick={() => scrollToSection("fotos")}
+                      icon={Heart} 
+                      label="Donaciones" 
+                      onClick={() => scrollToSection("donaciones")}
+                    />
+                  </div>
+                </div>
+
+                {/* Bottom Center Left - Videos */}
+                <div className="absolute bottom-[5%] left-[28%] transform -translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '1.4s' }}>
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
+                    <DuckMenuButton 
+                      icon={Video} 
+                      label="Videos" 
+                      onClick={() => scrollToSection("videos")}
                     />
                   </div>
                 </div>
