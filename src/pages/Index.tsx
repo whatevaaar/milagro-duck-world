@@ -103,7 +103,7 @@ const Index = () => {
                 </div>
 
                 {/* Top Center Left - Nosotros */}
-                <div className="absolute top-[12%] left-[22%] transform -translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.3s' }}>
+                <div className="absolute top-[12%] left-[18%] transform -translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.3s' }}>
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
                     <DuckMenuButton 
                       icon={Sparkles} 
@@ -125,7 +125,7 @@ const Index = () => {
                 </div>
 
                 {/* Top Center Right - Valores */}
-                <div className="absolute top-[12%] right-[22%] transform translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.5s' }}>
+                <div className="absolute top-[12%] right-[18%] transform translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.5s' }}>
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
                     <DuckMenuButton 
                       icon={Star} 
