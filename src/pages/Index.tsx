@@ -63,7 +63,7 @@ const Index = () => {
           <div className="relative flex items-center justify-center min-h-[90vh] pt-12">
             
             {/* Title above the duck */}
-            <div className="absolute top-[3%] left-1/2 transform -translate-x-1/2 text-center z-40">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 text-center z-40 pt-4">
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.8)] bg-white/80 rounded-3xl px-6 py-3 inline-block">
                 Patito Milagro
               </h1>
