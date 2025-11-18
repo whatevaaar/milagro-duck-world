@@ -493,11 +493,11 @@ const Index = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-muted p-6 rounded-3xl border-4 border-primary/20">
                   <h4 className="text-xl font-bold text-primary mb-2">📱 Teléfono</h4>
-                  <p className="text-lg text-foreground">+52 123 456 7890</p>
+                  <p className="text-lg text-foreground">5545211175</p>
                 </div>
                 <div className="bg-muted p-6 rounded-3xl border-4 border-accent/20">
                   <h4 className="text-xl font-bold text-accent mb-2">✉️ Email</h4>
-                  <p className="text-lg text-foreground">hola@patitomilagro.com</p>
+                  <p className="text-lg text-foreground">magia@patitomilagro.com.mx</p>
                 </div>
               </div>
               <Button 
