@@ -36,6 +36,7 @@ import patitoVideo1 from "@/assets/patito-video-1.mp4";
 import patitoVideo2 from "@/assets/patito-video-2.mp4";
 import patitoVideo3 from "@/assets/patito-video-3.mp4";
 import patitoVideo4 from "@/assets/patito-video-4.mp4";
+import patitoVideo5 from "@/assets/patito-video-5.mp4";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -253,7 +254,7 @@ const Index = () => {
         <section id="videos" className="scroll-mt-20">
           <SectionCard title="🎬 Videos del Patito" description="¡Disfruta de los mejores momentos en video!">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[patitoVideo1, patitoVideo2, patitoVideo3, patitoVideo4].map((video, i) => (
+              {[patitoVideo1, patitoVideo2, patitoVideo3, patitoVideo4, patitoVideo5].map((video, i) => (
                 <div 
                   key={i}
                   className="aspect-video bg-muted rounded-3xl border-4 border-accent/30 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.4)]"
