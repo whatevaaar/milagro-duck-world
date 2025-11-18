@@ -58,32 +58,110 @@ const sunnyStory: Record<string, StoryNode> = {
   },
   pajaros: {
     id: "pajaros",
-    text: "Patito Milagro siguió el hermoso canto hasta encontrar un grupo de pájaros cantando en un árbol. Los pájaros lo invitaron a su concierto matutino. ¡Qué melodía tan hermosa! Patito Milagro aprendió una nueva canción y la cantó todo el camino a casa. 🎶",
+    text: "Patito Milagro siguió el hermoso canto hasta encontrar un grupo de pájaros cantando en un árbol. Los pájaros lo invitaron a su concierto matutino. Había cardenales rojos, gorriones alegres y jilgueros amarillos. Todos juntos creaban una melodía mágica...",
+    choices: [
+      { text: "🎵 Aprender su canción", nextId: "aprender_cancion" },
+      { text: "🎤 Hacer un dueto con ellos", nextId: "dueto_pajaros" }
+    ]
+  },
+  aprender_cancion: {
+    id: "aprender_cancion",
+    text: "Patito Milagro prestó mucha atención y aprendió la hermosa canción. Los pájaros le enseñaron también sobre las diferentes notas y ritmos. Practicó hasta perfeccionarla y la cantó todo el camino a casa, sintiéndose muy orgulloso. 🎶✨",
+    isEnding: true
+  },
+  dueto_pajaros: {
+    id: "dueto_pajaros",
+    text: "Patito Milagro y los pájaros hicieron el dueto más hermoso que el bosque había escuchado. Los animales se acercaron a escuchar y todos aplaudieron al final. Fue como un pequeño concierto en la naturaleza. ¡Qué momento tan especial! 🎤🎵",
     isEnding: true
   },
   ardilla: {
     id: "ardilla",
-    text: "Patito Milagro ayudó a la pequeña ardilla a recoger sus nueces que se habían caído. La ardilla, muy agradecida, compartió con él unas deliciosas avellanas y le mostró su casa en el árbol. ¡Hicieron una nueva amistad! 🐿️💛",
+    text: "Patito Milagro ayudó a la pequeña ardilla a recoger sus nueces que se habían caído. La ardilla, muy agradecida, le contó que estaba preparando reservas para el invierno y le preguntó si quería ayudarla más...",
+    choices: [
+      { text: "🌰 Ayudar a organizar las nueces", nextId: "organizar_nueces" },
+      { text: "🏡 Visitar su casa en el árbol", nextId: "casa_ardilla" }
+    ]
+  },
+  organizar_nueces: {
+    id: "organizar_nueces",
+    text: "Juntos organizaron las nueces por tamaño y tipo en la despensa de la ardilla. Patito Milagro aprendió mucho sobre la importancia de planificar. La ardilla le regaló una nuez especial como agradecimiento por su ayuda. 🌰💛",
+    isEnding: true
+  },
+  casa_ardilla: {
+    id: "casa_ardilla",
+    text: "La ardilla llevó a Patito Milagro a su acogedora casa en el árbol. Era pequeña pero muy bonita, con ventanas redondas y cortinas de hojas. Compartieron avellanas tostadas y se hicieron grandes amigos. 🏡🐿️",
     isEnding: true
   },
   bucear: {
     id: "bucear",
-    text: "Patito Milagro buceó profundo y descubrió que el brillo era una hermosa concha marina con colores del arcoíris. La tomó como tesoro y la llevó a casa para recordar su aventura. ¡Qué día tan especial! 🐚✨",
+    text: "Patito Milagro buceó profundo y descubrió que el brillo era una hermosa concha marina con colores del arcoíris. Cuando la tocó, la concha se abrió revelando una perla brillante. ¿Qué haría con este tesoro?",
+    choices: [
+      { text: "💎 Guardarla como tesoro personal", nextId: "guardar_perla" },
+      { text: "🎁 Regalársela a un amigo especial", nextId: "regalar_perla" }
+    ]
+  },
+  guardar_perla: {
+    id: "guardar_perla",
+    text: "Patito Milagro llevó la perla a casa y la colocó en un lugar especial donde pudiera verla brillar cada día. Cada vez que la miraba, recordaba su aventura submarina y lo valiente que fue al bucear tan profundo. 🐚✨",
+    isEnding: true
+  },
+  regalar_perla: {
+    id: "regalar_perla",
+    text: "Patito Milagro decidió regalar la perla a su mejor amigo que estaba triste. La alegría en los ojos de su amigo fue más valiosa que cualquier tesoro. Aprendió que compartir la felicidad la multiplica. 🎁💛",
     isEnding: true
   },
   otros_patos: {
     id: "otros_patos",
-    text: "Patito Milagro nadó hacia un grupo de patitos que jugaban en el lago. Juntos hicieron carreras de natación, se zambulleron y formaron una fila de patitos nadando. ¡Fue el mejor día de juegos en el lago! 🦆🦆🦆",
+    text: "Patito Milagro nadó hacia un grupo de patitos que jugaban en el lago. Le propusieron jugar juntos y él aceptó emocionado. Había tantos juegos por elegir...",
+    choices: [
+      { text: "🏊 Hacer carreras de natación", nextId: "carreras_natacion" },
+      { text: "🎪 Hacer trucos de buceo", nextId: "trucos_buceo" }
+    ]
+  },
+  carreras_natacion: {
+    id: "carreras_natacion",
+    text: "Organizaron carreras desde una orilla del lago hasta la otra. Patito Milagro no ganó todas, pero se divirtió muchísimo. Al final, todos recibieron una medalla de hojas que ellos mismos hicieron. ¡Fue el mejor día de juegos! 🏊🏅",
+    isEnding: true
+  },
+  trucos_buceo: {
+    id: "trucos_buceo",
+    text: "Cada patito mostró sus mejores trucos de buceo. Patito Milagro hizo una voltereta submarina perfecta que todos aplaudieron. Se zambulleron, giraron y saltaron juntos. Formaron un equipo de acrobacias acuáticas. 🎪🦆",
     isEnding: true
   },
   mariposa: {
     id: "mariposa",
-    text: "La mariposa llevó a Patito Milagro a un claro secreto del bosque lleno de flores brillantes que nunca había visto. Era como un jardín mágico. Patito Milagro pasó la tarde en ese lugar especial, sintiéndose muy afortunado. 🦋✨",
+    text: "La mariposa llevó a Patito Milagro por un camino secreto entre los árboles. Volaron (bueno, la mariposa volaba y Patito corría) hasta llegar a un claro hermoso lleno de flores que brillaban con luz propia. Era un lugar mágico...",
+    choices: [
+      { text: "✨ Explorar el jardín secreto", nextId: "jardin_secreto" },
+      { text: "🦋 Conocer a más mariposas", nextId: "familia_mariposas" }
+    ]
+  },
+  jardin_secreto: {
+    id: "jardin_secreto",
+    text: "Patito Milagro exploró cada rincón del jardín mágico. Encontró flores que cambiaban de color, otras que sonaban como campanitas y algunas que olían a galletas recién horneadas. Pasó la tarde maravillado por tanta belleza. 🌺✨",
+    isEnding: true
+  },
+  familia_mariposas: {
+    id: "familia_mariposas",
+    text: "La mariposa azul presentó a Patito Milagro con toda su familia. Había mariposas de todos los colores del arcoíris. Le enseñaron cómo hacer los jardines más hermosos y le dieron semillas mágicas para plantar en su casa. 🦋🌈",
     isEnding: true
   },
   flores: {
     id: "flores",
-    text: "Patito Milagro recolectó las flores más bonitas del jardín con mucho cuidado. Hizo un hermoso ramo y lo llevó a su cabañita. El aroma de las flores llenó su hogar de alegría y color. ¡Su cabañita nunca se había visto tan linda! 🌸🏡",
+    text: "Patito Milagro comenzó a recolectar flores con mucho cuidado, asegurándose de no dañar las plantas. Las rosas rojas olían dulce, las margaritas amarillas brillaban al sol. ¿Qué haría con este hermoso ramo?",
+    choices: [
+      { text: "🏡 Decorar su cabañita", nextId: "decorar_cabanita" },
+      { text: "💐 Llevarlas a un amigo", nextId: "regalar_flores" }
+    ]
+  },
+  decorar_cabanita: {
+    id: "decorar_cabanita",
+    text: "Patito Milagro llevó las flores a casa y las colocó en jarrones de diferentes tamaños. Organizó cada color cuidadosamente. Su cabañita se transformó en un lugar lleno de vida, color y aromas hermosos. ¡Nunca se había visto tan bonita! 🌸🏡",
+    isEnding: true
+  },
+  regalar_flores: {
+    id: "regalar_flores",
+    text: "Patito Milagro llevó el ramo de flores a su amiga la tortuga que estaba enferma. Sus ojos brillaron de felicidad al ver las flores. El regalo la hizo sentir mucho mejor. Patito aprendió que dar alegría es la mejor medicina. 💐💚",
     isEnding: true
   }
 };
@@ -124,32 +202,110 @@ const rainyStory: Record<string, StoryNode> = {
   },
   jugar_charcos: {
     id: "jugar_charcos",
-    text: "Llegaron más patitos y juntos hicieron una competencia de saltos en charcos. ¡Las risas llenaban el aire! Patito Milagro ganó el premio al salto más divertido. Todos terminaron mojados pero muy felices. 🦆💦",
+    text: "Llegaron más patitos y juntos organizaron los juegos más divertidos. Primero hicieron competencias de saltos, luego carreras de chapoteo. Patito Milagro propuso un nuevo juego...",
+    choices: [
+      { text: "🎨 Hacer arte con el barro", nextId: "arte_barro" },
+      { text: "🏆 Competencia de salto más alto", nextId: "salto_alto" }
+    ]
+  },
+  arte_barro: {
+    id: "arte_barro",
+    text: "Todos los patitos usaron el barro para crear esculturas y dibujos. Patito Milagro hizo una escultura de un corazón gigante. Al final, montaron una galería de arte bajo la lluvia. ¡Fue la exposición más original! 🎨💦",
+    isEnding: true
+  },
+  salto_alto: {
+    id: "salto_alto",
+    text: "La competencia de saltos fue épica. Cada patito dio su mejor esfuerzo. Patito Milagro ganó el premio al salto más divertido con una voltereta en el aire. Todos rieron y terminaron mojados pero muy felices. 🏆🦆",
     isEnding: true
   },
   cantar_lluvia: {
     id: "cantar_lluvia",
-    text: "Patito Milagro comenzó a cantar una hermosa melodía que imitaba el sonido de la lluvia. Los pájaros en los árboles se unieron a su canción, creando una sinfonía natural maravillosa. ¡Fue un concierto inolvidable! 🎵☔",
+    text: "Patito Milagro comenzó a cantar una hermosa melodía que imitaba el sonido de la lluvia. Su voz era tan dulce que atrajo la atención de otros animales...",
+    choices: [
+      { text: "🎵 Enseñar la canción a los pájaros", nextId: "ensenar_cancion_lluvia" },
+      { text: "🎶 Crear una orquesta de lluvia", nextId: "orquesta_lluvia" }
+    ]
+  },
+  ensenar_cancion_lluvia: {
+    id: "ensenar_cancion_lluvia",
+    text: "Los pájaros se acercaron curiosos y Patito Milagro les enseñó su canción de lluvia. Juntos la perfeccionaron agregando diferentes tonos. Se convirtió en la canción oficial del bosque para los días lluviosos. 🎵☔",
+    isEnding: true
+  },
+  orquesta_lluvia: {
+    id: "orquesta_lluvia",
+    text: "Patito Milagro organizó una orquesta donde cada animal hacía un sonido diferente: gotas, truenos, viento. Los pájaros silbaban, las ranas croaban y él dirigía. ¡Fue un concierto inolvidable bajo la lluvia! 🎶🌧️",
     isEnding: true
   },
   leer_libro: {
     id: "leer_libro",
-    text: "Patito Milagro abrió su libro favorito de aventuras y se transportó a mundos mágicos. Mientras leía, la lluvia seguía cayendo afuera, haciendo todo más acogedor. Fue una tarde perfecta de lectura. 📚✨",
+    text: "Patito Milagro abrió su libro favorito de aventuras. La historia era tan emocionante que se sintió parte de ella. Cada página lo transportaba a un nuevo mundo mágico...",
+    choices: [
+      { text: "📖 Terminar el libro completo", nextId: "terminar_libro" },
+      { text: "✍️ Escribir su propia historia", nextId: "escribir_historia" }
+    ]
+  },
+  terminar_libro: {
+    id: "terminar_libro",
+    text: "Patito Milagro leyó hasta la última página mientras la lluvia seguía cayendo afuera. El final fue hermoso y le enseñó una lección importante sobre la amistad. Cerró el libro sintiéndose inspirado y feliz. 📚✨",
+    isEnding: true
+  },
+  escribir_historia: {
+    id: "escribir_historia",
+    text: "Inspirado por el libro, Patito Milagro decidió escribir su propia aventura. Escribió sobre un patito valiente que ayudaba a otros. La lluvia afuera hacía el momento perfecto para crear. Escribió página tras página de su imaginación. ✍️💛",
     isEnding: true
   },
   pintar_lluvia: {
     id: "pintar_lluvia",
-    text: "Con sus acuarelas, Patito Milagro pintó el paisaje lluvioso que veía por la ventana. Los tonos grises y azules se mezclaban hermosamente. Creó una obra de arte que guardó como recuerdo de ese día especial. 🎨💙",
+    text: "Con sus acuarelas, Patito Milagro comenzó a pintar el paisaje lluvioso. Los colores se mezclaban hermosamente en el papel mojado, creando efectos únicos...",
+    choices: [
+      { text: "🎨 Pintar el arcoíris que aparece", nextId: "pintar_arcoiris" },
+      { text: "🖼️ Hacer una serie de cuadros", nextId: "serie_cuadros" }
+    ]
+  },
+  pintar_arcoiris: {
+    id: "pintar_arcoiris",
+    text: "Cuando salió el sol y apareció un arcoíris, Patito Milagro lo pintó con todos sus colores vibrantes. Cada tono era perfecto. Colgó su pintura en la pared donde la vería cada mañana. 🎨🌈",
+    isEnding: true
+  },
+  serie_cuadros: {
+    id: "serie_cuadros",
+    text: "Patito Milagro pintó varios cuadros mostrando la lluvia en diferentes momentos: al inicio, durante la tormenta y al final con el sol saliendo. Creó toda una galería personal. Se sintió como un verdadero artista. 🖼️💙",
     isEnding: true
   },
   final_arcoiris: {
     id: "final_arcoiris",
-    text: "Patito Milagro siguió el arcoíris hasta encontrar un prado lleno de flores de todos los colores. Era como si el arcoíris hubiera tocado la tierra. Pasó la tarde entre flores brillantes y mariposas. 🌈🌸",
+    text: "Patito Milagro siguió el arcoíris hasta llegar a un prado mágico. El lugar estaba lleno de flores de todos los colores imaginables, como si el arcoíris hubiera tocado la tierra...",
+    choices: [
+      { text: "🌺 Recoger flores del arcoíris", nextId: "flores_arcoiris" },
+      { text: "🦋 Jugar con las mariposas de colores", nextId: "mariposas_arcoiris" }
+    ]
+  },
+  flores_arcoiris: {
+    id: "flores_arcoiris",
+    text: "Patito Milagro recogió flores de cada color del arcoíris. Cada una tenía un aroma único y especial. Hizo un ramo mágico que nunca se marchitaría, un regalo del arcoíris que brillaría por siempre. 🌺🌈",
+    isEnding: true
+  },
+  mariposas_arcoiris: {
+    id: "mariposas_arcoiris",
+    text: "Mariposas de todos los colores llenaban el prado. Patito Milagro jugó con ellas toda la tarde. Las mariposas formaban arcoíris voladores a su alrededor. Fue como estar dentro de un sueño de colores. 🦋✨",
     isEnding: true
   },
   fotos_arcoiris: {
     id: "fotos_arcoiris",
-    text: "Patito Milagro tomó las fotos más hermosas del arcoíris desde diferentes ángulos. Cada foto era única y especial. Las compartió con sus amigos y todos quedaron maravillados con la belleza de la naturaleza. 📸🌈",
+    text: "Patito Milagro tomó fotos desde diferentes ángulos. Cada fotografía capturaba la belleza única del arcoíris. Luego decidió qué hacer con estas hermosas imágenes...",
+    choices: [
+      { text: "🖼️ Hacer una exposición de fotos", nextId: "exposicion_fotos" },
+      { text: "💝 Compartir las fotos con amigos", nextId: "compartir_fotos" }
+    ]
+  },
+  exposicion_fotos: {
+    id: "exposicion_fotos",
+    text: "Patito Milagro organizó una exposición fotográfica en su jardín. Todos vinieron a admirar las hermosas fotos del arcoíris. Fue una celebración de la belleza de la naturaleza. ¡Un éxito total! 🖼️📸",
+    isEnding: true
+  },
+  compartir_fotos: {
+    id: "compartir_fotos",
+    text: "Patito Milagro imprimió las fotos y las regaló a sus amigos. Cada uno recibió una imagen del arcoíris para alegrar sus días grises. La belleza compartida se multiplicó en sonrisas. 💝🌈",
     isEnding: true
   }
 };
@@ -190,32 +346,110 @@ const nightStory: Record<string, StoryNode> = {
   },
   deseo: {
     id: "deseo",
-    text: "Patito Milagro cerró sus ojitos y pidió un deseo muy especial: que todos los patitos del mundo pudieran tener un hogar lleno de amor. La estrella pareció brillar más fuerte, como si hubiera escuchado su deseo. 🌠💛",
+    text: "Patito Milagro cerró sus ojitos y pidió un deseo muy especial con todo su corazón. Cuando abrió los ojos, la estrella brillaba aún más fuerte, como si hubiera escuchado...",
+    choices: [
+      { text: "✨ Ver si el deseo se cumple", nextId: "deseo_cumplido" },
+      { text: "🌟 Compartir el momento con amigos", nextId: "compartir_deseo" }
+    ]
+  },
+  deseo_cumplido: {
+    id: "deseo_cumplido",
+    text: "Al día siguiente, Patito Milagro descubrió que su deseo se había cumplido: todos los patitos sin hogar del pueblo habían encontrado familias amorosas. Su corazón se llenó de alegría. Los milagros sí existen. 🌠💛",
+    isEnding: true
+  },
+  compartir_deseo: {
+    id: "compartir_deseo",
+    text: "Patito Milagro corrió a buscar a sus amigos para contarles sobre la estrella fugaz. Juntos hicieron una ceremonia especial de deseos bajo las estrellas. Cada uno pidió algo hermoso para el mundo. 🌟🦆",
     isEnding: true
   },
   mas_estrellas: {
     id: "mas_estrellas",
-    text: "Patito Milagro contó más de diez estrellas fugaces esa noche. Cada una parecía una carta de amor del universo. Guardó ese momento en su corazón para siempre. Fue una noche verdaderamente mágica. ✨🌌",
+    text: "Patito Milagro siguió observando el cielo y comenzó a contar estrellas fugaces. Una, dos, tres... ¡hasta diez! Cada una parecía llevar un mensaje especial del universo...",
+    choices: [
+      { text: "📝 Anotar cada deseo en un diario", nextId: "diario_deseos" },
+      { text: "🎆 Celebrar con luces de bengala", nextId: "celebrar_estrellas" }
+    ]
+  },
+  diario_deseos: {
+    id: "diario_deseos",
+    text: "Patito Milagro sacó su diario especial y escribió todos los deseos que pidió, uno por cada estrella fugaz. Guardó el diario como un tesoro para recordar esa noche mágica por siempre. 📝✨",
+    isEnding: true
+  },
+  celebrar_estrellas: {
+    id: "celebrar_estrellas",
+    text: "Patito Milagro encendió bengalas que tenía guardadas para ocasiones especiales. Las luces chispeantes en la tierra hacían eco de las estrellas en el cielo. Fue una celebración celestial hermosa. 🎆🌌",
     isEnding: true
   },
   buho: {
     id: "buho",
-    text: "El búho sabio llevó a Patito Milagro a un árbol ancestral y le contó historias antiguas del bosque. Patito Milagro aprendió sobre la sabiduría de la naturaleza y la importancia de cuidar a todos los seres vivos. 🦉📖",
+    text: "El búho sabio llevó a Patito Milagro a un árbol ancestral muy especial. Sus ojos dorados brillaban con sabiduría. El búho comenzó a compartir historias antiguas del bosque...",
+    choices: [
+      { text: "📖 Escuchar leyendas antiguas", nextId: "leyendas_antiguas" },
+      { text: "🦉 Aprender la sabiduría del búho", nextId: "sabiduria_buho" }
+    ]
+  },
+  leyendas_antiguas: {
+    id: "leyendas_antiguas",
+    text: "El búho narró historias de cuando el bosque era joven, de animales valientes y de la magia que vive en cada árbol. Patito Milagro escuchó fascinado hasta el amanecer, sintiendo una conexión profunda con la naturaleza. 📖🦉",
+    isEnding: true
+  },
+  sabiduria_buho: {
+    id: "sabiduria_buho",
+    text: "El búho le enseñó a Patito Milagro sobre la importancia de cuidar a todos los seres vivos, de ser paciente y de encontrar la belleza en las pequeñas cosas. Fueron lecciones que Patito llevaría en su corazón para siempre. 🦉✨",
     isEnding: true
   },
   grillos: {
     id: "grillos",
-    text: "Patito Milagro se sentó a escuchar la sinfonía nocturna de los grillos. El ritmo era hipnotizante y relajante. Pronto se le unieron luciérnagas que iluminaban el camino como lucecitas mágicas. 🦗✨",
+    text: "Patito Milagro se sentó a escuchar la sinfonía nocturna de los grillos. El ritmo era hipnotizante. Pronto notó que luciérnagas comenzaban a aparecer, iluminando la noche...",
+    choices: [
+      { text: "✨ Bailar con las luciérnagas", nextId: "bailar_luciernagas" },
+      { text: "🎵 Unirse al coro de grillos", nextId: "coro_grillos" }
+    ]
+  },
+  bailar_luciernagas: {
+    id: "bailar_luciernagas",
+    text: "Las luciérnagas formaron un círculo alrededor de Patito Milagro y él bailó siguiendo sus luces. Era como bailar en un escenario de estrellas. El momento fue tan mágico que no quería que terminara. ✨💃",
+    isEnding: true
+  },
+  coro_grillos: {
+    id: "coro_grillos",
+    text: "Patito Milagro aprendió el ritmo de los grillos y se unió a su coro con suaves cuac-cuac que armonizaban perfectamente. Juntos crearon la música más hermosa de la noche. Los animales del bosque se durmieron con su melodía. 🦗🎵",
     isEnding: true
   },
   fiesta_amigos: {
     id: "fiesta_amigos",
-    text: "Todos los amigos llegaron con sus propias linternas. El jardín se transformó en un lugar de cuento de hadas con luces de colores por todos lados. Bailaron, rieron y celebraron la amistad bajo las estrellas. 🎉🏮",
+    text: "Todos los amigos llegaron con sus propias linternas de colores. El jardín se transformó en un lugar de cuento de hadas. Patito Milagro propuso hacer algo especial...",
+    choices: [
+      { text: "🎶 Organizar un concierto nocturno", nextId: "concierto_nocturno" },
+      { text: "🎨 Decorar todo el jardín juntos", nextId: "decorar_jardin" }
+    ]
+  },
+  concierto_nocturno: {
+    id: "concierto_nocturno",
+    text: "Cada amigo tocó un instrumento diferente bajo las linternas brillantes. La música llenó la noche mágica. Bailaron y cantaron hasta que las estrellas empezaron a desaparecer con el amanecer. 🎶🌙",
+    isEnding: true
+  },
+  decorar_jardin: {
+    id: "decorar_jardin",
+    text: "Juntos colgaron linternas en cada árbol y arbusto. Agregaron flores brillantes y cintas de colores. El jardín se convirtió en el lugar más hermoso del mundo, un paraíso iluminado de amistad. 🎨✨",
     isEnding: true
   },
   linternas_flotantes: {
     id: "linternas_flotantes",
-    text: "Patito Milagro hizo linternas especiales que podían flotar en el aire. Las soltó una por una y el cielo se llenó de luces brillantes que subían hacia las estrellas. Era como si la tierra y el cielo se conectaran. 💫🏮",
+    text: "Patito Milagro hizo linternas especiales que podían flotar en el aire. Una a una, las soltó al cielo nocturno. Brillaban hermosas subiendo hacia las estrellas...",
+    choices: [
+      { text: "🌟 Hacer un deseo con cada linterna", nextId: "deseos_linternas" },
+      { text: "📸 Capturar el momento en una foto", nextId: "foto_linternas" }
+    ]
+  },
+  deseos_linternas: {
+    id: "deseos_linternas",
+    text: "Con cada linterna que soltaba, Patito Milagro hacía un deseo diferente. Deseos de amor, paz, alegría y esperanza para todos. Las linternas llevaban sus deseos hacia el universo. Era como enviar cartas a las estrellas. 🌟💫",
+    isEnding: true
+  },
+  foto_linternas: {
+    id: "foto_linternas",
+    text: "Patito Milagro tomó la foto más hermosa que jamás había capturado: cientos de linternas flotando hacia el cielo estrellado. Era una imagen que captaba la magia pura del momento. La guardó como su tesoro más preciado. 📸✨",
     isEnding: true
   }
 };
@@ -256,32 +490,110 @@ const magicStory: Record<string, StoryNode> = {
   },
   arbol_deseos: {
     id: "arbol_deseos",
-    text: "Patito Milagro plantó una semilla especial y al instante creció un árbol hermoso lleno de frutos dorados. Cada fruto era un deseo que se haría realidad para alguien necesitado. 🌳✨",
+    text: "Patito Milagro plantó una semilla especial y al instante creció un árbol hermoso. Sus hojas brillaban y sus frutos eran dorados. El árbol tenía poderes mágicos...",
+    choices: [
+      { text: "🌟 Compartir los frutos mágicos", nextId: "compartir_frutos" },
+      { text: "🌳 Cuidar el árbol especial", nextId: "cuidar_arbol" }
+    ]
+  },
+  compartir_frutos: {
+    id: "compartir_frutos",
+    text: "Patito Milagro recogió los frutos dorados y los compartió con todos los animales del bosque que necesitaban ayuda. Cada fruto cumplía un deseo. La alegría se multiplicó por todo el reino. 🌟💛",
+    isEnding: true
+  },
+  cuidar_arbol: {
+    id: "cuidar_arbol",
+    text: "Patito Milagro prometió cuidar el árbol de los deseos cada día. Lo regaba con agua de manantial y le cantaba canciones. El árbol creció más fuerte y hermoso, bendiciendo a todos los que se acercaban. 🌳✨",
     isEnding: true
   },
   baile_flores: {
     id: "baile_flores",
-    text: "Patito Milagro bailó con las flores al ritmo de una melodía celestial. Con cada paso, más flores nacían y el jardín se llenaba de colores y fragancias maravillosas. ¡Fue el baile más mágico de su vida! 🌸💃",
+    text: "Patito Milagro bailó con las flores al ritmo de una melodía celestial. Con cada paso, más flores nacían del suelo. La danza era tan hermosa que atrajo visitantes mágicos...",
+    choices: [
+      { text: "🧚 Bailar con las hadas", nextId: "baile_hadas" },
+      { text: "🎶 Enseñar el baile a otros", nextId: "ensenar_baile" }
+    ]
+  },
+  baile_hadas: {
+    id: "baile_hadas",
+    text: "Las hadas se unieron al baile y juntos crearon una coreografía mágica. Los pétalos volaban en el aire formando patrones hermosos. Fue el baile más mágico que el jardín había presenciado. 🧚💃",
+    isEnding: true
+  },
+  ensenar_baile: {
+    id: "ensenar_baile",
+    text: "Patito Milagro enseñó el baile de las flores a todos los animales del jardín. Pronto, todos bailaban juntos en armonía. El jardín se convirtió en un lugar de celebración eterna. 🎶🌸",
     isEnding: true
   },
   volar_unicornio: {
     id: "volar_unicornio",
-    text: "Patito Milagro montó en el unicornio y juntos volaron sobre nubes de algodón, cruzaron arcoíris y tocaron las estrellas. Desde arriba, el mundo se veía aún más hermoso. 🦄☁️",
+    text: "Patito Milagro montó en el unicornio y juntos despegaron hacia el cielo. Volaron sobre nubes suaves y atravesaron arcoíris brillantes. El unicornio le preguntó si quería visitar un lugar especial...",
+    choices: [
+      { text: "⭐ Visitar el castillo de las nubes", nextId: "castillo_nubes" },
+      { text: "🌈 Tocar el final del arcoíris", nextId: "final_arcoiris_magico" }
+    ]
+  },
+  castillo_nubes: {
+    id: "castillo_nubes",
+    text: "El unicornio llevó a Patito Milagro a un castillo hecho de nubes donde vivían ángeles guardianes. Le mostraron vistas increíbles del mundo desde arriba y le dieron alas temporales para volar solo. 🏰☁️",
+    isEnding: true
+  },
+  final_arcoiris_magico: {
+    id: "final_arcoiris_magico",
+    text: "Tocaron el final del arcoíris y encontraron un tesoro de luz pura. No era oro ni joyas, sino amor concentrado que podían compartir con el mundo. Patito lo guardó en su corazón. 🌈✨",
     isEnding: true
   },
   hadas: {
     id: "hadas",
-    text: "Las hadas llevaron a Patito Milagro a su aldea en el árbol más antiguo del bosque. Le enseñaron a hacer magia con el corazón y le dieron un polvillo de estrellas como regalo. 🧚✨",
+    text: "Las hadas llevaron a Patito Milagro a su aldea secreta en el árbol más antiguo del bosque. Era un lugar lleno de luces brillantes y risas melodiosas. Las hadas querían compartir su magia...",
+    choices: [
+      { text: "✨ Aprender magia del corazón", nextId: "magia_corazon" },
+      { text: "🎁 Recibir un regalo mágico", nextId: "regalo_magico" }
+    ]
+  },
+  magia_corazon: {
+    id: "magia_corazon",
+    text: "Las hadas le enseñaron a Patito Milagro que la verdadera magia viene del corazón. Le mostraron cómo usar el amor y la bondad para crear pequeños milagros. Patito practicó y logró hacer brillar una flor. 🧚✨",
+    isEnding: true
+  },
+  regalo_magico: {
+    id: "regalo_magico",
+    text: "Las hadas le dieron a Patito Milagro un frasco de polvillo de estrellas. Con él podría hacer que los deseos más puros se cumplieran. Patito prometió usarlo sabiamente para ayudar a otros. 🎁⭐",
     isEnding: true
   },
   dejar_recuerdo: {
     id: "dejar_recuerdo",
-    text: "Patito Milagro dejó su recuerdo más preciado: el amor y la amistad que sentía por todos. El cristal brilló con una luz cálida y dorada que llenó toda la cueva de felicidad. 💎💛",
+    text: "Patito Milagro tocó un cristal vacío y pensó en su recuerdo más preciado. El cristal comenzó a brillar capturando ese momento de amor y alegría...",
+    choices: [
+      { text: "💛 Compartir el recuerdo con otros", nextId: "compartir_recuerdo" },
+      { text: "🔮 Preservar el recuerdo para siempre", nextId: "preservar_recuerdo" }
+    ]
+  },
+  compartir_recuerdo: {
+    id: "compartir_recuerdo",
+    text: "El cristal proyectó el recuerdo de Patito Milagro en el aire para que todos lo vieran. Era un momento de pura amistad y amor. Todos los presentes sintieron calidez en sus corazones. 💛✨",
+    isEnding: true
+  },
+  preservar_recuerdo: {
+    id: "preservar_recuerdo",
+    text: "Patito Milagro colocó cuidadosamente el cristal con su recuerdo en un lugar especial de la cueva. Allí brillaría por siempre, inspirando a futuras generaciones con su mensaje de amor. 🔮💎",
     isEnding: true
   },
   ver_recuerdos: {
     id: "ver_recuerdos",
-    text: "Patito Milagro vio recuerdos hermosos de risas, abrazos, primeras veces y momentos de amor. Se dio cuenta de que el mundo estaba lleno de momentos mágicos y decidió crear más cada día. 🌈✨",
+    text: "Patito Milagro comenzó a tocar diferentes cristales. Cada uno le mostraba hermosos recuerdos de otros: risas, abrazos, momentos de amor. Se dio cuenta de algo importante...",
+    choices: [
+      { text: "🌟 Inspirarse para crear más recuerdos", nextId: "crear_recuerdos" },
+      { text: "📖 Contar las historias que vio", nextId: "contar_historias" }
+    ]
+  },
+  crear_recuerdos: {
+    id: "crear_recuerdos",
+    text: "Patito Milagro salió de la cueva inspirado. Decidió dedicar cada día a crear momentos hermosos con sus seres queridos. Cada nuevo recuerdo sería un cristal más en su propia cueva del corazón. 🌟💛",
+    isEnding: true
+  },
+  contar_historias: {
+    id: "contar_historias",
+    text: "Patito Milagro se convirtió en el guardián de las historias de la cueva. Compartió con todos las bellas memorias que había visto, inspirando a otros a valorar cada momento. Fue un narrador de esperanza. 📖✨",
     isEnding: true
   }
 };
