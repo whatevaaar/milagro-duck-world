@@ -20,6 +20,7 @@ import {
 import { MemoramaGame } from "@/components/games/MemoramaGame";
 import { GuessTheDuckGame } from "@/components/games/GuessTheDuckGame";
 import { CountDucksGame } from "@/components/games/CountDucksGame";
+import { AdventureGame } from "@/components/games/AdventureGame";
 import patitoHero from "@/assets/patito-hero.jpg";
 import forestBackground from "@/assets/forest-background.jpg";
 import patito1 from "@/assets/patito-1.png";
@@ -35,7 +36,7 @@ import patitoVideo1 from "@/assets/patito-video-1.mp4";
 import patitoVideo2 from "@/assets/patito-video-2.mp4";
 
 const Index = () => {
-  const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count">("memorama");
+  const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
   
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -581,12 +582,21 @@ const Index = () => {
                 >
                   🔢 Cuenta Patitos
                 </Button>
+                <Button
+                  onClick={() => setActiveGame("adventure")}
+                  variant={activeGame === "adventure" ? "default" : "outline"}
+                  size="lg"
+                  className="px-8"
+                >
+                  📖 Elige tu Aventura
+                </Button>
               </div>
 
               <div className="mt-8">
                 {activeGame === "memorama" && <MemoramaGame />}
                 {activeGame === "guess" && <GuessTheDuckGame />}
                 {activeGame === "count" && <CountDucksGame />}
+                {activeGame === "adventure" && <AdventureGame />}
               </div>
             </div>
           </SectionCard>
