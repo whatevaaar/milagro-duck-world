@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { DuckMenuButton } from "@/components/DuckMenuButton";
 import { MusicPlayer } from "@/components/MusicPlayer";
 import { SectionCard } from "@/components/SectionCard";
@@ -13,8 +14,12 @@ import {
   Calendar,
   Star,
   Sparkles,
-  ShoppingBag
+  ShoppingBag,
+  Gamepad2
 } from "lucide-react";
+import { MemoramaGame } from "@/components/games/MemoramaGame";
+import { GuessTheDuckGame } from "@/components/games/GuessTheDuckGame";
+import { CountDucksGame } from "@/components/games/CountDucksGame";
 import patitoHero from "@/assets/patito-hero.jpg";
 import forestBackground from "@/assets/forest-background.jpg";
 import patito1 from "@/assets/patito-1.png";
@@ -30,6 +35,8 @@ import patitoVideo1 from "@/assets/patito-video-1.mp4";
 import patitoVideo2 from "@/assets/patito-video-2.mp4";
 
 const Index = () => {
+  const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count">("memorama");
+  
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -178,6 +185,17 @@ const Index = () => {
                       icon={Heart} 
                       label="Donaciones" 
                       onClick={() => scrollToSection("donaciones")}
+                    />
+                  </div>
+                </div>
+
+                {/* Bottom Center Left - Juegos */}
+                <div className="absolute bottom-[5%] left-[28%] transform -translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '1.4s' }}>
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-secondary/30">
+                    <DuckMenuButton 
+                      icon={Gamepad2} 
+                      label="Juegos" 
+                      onClick={() => scrollToSection("juegos")}
                     />
                   </div>
                 </div>
@@ -523,9 +541,52 @@ const Index = () => {
                 <div className="text-6xl animate-wiggle">🎵</div>
                 <h4 className="text-xl font-bold text-accent">Canciones</h4>
               </div>
-              <div className="bg-gradient-to-br from-secondary/30 to-accent/30 p-8 rounded-3xl border-4 border-secondary/20 text-center space-y-4 transform transition-all hover:scale-105 cursor-pointer">
+              <div 
+                className="bg-gradient-to-br from-secondary/30 to-accent/30 p-8 rounded-3xl border-4 border-secondary/20 text-center space-y-4 transform transition-all hover:scale-105 cursor-pointer"
+                onClick={() => scrollToSection("juegos")}
+              >
                 <div className="text-6xl animate-sparkle">🎮</div>
-                <h4 className="text-xl font-bold text-secondary">Juegos</h4>
+                <h4 className="text-xl font-bold text-secondary">Juegos Interactivos</h4>
+              </div>
+            </div>
+          </SectionCard>
+        </section>
+
+        {/* Juegos Section */}
+        <section id="juegos" className="scroll-mt-20">
+          <SectionCard title="🎮 Juegos Interactivos" description="¡Diviértete jugando con Patito Milagro!">
+            <div className="space-y-6">
+              <div className="flex gap-4 justify-center flex-wrap">
+                <Button
+                  onClick={() => setActiveGame("memorama")}
+                  variant={activeGame === "memorama" ? "default" : "outline"}
+                  size="lg"
+                  className="px-8"
+                >
+                  🧠 Memorama
+                </Button>
+                <Button
+                  onClick={() => setActiveGame("guess")}
+                  variant={activeGame === "guess" ? "default" : "outline"}
+                  size="lg"
+                  className="px-8"
+                >
+                  🎮 Adivina el Patito
+                </Button>
+                <Button
+                  onClick={() => setActiveGame("count")}
+                  variant={activeGame === "count" ? "default" : "outline"}
+                  size="lg"
+                  className="px-8"
+                >
+                  🔢 Cuenta Patitos
+                </Button>
+              </div>
+
+              <div className="mt-8">
+                {activeGame === "memorama" && <MemoramaGame />}
+                {activeGame === "guess" && <GuessTheDuckGame />}
+                {activeGame === "count" && <CountDucksGame />}
               </div>
             </div>
           </SectionCard>
