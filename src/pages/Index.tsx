@@ -37,6 +37,7 @@ import patitoVideo2 from "@/assets/patito-video-2.mp4";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
+  const [showGames, setShowGames] = useState(false);
   
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -190,13 +191,13 @@ const Index = () => {
                   </div>
                 </div>
 
-                {/* Bottom Center Left - Juegos */}
+                {/* Bottom Center Left - Sorpresas */}
                 <div className="absolute bottom-[5%] left-[28%] transform -translate-x-1/2 translate-y-1/2 animate-float" style={{ animationDelay: '1.4s' }}>
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-secondary/30">
                     <DuckMenuButton 
                       icon={Gamepad2} 
-                      label="Juegos" 
-                      onClick={() => scrollToSection("juegos")}
+                      label="Sorpresas" 
+                      onClick={() => scrollToSection("sorpresas")}
                     />
                   </div>
                 </div>
@@ -544,63 +545,67 @@ const Index = () => {
               </div>
               <div 
                 className="bg-gradient-to-br from-secondary/30 to-accent/30 p-8 rounded-3xl border-4 border-secondary/20 text-center space-y-4 transform transition-all hover:scale-105 cursor-pointer"
-                onClick={() => scrollToSection("juegos")}
+                onClick={() => setShowGames(!showGames)}
               >
                 <div className="text-6xl animate-sparkle">🎮</div>
                 <h4 className="text-xl font-bold text-secondary">Juegos Interactivos</h4>
               </div>
             </div>
+
+            {/* Juegos desplegables */}
+            {showGames && (
+              <div className="mt-8 animate-fade-in">
+                <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-6 rounded-3xl border-4 border-primary/30">
+                  <h3 className="text-3xl font-bold text-center mb-6 text-primary">🎮 Juegos Interactivos</h3>
+                  <div className="space-y-6">
+                    <div className="flex gap-4 justify-center flex-wrap">
+                      <Button
+                        onClick={() => setActiveGame("memorama")}
+                        variant={activeGame === "memorama" ? "default" : "outline"}
+                        size="lg"
+                        className="px-8"
+                      >
+                        🧠 Memorama
+                      </Button>
+                      <Button
+                        onClick={() => setActiveGame("guess")}
+                        variant={activeGame === "guess" ? "default" : "outline"}
+                        size="lg"
+                        className="px-8"
+                      >
+                        🎮 Adivina el Patito
+                      </Button>
+                      <Button
+                        onClick={() => setActiveGame("count")}
+                        variant={activeGame === "count" ? "default" : "outline"}
+                        size="lg"
+                        className="px-8"
+                      >
+                        🔢 Cuenta Patitos
+                      </Button>
+                      <Button
+                        onClick={() => setActiveGame("adventure")}
+                        variant={activeGame === "adventure" ? "default" : "outline"}
+                        size="lg"
+                        className="px-8"
+                      >
+                        🗺️ Elige tu Aventura
+                      </Button>
+                    </div>
+
+                    <div className="mt-8">
+                      {activeGame === "memorama" && <MemoramaGame />}
+                      {activeGame === "guess" && <GuessTheDuckGame />}
+                      {activeGame === "count" && <CountDucksGame />}
+                      {activeGame === "adventure" && <AdventureGame />}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </SectionCard>
         </section>
 
-        {/* Juegos Section */}
-        <section id="juegos" className="scroll-mt-20">
-          <SectionCard title="🎮 Juegos Interactivos" description="¡Diviértete jugando con Patito Milagro!">
-            <div className="space-y-6">
-              <div className="flex gap-4 justify-center flex-wrap">
-                <Button
-                  onClick={() => setActiveGame("memorama")}
-                  variant={activeGame === "memorama" ? "default" : "outline"}
-                  size="lg"
-                  className="px-8"
-                >
-                  🧠 Memorama
-                </Button>
-                <Button
-                  onClick={() => setActiveGame("guess")}
-                  variant={activeGame === "guess" ? "default" : "outline"}
-                  size="lg"
-                  className="px-8"
-                >
-                  🎮 Adivina el Patito
-                </Button>
-                <Button
-                  onClick={() => setActiveGame("count")}
-                  variant={activeGame === "count" ? "default" : "outline"}
-                  size="lg"
-                  className="px-8"
-                >
-                  🔢 Cuenta Patitos
-                </Button>
-                <Button
-                  onClick={() => setActiveGame("adventure")}
-                  variant={activeGame === "adventure" ? "default" : "outline"}
-                  size="lg"
-                  className="px-8"
-                >
-                  📖 Elige tu Aventura
-                </Button>
-              </div>
-
-              <div className="mt-8">
-                {activeGame === "memorama" && <MemoramaGame />}
-                {activeGame === "guess" && <GuessTheDuckGame />}
-                {activeGame === "count" && <CountDucksGame />}
-                {activeGame === "adventure" && <AdventureGame />}
-              </div>
-            </div>
-          </SectionCard>
-        </section>
 
       </div>
 
