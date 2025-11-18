@@ -94,6 +94,17 @@ const Index = () => {
                   </div>
                 </div>
 
+                {/* Top Center Left - Nosotros */}
+                <div className="absolute top-[5%] left-[28%] transform -translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.3s' }}>
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
+                    <DuckMenuButton 
+                      icon={Sparkles} 
+                      label="Nosotros" 
+                      onClick={() => scrollToSection("sobre-nosotros")}
+                    />
+                  </div>
+                </div>
+
                 {/* Top Right - Obra (con palomita) */}
                 <div className="absolute top-[14.6%] right-[14.6%] transform translate-x-1/2 -translate-y-1/2 animate-bounce" style={{ animationDelay: '0.2s' }}>
                   <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-accent/30">
@@ -101,6 +112,17 @@ const Index = () => {
                       icon={Theater} 
                       label="Obra" 
                       onClick={() => scrollToSection("obra")}
+                    />
+                  </div>
+                </div>
+
+                {/* Top Center Right - Valores */}
+                <div className="absolute top-[5%] right-[28%] transform translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: '0.5s' }}>
+                  <div className="bg-white/90 rounded-full p-2 shadow-[0_8px_20px_-6px_hsl(199_89%_48%/0.5)] backdrop-blur-sm border-2 border-primary/30">
+                    <DuckMenuButton 
+                      icon={Star} 
+                      label="Valores" 
+                      onClick={() => scrollToSection("valores")}
                     />
                   </div>
                 </div>
@@ -363,25 +385,105 @@ const Index = () => {
           </SectionCard>
         </section>
 
+        {/* Sobre Nosotros Section */}
+        <section id="sobre-nosotros" className="scroll-mt-20">
+          <SectionCard title="✨ Sobre Patito Milagro" description="Más que una marca, un movimiento de esperanza">
+            <div className="space-y-6">
+              <p className="text-lg text-foreground leading-relaxed">
+                Patito Milagro es un proyecto que combina creatividad, arte y compromiso social con un objetivo noble: 
+                generar conciencia y esperanza a través de la ternura. Nuestra empresa nace del deseo de unir el mundo 
+                de los productos con causa —como peluches y playeras— con el poder transformador del arte escénico, 
+                mediante una obra de teatro protagonizada por nuestro entrañable personaje, el patito Milagro.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                Más allá de ofrecer artículos de calidad y experiencias artísticas, buscamos inspirar valores de 
+                empatía, respeto y amor hacia los animales. Parte de los recursos obtenidos se destinan a una causa 
+                fundamental: la construcción de un albergue para patitos sin hogar, un espacio donde puedan recibir 
+                cuidado, refugio y la oportunidad de una nueva vida.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed font-semibold">
+                Patito Milagro es más que una marca; es un movimiento que invita a creer que los milagros pueden 
+                surgir cuando las personas se unen con un propósito común: ayudar, crear y compartir esperanza.
+              </p>
+            </div>
+          </SectionCard>
+        </section>
+
         {/* Misión y Visión Section */}
         <section id="mision" className="scroll-mt-20">
           <div className="grid md:grid-cols-2 gap-8">
             <SectionCard title="🎯 Nuestra Misión">
               <p className="text-lg text-foreground leading-relaxed">
-                Llevar alegría, valores y enseñanzas positivas a todos los niños a través de 
-                las aventuras del Patito Milagro. Inspirar amor, amistad y valentía en cada 
-                corazón pequeño. 💛
+                La misión de Patito Milagro es demostrar que los milagros existen cuando se unen la creatividad 
+                y el respeto por la naturaleza y los animales. A través de nuestros productos y de la magia del 
+                teatro, trabajamos para transformar cada sonrisa en una acción solidaria que contribuya a la 
+                construcción de un hogar digno para los patitos que más lo necesitan.
               </p>
             </SectionCard>
             
             <SectionCard title="🌟 Nuestra Visión">
               <p className="text-lg text-foreground leading-relaxed">
-                Ser el espectáculo infantil más querido y significativo, creando recuerdos 
-                inolvidables y formando una generación de niños felices, seguros y llenos 
-                de esperanza. ✨
+                La visión de Patito Milagro es que cada persona que conozca a nuestro patito —ya sea en un 
+                escenario, en una tienda o en un abrazo de peluche— se sienta parte de un milagro colectivo: 
+                un mundo donde todos los patitos puedan vivir rodeados de amor, cuidado y esperanza.
               </p>
             </SectionCard>
           </div>
+        </section>
+
+        {/* Valores Section */}
+        <section id="valores" className="scroll-mt-20">
+          <SectionCard title="💎 Nuestros Valores" description="Los principios que nos guían">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-primary/20 to-primary/5 p-6 rounded-3xl border-2 border-primary/30 transform transition-all hover:scale-105">
+                <h3 className="text-2xl font-bold text-primary mb-3">❤️ Amor</h3>
+                <p className="text-foreground leading-relaxed">
+                  El motor que impulsa cada acción y cada creación en Patito Milagro. Creemos en el amor como 
+                  la fuerza capaz de generar cambios reales.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-secondary/20 to-secondary/5 p-6 rounded-3xl border-2 border-secondary/30 transform transition-all hover:scale-105">
+                <h3 className="text-2xl font-bold text-secondary mb-3">🤝 Empatía</h3>
+                <p className="text-foreground leading-relaxed">
+                  Nos ponemos en el lugar de los demás —humanos y animales— para comprender sus necesidades 
+                  y actuar con sensibilidad.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-accent/20 to-accent/5 p-6 rounded-3xl border-2 border-accent/30 transform transition-all hover:scale-105">
+                <h3 className="text-2xl font-bold text-accent mb-3">🎨 Creatividad</h3>
+                <p className="text-foreground leading-relaxed">
+                  Fomentamos la imaginación como herramienta para transmitir mensajes positivos y construir 
+                  soluciones que inspiren.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-primary/20 to-primary/5 p-6 rounded-3xl border-2 border-primary/30 transform transition-all hover:scale-105">
+                <h3 className="text-2xl font-bold text-primary mb-3">🤲 Solidaridad</h3>
+                <p className="text-foreground leading-relaxed">
+                  Cada producto, cada obra y cada gesto están pensados para ayudar y generar un impacto 
+                  positivo en nuestra comunidad.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-secondary/20 to-secondary/5 p-6 rounded-3xl border-2 border-secondary/30 transform transition-all hover:scale-105">
+                <h3 className="text-2xl font-bold text-secondary mb-3">🌿 Respeto por la vida</h3>
+                <p className="text-foreground leading-relaxed">
+                  Promovemos el cuidado y la protección de todos los seres vivos, fomentando una convivencia 
+                  responsable con la naturaleza.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-accent/20 to-accent/5 p-6 rounded-3xl border-2 border-accent/30 transform transition-all hover:scale-105">
+                <h3 className="text-2xl font-bold text-accent mb-3">✨ Esperanza</h3>
+                <p className="text-foreground leading-relaxed">
+                  Creemos que cada pequeño acto de bondad puede convertirse en un milagro capaz de transformar 
+                  el mundo.
+                </p>
+              </div>
+            </div>
+          </SectionCard>
         </section>
 
         {/* Contacto Section */}
