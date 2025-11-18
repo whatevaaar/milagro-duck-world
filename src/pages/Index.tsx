@@ -38,6 +38,7 @@ import patitoVideo2 from "@/assets/patito-video-2.mp4";
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
   const [showGames, setShowGames] = useState(false);
+  const [showColoring, setShowColoring] = useState(false);
   
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -535,7 +536,13 @@ const Index = () => {
         <section id="sorpresas" className="scroll-mt-20">
           <SectionCard title="🎁 Zona de Sorpresas" description="¡Diversión extra para ti!">
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-primary/30 to-secondary/30 p-8 rounded-3xl border-4 border-primary/20 text-center space-y-4 transform transition-all hover:scale-105 cursor-pointer">
+              <div 
+                className="bg-gradient-to-br from-primary/30 to-secondary/30 p-8 rounded-3xl border-4 border-primary/20 text-center space-y-4 transform transition-all hover:scale-105 cursor-pointer"
+                onClick={() => {
+                  setShowColoring(!showColoring);
+                  setShowGames(false);
+                }}
+              >
                 <div className="text-6xl animate-bounce">🎨</div>
                 <h4 className="text-xl font-bold text-primary">Dibujos para Colorear</h4>
               </div>
@@ -545,12 +552,51 @@ const Index = () => {
               </div>
               <div 
                 className="bg-gradient-to-br from-secondary/30 to-accent/30 p-8 rounded-3xl border-4 border-secondary/20 text-center space-y-4 transform transition-all hover:scale-105 cursor-pointer"
-                onClick={() => setShowGames(!showGames)}
+                onClick={() => {
+                  setShowGames(!showGames);
+                  setShowColoring(false);
+                }}
               >
                 <div className="text-6xl animate-sparkle">🎮</div>
                 <h4 className="text-xl font-bold text-secondary">Juegos Interactivos</h4>
               </div>
             </div>
+
+            {/* Dibujos para Colorear desplegables */}
+            {showColoring && (
+              <div className="mt-8 animate-fade-in">
+                <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-6 rounded-3xl border-4 border-primary/30">
+                  <h3 className="text-3xl font-bold text-center mb-6 text-primary">🎨 Dibujos para Colorear</h3>
+                  <p className="text-center text-lg text-foreground mb-6">
+                    ¡Descarga estas imágenes de Patito Milagro y coloréalas como más te guste!
+                  </p>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    {[
+                      { img: patito1, name: "Patito 1" },
+                      { img: patito2, name: "Patito 2" },
+                      { img: patito3, name: "Patito 3" },
+                      { img: patito4, name: "Patito 4" },
+                      { img: patito5, name: "Patito 5" }
+                    ].map((duck, index) => (
+                      <div 
+                        key={index}
+                        className="group relative bg-white p-4 rounded-2xl shadow-lg border-4 border-primary/30 transform transition-all hover:scale-105 hover:shadow-2xl"
+                      >
+                        <img
+                          src={duck.img}
+                          alt={duck.name}
+                          className="w-full h-48 object-cover rounded-lg filter grayscale contrast-125 brightness-110"
+                        />
+                        <p className="text-center mt-3 font-bold text-primary">{duck.name}</p>
+                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-2xl">
+                          <p className="text-white font-bold text-sm">Click derecho → Guardar imagen</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Juegos desplegables */}
             {showGames && (
