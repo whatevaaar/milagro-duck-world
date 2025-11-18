@@ -81,7 +81,7 @@ const Index = () => {
             </div>
             
             {/* Subtitle in bottom left corner */}
-            <div className="absolute bottom-[2%] left-[2%] z-40">
+            <div className="absolute bottom-[2%] left-[0.5%] z-40">
               <p className="text-base md:text-lg text-foreground font-bold bg-white/70 rounded-2xl px-4 py-2 inline-block">
                 Un mundo de felicidad y ternura ✨🦆💛
               </p>
