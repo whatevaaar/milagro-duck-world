@@ -60,7 +60,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-accent/40 via-background/30 to-background/50 backdrop-blur-[2px]" />
         
         <div className="container mx-auto px-4 py-12 relative z-10">
-          <div className="relative flex items-center justify-center min-h-[90vh] pt-12">
+          <div className="relative flex items-center justify-center min-h-[90vh] pt-4">
             
             {/* Title above the duck */}
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 text-center z-40 pt-4">
@@ -70,7 +70,7 @@ const Index = () => {
             </div>
             
             {/* Central Patito Logo - GRANDE CENTRADO */}
-            <div className="relative z-10 flex flex-col items-center">
+            <div className="relative z-10 flex flex-col items-center -mt-12">
               <div className="animate-float">
                 <img 
                   src={patitoHero} 
