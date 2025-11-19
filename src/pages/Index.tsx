@@ -68,7 +68,7 @@ const Index = () => {
           <div className="relative flex items-center justify-center min-h-[90vh] pt-4">
             
             {/* Title above the duck */}
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-center z-40">
+            <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 text-center z-40">
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-titan text-yellow-400 drop-shadow-[0_0_30px_rgba(255,215,0,0.9)] [text-shadow:_2px_2px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000] px-6 py-3 inline-block">
                 EL MUNDO DE PATITO MILAGRO
               </h1>
