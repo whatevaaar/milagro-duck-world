@@ -75,7 +75,7 @@ const Index = () => {
             </div>
             
             {/* Central Patito Logo - GRANDE CENTRADO */}
-            <div className="relative z-10 flex flex-col items-center -mt-8">
+            <div className="relative z-10 flex flex-col items-center -mt-12">
               <div className="animate-float">
                 <img 
                   src={patitoHero} 
