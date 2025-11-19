@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Fredoka", "sans-serif"],
+        titan: ["Titan One", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",
