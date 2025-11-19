@@ -69,7 +69,7 @@ const Index = () => {
             
             {/* Title above the duck */}
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-center z-40">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-primary drop-shadow-[0_4px_20px_rgba(255,193,7,0.8)] px-6 py-3 inline-block">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-titan text-yellow-400 drop-shadow-[0_0_30px_rgba(255,215,0,0.9)] [text-shadow:_2px_2px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000] px-6 py-3 inline-block">
                 EL MUNDO DE PATITO MILAGRO
               </h1>
             </div>
