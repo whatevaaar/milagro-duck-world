@@ -428,8 +428,8 @@ const Index = () => {
                   
                   {/* Área del camino con patito y albergue */}
                   <div className="relative h-80 bg-yellow-100/50 dark:bg-yellow-900/20 rounded-2xl border-2 border-yellow-400/30 overflow-hidden">
-                    {/* Línea del camino */}
-                    <div className="absolute bottom-20 left-4 right-4 h-1 bg-yellow-400/50" />
+                    {/* Línea del camino - pasa por la mitad de las esferas */}
+                    <div className="absolute bottom-[5.5rem] left-4 right-4 h-1 bg-yellow-400/50" />
                     
                     {/* INICIO - Patito en punto de partida */}
                     <div className="absolute left-4 bottom-6 transform">
@@ -458,9 +458,9 @@ const Index = () => {
                           <img 
                             src={donateImage} 
                             alt="Donate 1"
-                            className="w-16 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
+                            className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
                           />
-                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-sm w-6 h-6 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
                             1
                           </div>
                           {duckProgress >= 1 && (
@@ -493,9 +493,9 @@ const Index = () => {
                           <img 
                             src={donateImage} 
                             alt="Donate 2"
-                            className="w-16 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
+                            className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
                           />
-                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-sm w-6 h-6 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
                             2
                           </div>
                           {duckProgress >= 2 && (
@@ -528,9 +528,9 @@ const Index = () => {
                           <img 
                             src={donateImage} 
                             alt="Donate 3"
-                            className="w-16 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
+                            className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
                           />
-                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-sm w-6 h-6 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
                             3
                           </div>
                           {duckProgress >= 3 && (
@@ -563,9 +563,9 @@ const Index = () => {
                           <img 
                             src={donateImage} 
                             alt="Donate 4"
-                            className="w-16 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
+                            className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
                           />
-                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-sm w-6 h-6 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
                             4
                           </div>
                           {duckProgress >= 4 && (
@@ -598,9 +598,9 @@ const Index = () => {
                           <img 
                             src={donateImage} 
                             alt="Donate 5"
-                            className="w-16 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
+                            className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
                           />
-                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-sm w-6 h-6 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
                             5
                           </div>
                           {duckProgress >= 5 && (
