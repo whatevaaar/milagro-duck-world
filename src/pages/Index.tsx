@@ -45,6 +45,7 @@ import patitoPaso5 from "@/assets/patito-paso-5.jpg";
 import patitoPaso6 from "@/assets/patito-paso-6.jpg";
 import albergueFinal from "@/assets/albergue-final.jpg";
 import donateImage from "@/assets/donate-image.jpg";
+import cajaRegalo from "@/assets/caja-regalo.jpg";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -652,6 +653,11 @@ const Index = () => {
                       <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(30,64,175,1)]">
                         DONATIVOS RECIBIDOS 
                       </p>
+                      <img 
+                        src={cajaRegalo} 
+                        alt="Caja de Regalo" 
+                        className="w-12 h-12 object-contain animate-bounce"
+                      />
                       <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
                     </div>
                   </div>
