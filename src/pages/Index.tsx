@@ -438,7 +438,7 @@ const Index = () => {
                         <img 
                           src={patitoInicio} 
                           alt="Patito Milagro - Inicio" 
-                          className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
+                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
                         />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            INICIO
@@ -474,7 +474,7 @@ const Index = () => {
                           <img 
                             src={patitoPaso2} 
                             alt="Patito Milagro - Paso 1" 
-                            className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                           />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 1
@@ -510,7 +510,7 @@ const Index = () => {
                           <img 
                             src={patitoPaso4} 
                             alt="Patito Milagro - Paso 2" 
-                            className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                           />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 2
@@ -546,7 +546,7 @@ const Index = () => {
                           <img 
                             src={patitoPaso3} 
                             alt="Patito Milagro - Paso 3" 
-                            className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                           />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 3
@@ -582,7 +582,7 @@ const Index = () => {
                           <img 
                             src={patitoPaso5} 
                             alt="Patito Milagro - Paso 4" 
-                            className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                           />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 4
@@ -618,7 +618,7 @@ const Index = () => {
                           <img 
                             src={patitoPaso6} 
                             alt="Patito Milagro - Paso 5" 
-                            className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                           />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 5
@@ -632,7 +632,7 @@ const Index = () => {
                           <img 
                             src={albergueFinal} 
                             alt="Albergue Patito Milagro" 
-                            className={`w-20 h-20 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
+                            className={`w-24 h-24 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
                           />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            SUEÑO CUMPLIDO
