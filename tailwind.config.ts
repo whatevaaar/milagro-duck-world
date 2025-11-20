@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         sans: ["Fredoka", "sans-serif"],
         titan: ["Titan One", "cursive"],
+        baloo: ["Baloo 2", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",
