@@ -80,7 +80,7 @@ const Index = () => {
                 <img 
                   src={patitoHero} 
                   alt="Patito Milagro"
-                  className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-[0_30px_60px_-15px_rgba(234,88,12,0.7)] border-8 border-orange-600 bg-white/90"
+                  className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-[0_30px_60px_-15px_rgba(234,179,8,0.8)] border-8 border-yellow-500 bg-white/90"
                 />
               </div>
             </div>
