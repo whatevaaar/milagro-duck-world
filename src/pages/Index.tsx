@@ -656,7 +656,7 @@ const Index = () => {
                       <img 
                         src={cajaRegalo} 
                         alt="Caja de Regalo" 
-                        className="w-12 h-12 object-contain animate-bounce"
+                        className="w-12 h-12 object-contain animate-bounce mix-blend-multiply"
                       />
                       <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
                     </div>
