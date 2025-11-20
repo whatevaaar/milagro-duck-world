@@ -440,7 +440,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 2 - Primera donación */}
-                    <div className="absolute left-[25%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[30%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso2} 
