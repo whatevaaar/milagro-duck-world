@@ -429,14 +429,14 @@ const Index = () => {
                   {/* Área del camino con patito y albergue */}
                   <div className="relative h-80 bg-yellow-100/50 dark:bg-yellow-900/20 rounded-2xl border-2 border-yellow-400/30 overflow-hidden">
                     {/* Línea del camino */}
-                    <div className="absolute bottom-16 left-4 right-4 h-1 bg-yellow-400/50" />
+                    <div className="absolute bottom-20 left-4 right-4 h-1 bg-yellow-400/50" />
                     
                     {/* INICIO - Patito en punto de partida */}
-                    <div className="absolute left-[3%] bottom-0">
+                    <div className="absolute left-4 bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
                         {/* Imagen DONATE 0 (Inicio) */}
                         <div
-                          className="relative cursor-pointer transition-all hover:scale-105"
+                          className="relative transition-all"
                         >
                           <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                             INICIO
@@ -451,7 +451,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 1 - Primera donación */}
-                    <div className="absolute left-[18%] bottom-0">
+                    <div className="absolute left-[18%] bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
                         {/* Imagen DONATE 1 */}
                         <div
@@ -486,7 +486,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 2 - Segunda donación */}
-                    <div className="absolute left-[33%] bottom-0">
+                    <div className="absolute left-[33%] bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
                         {/* Imagen DONATE 2 */}
                         <div
@@ -521,7 +521,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 3 - Tercera donación */}
-                    <div className="absolute left-[48%] bottom-0">
+                    <div className="absolute left-[48%] bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
                         {/* Imagen DONATE 3 */}
                         <div
@@ -556,7 +556,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 4 - Cuarta donación */}
-                    <div className="absolute left-[63%] bottom-0">
+                    <div className="absolute left-[63%] bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
                         {/* Imagen DONATE 4 */}
                         <div
@@ -591,7 +591,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 5 - Quinta donación */}
-                    <div className="absolute left-[78%] bottom-0">
+                    <div className="absolute left-[78%] bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
                         {/* Imagen DONATE 5 */}
                         <div
@@ -626,7 +626,7 @@ const Index = () => {
                     </div>
                     
                     {/* Albergue (META) */}
-                    <div className="absolute right-[2%] bottom-0">
+                    <div className="absolute right-4 bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
                         <img 
                           src={albergueFinal} 
