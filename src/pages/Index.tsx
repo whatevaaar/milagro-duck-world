@@ -423,8 +423,12 @@ const Index = () => {
                 
                 <div className="relative space-y-6">
                   {/* Título del progreso ARRIBA */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-center bg-gradient-to-r from-green-600 via-yellow-500 to-green-600 bg-clip-text text-transparent drop-shadow-lg mb-2">
-                    🏠 Camino hacia EL MUNDO DE PATITO MILAGRO 🏠
+                  <h3 className="text-2xl md:text-3xl font-bold text-center drop-shadow-lg mb-2 flex items-center justify-center gap-2">
+                    <span>🏠</span>
+                    <span className="bg-gradient-to-r from-green-600 via-yellow-500 to-green-600 bg-clip-text text-transparent">
+                      Camino hacia EL MUNDO DE PATITO MILAGRO
+                    </span>
+                    <span>🏠</span>
                   </h3>
                   
                    {/* Área del camino con patito y albergue */}
