@@ -43,6 +43,7 @@ import patitoPaso3 from "@/assets/patito-paso-3.jpg";
 import patitoPaso4 from "@/assets/patito-paso-4.jpg";
 import patitoPaso5 from "@/assets/patito-paso-5.jpg";
 import patitoPaso6 from "@/assets/patito-paso-6.jpg";
+import albergueFinal from "@/assets/albergue-final.jpg";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -452,7 +453,7 @@ const Index = () => {
                           className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
                         <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
-                          1
+                          ETAPA 1
                         </span>
                       </div>
                     </div>
@@ -466,7 +467,7 @@ const Index = () => {
                           className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
                         <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
-                          2
+                          ETAPA 2
                         </span>
                       </div>
                     </div>
@@ -480,7 +481,7 @@ const Index = () => {
                           className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
                         <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
-                          3
+                          ETAPA 3
                         </span>
                       </div>
                     </div>
@@ -494,7 +495,7 @@ const Index = () => {
                           className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
                         <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
-                          4
+                          ETAPA 4
                         </span>
                       </div>
                     </div>
@@ -508,21 +509,28 @@ const Index = () => {
                           className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
                         <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
-                          5
+                          ETAPA 5
                         </span>
                       </div>
                     </div>
                     
                     {/* Albergue (META) */}
                     <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                      <div className={`text-6xl ${duckProgress === 5 ? 'animate-bounce' : ''}`}>
-                        🏠
+                      <div className="flex flex-col items-center">
+                        <img 
+                          src={albergueFinal} 
+                          alt="Albergue Patito Milagro" 
+                          className={`w-32 h-32 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
+                        />
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-2">
+                          SUEÑO CUMPLIDO
+                        </span>
+                        {duckProgress === 5 && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                            <span className="text-2xl animate-bounce">🎉 ¡META! 🎉</span>
+                          </div>
+                        )}
                       </div>
-                      {duckProgress === 5 && (
-                        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                          <span className="text-2xl animate-bounce">🎉 ¡META! 🎉</span>
-                        </div>
-                      )}
                     </div>
                   </div>
                   
