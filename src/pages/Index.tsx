@@ -407,39 +407,11 @@ const Index = () => {
         <section id="donaciones" className="scroll-mt-20">
           <SectionCard title="💛 Apoya al Patito Milagro" description="Tu ayuda hace la diferencia">
             <div className="space-y-8">
-              {/* Imagen de DONATE arriba */}
-              <div className="flex justify-center">
-                <img 
-                  src={donateImage} 
-                  alt="Donate" 
-                  className="w-full max-w-2xl rounded-3xl shadow-2xl border-4 border-yellow-400"
-                />
-              </div>
-              
-              {/* Botones de donativo arriba */}
-              <div className="flex justify-center gap-4 flex-wrap">
-                {[1, 2, 3, 4, 5].map((donation) => (
-                  <Button
-                    key={donation}
-                    onClick={() => setDuckProgress(donation)}
-                    disabled={duckProgress >= donation}
-                    size="lg"
-                    className={`px-8 py-8 text-xl font-bold rounded-3xl transition-all shadow-lg ${
-                      duckProgress >= donation
-                        ? 'bg-green-500 hover:bg-green-600 cursor-default text-white'
-                        : 'bg-yellow-500 hover:bg-yellow-600 hover:scale-110 text-white'
-                    }`}
-                  >
-                    {duckProgress >= donation ? '✅ COMPLETADO' : '💛 DONATIVO'} {donation}
-                  </Button>
-                ))}
-              </div>
-              
               <p className="text-xl text-foreground text-center leading-relaxed px-4">
                 Patito Milagro tiene un gran sueño en donde tú eres el protagonista principal, ya que a través de tu donativo, podrá cumplir que su gran sueño, se vuelva realidad, ya que Patito Milagro quiere conseguir un espacio, para construir un hermoso albergue que se llamará <strong className="text-yellow-400">EL MUNDO DE PATITO MILAGRO</strong>, donde construirá un hermoso albergue donde todos los patitos que no tienen un hogar digno o un lugar donde vivir, puedan vivir, de una manera feliz y maravillosa, para que el ser pato se convierta en una verdadera experiencia de amor y ternura para los patitos que decidan vivir aquí, es por ello que gracias a tu donativo, el gran sueño de Patito Milagro, se convertirá en un verdadero MILAGRO de amor, ternura y esperanza para los patitos, si te gustaría ayudar a que Patito Milagro llegue a su meta de cumplir su gran sueño, te compartimos su número de cuenta de Patito Milagro para que Patito Milagro pueda llegar a su meta lo antes posible, de cumplirse su sueño, te invitará a que asistas y cortes el listón de la apertura del albergue: <strong className="text-yellow-400">EL MUNDO DE PATITO MILAGRO</strong>, ¿te animas?, ¡mil gracias!! por tu DONATIVO. 🦆💫💛
               </p>
               
-              {/* Camino del Patito hacia su META */}
+              {/* Contenedor principal con fondo de bosque */}
               <div className="relative p-8 rounded-3xl border-4 border-yellow-400/50 overflow-hidden">
                 {/* Fondo con imagen */}
                 <div 
@@ -449,6 +421,34 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 to-green-400/10" />
                 
                 <div className="relative space-y-6">
+                  {/* Imagen de DONATE arriba */}
+                  <div className="flex justify-center">
+                    <img 
+                      src={donateImage} 
+                      alt="Donate" 
+                      className="w-full max-w-2xl rounded-3xl shadow-2xl border-4 border-yellow-400"
+                    />
+                  </div>
+                  
+                  {/* Botones de donativo */}
+                  <div className="flex justify-center gap-4 flex-wrap">
+                    {[1, 2, 3, 4, 5].map((donation) => (
+                      <Button
+                        key={donation}
+                        onClick={() => setDuckProgress(donation)}
+                        disabled={duckProgress >= donation}
+                        size="lg"
+                        className={`px-8 py-8 text-xl font-bold rounded-3xl transition-all shadow-lg ${
+                          duckProgress >= donation
+                            ? 'bg-green-500 hover:bg-green-600 cursor-default text-white'
+                            : 'bg-yellow-500 hover:bg-yellow-600 hover:scale-110 text-white'
+                        }`}
+                      >
+                        {duckProgress >= donation ? '✅ COMPLETADO' : '💛 DONATIVO'} {donation}
+                      </Button>
+                    ))}
+                  </div>
+                  
                   {/* Título del progreso */}
                   <h3 className="text-2xl font-bold text-center text-yellow-600 dark:text-yellow-400 drop-shadow-lg">
                     🏠 Camino hacia EL MUNDO DE PATITO MILAGRO 🏠
