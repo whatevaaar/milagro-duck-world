@@ -37,6 +37,7 @@ import patitoVideo2 from "@/assets/patito-video-2.mp4";
 import patitoVideo3 from "@/assets/patito-video-3.mp4";
 import patitoVideo4 from "@/assets/patito-video-4.mp4";
 import patitoVideo5 from "@/assets/patito-video-5.mp4";
+import patitoInicio from "@/assets/patito-inicio.jpg";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -442,8 +443,17 @@ const Index = () => {
                         transform: `translateY(-50%) ${duckProgress === 5 ? 'scale(1.2)' : 'scale(1)'}`
                       }}
                     >
-                      <div className={`text-5xl ${duckProgress < 5 ? 'animate-bounce' : 'animate-pulse'}`}>
-                        🦆
+                      <div className={`flex flex-col items-center ${duckProgress < 5 ? 'animate-bounce' : 'animate-pulse'}`}>
+                        <img 
+                          src={patitoInicio} 
+                          alt="Patito Milagro" 
+                          className="w-16 h-16 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
+                        />
+                        {duckProgress === 0 && (
+                          <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                            INICIO
+                          </span>
+                        )}
                       </div>
                     </div>
                     
