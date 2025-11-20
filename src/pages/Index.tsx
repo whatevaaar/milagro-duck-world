@@ -42,6 +42,7 @@ import patitoPaso2 from "@/assets/patito-paso-2.jpg";
 import patitoPaso3 from "@/assets/patito-paso-3.jpg";
 import patitoPaso4 from "@/assets/patito-paso-4.jpg";
 import patitoPaso5 from "@/assets/patito-paso-5.jpg";
+import patitoPaso6 from "@/assets/patito-paso-6.jpg";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -434,66 +435,80 @@ const Index = () => {
                         <img 
                           src={patitoInicio} 
                           alt="Patito Milagro - Inicio" 
-                          className="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
+                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
                         />
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                        <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           INICIO
                         </span>
                       </div>
                     </div>
                     
-                    {/* Punto 2 - Primera donación */}
-                    <div className="absolute left-[30%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    {/* Punto 1 - Primera donación */}
+                    <div className="absolute left-[20%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso2} 
                           alt="Patito Milagro - Paso 1" 
-                          className="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
-                        <span className="text-lg font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                        <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           1
                         </span>
                       </div>
                     </div>
                     
-                    {/* Punto 3 - Segunda donación */}
-                    <div className="absolute left-[48%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    {/* Punto 2 - Segunda donación */}
+                    <div className="absolute left-[33%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso4} 
                           alt="Patito Milagro - Paso 2" 
-                          className="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
-                        <span className="text-lg font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                        <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           2
                         </span>
                       </div>
                     </div>
                     
-                    {/* Punto 4 - Tercera donación */}
-                    <div className="absolute left-[66%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    {/* Punto 3 - Tercera donación */}
+                    <div className="absolute left-[46%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso3} 
                           alt="Patito Milagro - Paso 3" 
-                          className="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
-                        <span className="text-lg font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                        <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           3
                         </span>
                       </div>
                     </div>
                     
-                    {/* Punto 5 - Cuarta donación */}
-                    <div className="absolute left-[82%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    {/* Punto 4 - Cuarta donación */}
+                    <div className="absolute left-[59%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso5} 
                           alt="Patito Milagro - Paso 4" 
-                          className="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
-                        <span className="text-lg font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                        <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           4
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {/* Punto 5 - Quinta donación */}
+                    <div className="absolute left-[72%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                      <div className="flex flex-col items-center">
+                        <img 
+                          src={patitoPaso6} 
+                          alt="Patito Milagro - Paso 5" 
+                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                        />
+                        <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                          5
                         </span>
                       </div>
                     </div>
