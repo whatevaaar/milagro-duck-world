@@ -44,6 +44,7 @@ import patitoPaso4 from "@/assets/patito-paso-4.jpg";
 import patitoPaso5 from "@/assets/patito-paso-5.jpg";
 import patitoPaso6 from "@/assets/patito-paso-6.jpg";
 import albergueFinal from "@/assets/albergue-final.jpg";
+import donateImage from "@/assets/donate-image.jpg";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -405,8 +406,36 @@ const Index = () => {
         {/* Donaciones Section */}
         <section id="donaciones" className="scroll-mt-20">
           <SectionCard title="💛 Apoya al Patito Milagro" description="Tu ayuda hace la diferencia">
-            <div className="bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 p-8 rounded-3xl border-4 border-primary/30 space-y-6">
-              <p className="text-xl text-foreground text-center leading-relaxed">
+            <div className="space-y-8">
+              {/* Imagen de DONATE arriba */}
+              <div className="flex justify-center">
+                <img 
+                  src={donateImage} 
+                  alt="Donate" 
+                  className="w-full max-w-2xl rounded-3xl shadow-2xl border-4 border-yellow-400"
+                />
+              </div>
+              
+              {/* Botones de donativo arriba */}
+              <div className="flex justify-center gap-4 flex-wrap">
+                {[1, 2, 3, 4, 5].map((donation) => (
+                  <Button
+                    key={donation}
+                    onClick={() => setDuckProgress(donation)}
+                    disabled={duckProgress >= donation}
+                    size="lg"
+                    className={`px-8 py-8 text-xl font-bold rounded-3xl transition-all shadow-lg ${
+                      duckProgress >= donation
+                        ? 'bg-green-500 hover:bg-green-600 cursor-default text-white'
+                        : 'bg-yellow-500 hover:bg-yellow-600 hover:scale-110 text-white'
+                    }`}
+                  >
+                    {duckProgress >= donation ? '✅ COMPLETADO' : '💛 DONATIVO'} {donation}
+                  </Button>
+                ))}
+              </div>
+              
+              <p className="text-xl text-foreground text-center leading-relaxed px-4">
                 Patito Milagro tiene un gran sueño en donde tú eres el protagonista principal, ya que a través de tu donativo, podrá cumplir que su gran sueño, se vuelva realidad, ya que Patito Milagro quiere conseguir un espacio, para construir un hermoso albergue que se llamará <strong className="text-yellow-400">EL MUNDO DE PATITO MILAGRO</strong>, donde construirá un hermoso albergue donde todos los patitos que no tienen un hogar digno o un lugar donde vivir, puedan vivir, de una manera feliz y maravillosa, para que el ser pato se convierta en una verdadera experiencia de amor y ternura para los patitos que decidan vivir aquí, es por ello que gracias a tu donativo, el gran sueño de Patito Milagro, se convertirá en un verdadero MILAGRO de amor, ternura y esperanza para los patitos, si te gustaría ayudar a que Patito Milagro llegue a su meta de cumplir su gran sueño, te compartimos su número de cuenta de Patito Milagro para que Patito Milagro pueda llegar a su meta lo antes posible, de cumplirse su sueño, te invitará a que asistas y cortes el listón de la apertura del albergue: <strong className="text-yellow-400">EL MUNDO DE PATITO MILAGRO</strong>, ¿te animas?, ¡mil gracias!! por tu DONATIVO. 🦆💫💛
               </p>
               
@@ -431,7 +460,7 @@ const Index = () => {
                     <div className="absolute top-1/2 left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
                     
                     {/* INICIO - Patito en punto de partida */}
-                    <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
+                    <div className="absolute left-[6%] top-1/2 transform -translate-y-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoInicio} 
@@ -445,7 +474,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 1 - Primera donación */}
-                    <div className="absolute left-[20%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[21%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso2} 
@@ -459,7 +488,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 2 - Segunda donación */}
-                    <div className="absolute left-[33%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[36%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso4} 
@@ -473,7 +502,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 3 - Tercera donación */}
-                    <div className="absolute left-[46%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[51%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso3} 
@@ -487,7 +516,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 4 - Cuarta donación */}
-                    <div className="absolute left-[59%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[66%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso5} 
@@ -501,7 +530,7 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 5 - Quinta donación */}
-                    <div className="absolute left-[72%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[81%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso6} 
@@ -515,7 +544,7 @@ const Index = () => {
                     </div>
                     
                     {/* Albergue (META) */}
-                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <div className="absolute right-[3%] top-1/2 transform -translate-y-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={albergueFinal} 
@@ -536,28 +565,9 @@ const Index = () => {
                   
                   {/* Contador de donativos */}
                   <div className="text-center">
-                    <p className="text-lg font-semibold text-foreground">
+                    <p className="text-xl font-bold text-yellow-600 dark:text-yellow-400">
                       Donativos recibidos: <span className="text-yellow-600 dark:text-yellow-400 text-2xl">{duckProgress}</span> / 5
                     </p>
-                  </div>
-                  
-                  {/* Botones de donativo */}
-                  <div className="flex justify-center gap-3 flex-wrap">
-                    {[1, 2, 3, 4, 5].map((donation) => (
-                      <Button
-                        key={donation}
-                        onClick={() => setDuckProgress(donation)}
-                        disabled={duckProgress >= donation}
-                        size="sm"
-                        className={`px-6 py-6 text-lg font-bold rounded-2xl transition-all ${
-                          duckProgress >= donation
-                            ? 'bg-green-500 hover:bg-green-600 cursor-default'
-                            : 'bg-yellow-500 hover:bg-yellow-600 hover:scale-110'
-                        }`}
-                      >
-                        {duckProgress >= donation ? '✅' : '💛'} Donativo {donation}
-                      </Button>
-                    ))}
                   </div>
                   
                   {duckProgress === 5 && (
