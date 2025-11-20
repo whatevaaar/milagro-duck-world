@@ -11,7 +11,7 @@ export const MusicPlayer = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-8 z-50">
+    <div className="fixed bottom-4 right-10 z-50">
       <div className="relative">
         {/* Estela fosforescente */}
         <div className="absolute inset-0 rounded-full bg-yellow-400 blur-2xl opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
