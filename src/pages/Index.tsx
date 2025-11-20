@@ -408,10 +408,10 @@ const Index = () => {
               <div className="relative p-8 rounded-3xl border-4 border-yellow-400/50 overflow-hidden">
                 {/* Fondo con imagen */}
                 <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-40"
+                  className="absolute inset-0 bg-cover bg-center opacity-70"
                   style={{ backgroundImage: `url(${forestBackground})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/20 to-green-400/20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 to-green-400/10" />
                 
                 <div className="relative space-y-6">
                   {/* Título del progreso */}
