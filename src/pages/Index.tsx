@@ -90,7 +90,7 @@ const Index = () => {
               <p className="text-xs md:text-sm font-baloo font-bold text-yellow-400 px-4 py-2 inline-flex items-center gap-2 drop-shadow-[0_0_20px_rgba(255,215,0,0.8)] [text-shadow:_2px_2px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000]">
                 UN MUNDO DE FELICIDAD Y TERNURA 
                 <Sparkles className="w-3 h-3 md:w-4 md:h-4 inline-block text-orange-400 fill-orange-400" />
-                <span className="text-xs md:text-sm">🦆</span>
+                <span className="text-sm md:text-base">🦆</span>
                 <Heart className="w-3 h-3 md:w-4 md:h-4 inline-block text-red-500 fill-red-500" />
               </p>
             </div>
