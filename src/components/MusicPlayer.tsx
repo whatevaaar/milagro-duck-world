@@ -14,12 +14,12 @@ export const MusicPlayer = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <Button
         onClick={toggleMusic}
-        className="w-16 h-16 rounded-full bg-primary hover:bg-primary/90 shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.4)] animate-float"
+        className="w-16 h-16 rounded-full bg-gradient-to-br from-primary via-yellow-400 to-orange-400 hover:from-yellow-400 hover:via-orange-400 hover:to-primary shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.4)] animate-float border-4 border-white/30"
       >
         {isPlaying ? (
-          <Volume2 className="w-8 h-8 text-primary-foreground" />
+          <Volume2 className="w-9 h-9 text-white drop-shadow-lg" strokeWidth={2.5} />
         ) : (
-          <Music className="w-8 h-8 text-primary-foreground" />
+          <Music className="w-9 h-9 text-white drop-shadow-lg" strokeWidth={2.5} />
         )}
       </Button>
     </div>
