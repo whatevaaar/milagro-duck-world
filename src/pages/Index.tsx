@@ -282,7 +282,7 @@ const Index = () => {
               <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-8 rounded-3xl border-4 border-primary/30">
                 <h3 className="text-3xl font-bold text-primary mb-4">✨ Las Memorias de un Representante Médico ✨</h3>
                 <p className="text-xl text-foreground leading-relaxed">
-                  Se trata de un rinconcito donde Patito Milagro decidió emprender su viaje artístico hacia una obra de teatro donde él participa como el patito que se recupera de una fuerte gripita y que su dueño Alets va por él muy feliz y contento para volverlo a cuidar con muchísimo amor y cariño. Esta obra donde participa Patito Milagro se llama Las Memorias de un Representante Médico. 
+                  Se trata de un rinconcito donde Patito Milagro decidió emprender su viaje artístico para actuar en una obra de teatro donde Patito Milagro juega el papel de un patito que se recupera de una fuerte gripita y va su dueño Alets por él con la veterinaria que lo curó. Su dueño Alets va por él muy contento y feliz para volverlo a cuidar con muchísimo amor y cariño. Esta obra donde participa Patito Milagro se llama Las Memorias de un Representante Médico.
                   ¡Una experiencia inolvidable para toda la familia! 🌟
                 </p>
               </div>
