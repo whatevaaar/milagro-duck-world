@@ -459,7 +459,7 @@ const Index = () => {
                     <div className="absolute left-[48%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
-                          src={patitoPaso3} 
+                          src={patitoPaso4} 
                           alt="Patito Milagro - Paso 2" 
                           className="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
@@ -473,7 +473,7 @@ const Index = () => {
                     <div className="absolute left-[66%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
-                          src={patitoPaso4} 
+                          src={patitoPaso3} 
                           alt="Patito Milagro - Paso 3" 
                           className="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
