@@ -437,7 +437,7 @@ const Index = () => {
                         <img 
                           src={patitoInicio} 
                           alt="Patito Milagro - Inicio" 
-                          className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
+                          className="w-14 h-14 object-cover rounded-full border-3 border-yellow-400 shadow-lg"
                         />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            INICIO
@@ -470,11 +470,11 @@ const Index = () => {
                              </div>
                            )}
                          </div>
-                         <img 
-                           src={patitoPaso2} 
-                           alt="Patito Milagro - Paso 1" 
-                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                         />
+                          <img 
+                            src={patitoPaso2} 
+                            alt="Patito Milagro - Paso 1" 
+                            className="w-14 h-14 object-cover rounded-full border-3 border-yellow-400 shadow-lg transition-all"
+                          />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 1
                          </span>
@@ -506,11 +506,11 @@ const Index = () => {
                              </div>
                            )}
                          </div>
-                         <img 
-                           src={patitoPaso4} 
-                           alt="Patito Milagro - Paso 2" 
-                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                         />
+                          <img 
+                            src={patitoPaso4} 
+                            alt="Patito Milagro - Paso 2" 
+                            className="w-14 h-14 object-cover rounded-full border-3 border-yellow-400 shadow-lg transition-all"
+                          />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 2
                          </span>
@@ -542,11 +542,11 @@ const Index = () => {
                              </div>
                            )}
                          </div>
-                         <img 
-                           src={patitoPaso3} 
-                           alt="Patito Milagro - Paso 3" 
-                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                         />
+                          <img 
+                            src={patitoPaso3} 
+                            alt="Patito Milagro - Paso 3" 
+                            className="w-14 h-14 object-cover rounded-full border-3 border-yellow-400 shadow-lg transition-all"
+                          />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 3
                          </span>
@@ -578,11 +578,11 @@ const Index = () => {
                              </div>
                            )}
                          </div>
-                         <img 
-                           src={patitoPaso5} 
-                           alt="Patito Milagro - Paso 4" 
-                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                         />
+                          <img 
+                            src={patitoPaso5} 
+                            alt="Patito Milagro - Paso 4" 
+                            className="w-14 h-14 object-cover rounded-full border-3 border-yellow-400 shadow-lg transition-all"
+                          />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 4
                          </span>
@@ -614,11 +614,11 @@ const Index = () => {
                              </div>
                            )}
                          </div>
-                         <img 
-                           src={patitoPaso6} 
-                           alt="Patito Milagro - Paso 5" 
-                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                         />
+                          <img 
+                            src={patitoPaso6} 
+                            alt="Patito Milagro - Paso 5" 
+                            className="w-14 h-14 object-cover rounded-full border-3 border-yellow-400 shadow-lg transition-all"
+                          />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 5
                          </span>
@@ -628,11 +628,11 @@ const Index = () => {
                      {/* Albergue (META) */}
                      <div className="absolute right-4 top-[60%] transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
-                         <img 
-                           src={albergueFinal} 
-                           alt="Albergue Patito Milagro" 
-                           className={`w-20 h-20 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
-                         />
+                          <img 
+                            src={albergueFinal} 
+                            alt="Albergue Patito Milagro" 
+                            className={`w-14 h-14 object-cover rounded-xl border-3 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
+                          />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            SUEÑO CUMPLIDO
                          </span>
