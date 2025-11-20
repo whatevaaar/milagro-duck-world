@@ -420,7 +420,7 @@ const Index = () => {
                   </h3>
                   
                   {/* Área del camino con patito y albergue */}
-                  <div className="relative h-32 bg-yellow-100/50 dark:bg-yellow-900/20 rounded-2xl border-2 border-yellow-400/30 overflow-hidden">
+                  <div className="relative h-48 bg-yellow-100/50 dark:bg-yellow-900/20 rounded-2xl border-2 border-yellow-400/30 overflow-hidden">
                     {/* Línea del camino */}
                     <div className="absolute top-1/2 left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
                     
