@@ -433,7 +433,7 @@ const Index = () => {
                      
                      {/* INICIO - Patito en punto de partida */}
                      <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
-                       <div className="flex flex-col items-center gap-2">
+                       <div className="flex flex-col items-center gap-1">
                          <img 
                            src={patitoInicio} 
                            alt="Patito Milagro - Inicio" 
@@ -446,7 +446,7 @@ const Index = () => {
                      </div>
                     
                      {/* Punto 1 - Primera donación */}
-                     <div className="absolute left-[18%] top-1/2 transform -translate-y-1/2">
+                     <div className="absolute left-[20%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
@@ -482,7 +482,7 @@ const Index = () => {
                      </div>
                     
                      {/* Punto 2 - Segunda donación */}
-                     <div className="absolute left-[33%] top-1/2 transform -translate-y-1/2">
+                     <div className="absolute left-[36%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
@@ -518,7 +518,7 @@ const Index = () => {
                      </div>
                     
                      {/* Punto 3 - Tercera donación */}
-                     <div className="absolute left-[48%] top-1/2 transform -translate-y-1/2">
+                     <div className="absolute left-[52%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
@@ -554,7 +554,7 @@ const Index = () => {
                      </div>
                     
                      {/* Punto 4 - Cuarta donación */}
-                     <div className="absolute left-[63%] top-1/2 transform -translate-y-1/2">
+                     <div className="absolute left-[68%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
@@ -590,7 +590,7 @@ const Index = () => {
                      </div>
                     
                      {/* Punto 5 - Quinta donación */}
-                     <div className="absolute left-[78%] top-1/2 transform -translate-y-1/2">
+                     <div className="absolute left-[84%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
