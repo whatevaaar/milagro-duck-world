@@ -426,223 +426,223 @@ const Index = () => {
                     🏠 Camino hacia EL MUNDO DE PATITO MILAGRO 🏠
                   </h3>
                   
-                  {/* Área del camino con patito y albergue */}
-                  <div className="relative h-80 bg-yellow-100/50 dark:bg-yellow-900/20 rounded-2xl border-2 border-yellow-400/30 overflow-hidden">
-                    {/* Línea del camino - pasa por la mitad de las esferas */}
-                    <div className="absolute bottom-[5.5rem] left-4 right-4 h-1 bg-yellow-400/50" />
+                   {/* Área del camino con patito y albergue */}
+                   <div className="relative h-64 bg-yellow-100/50 dark:bg-yellow-900/20 rounded-2xl border-2 border-yellow-400/30 overflow-hidden">
+                     {/* Línea del camino - pasa por la mitad de las esferas */}
+                     <div className="absolute top-1/2 left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
+                     
+                     {/* INICIO - Patito en punto de partida */}
+                     <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
+                       <div className="flex flex-col items-center gap-2">
+                         <img 
+                           src={patitoInicio} 
+                           alt="Patito Milagro - Inicio" 
+                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
+                         />
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                           INICIO
+                         </span>
+                       </div>
+                     </div>
                     
-                    {/* INICIO - Patito en punto de partida */}
-                    <div className="absolute left-4 bottom-6 transform">
-                      <div className="flex flex-col items-center gap-2">
-                        <img 
-                          src={patitoInicio} 
-                          alt="Patito Milagro - Inicio" 
-                          className="w-28 h-28 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
-                        />
-                        <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
-                          INICIO
-                        </span>
-                      </div>
-                    </div>
+                     {/* Punto 1 - Primera donación */}
+                     <div className="absolute left-[18%] top-1/2 transform -translate-y-1/2">
+                       <div className="flex flex-col items-center gap-1">
+                         {/* Texto DONACION arriba */}
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
+                           DONACIÓN
+                         </span>
+                         {/* Imagen DONATE 1 */}
+                         <div
+                           onClick={() => setDuckProgress(1)}
+                           className={`relative cursor-pointer transition-all hover:scale-105 ${
+                             duckProgress >= 1 ? 'opacity-70' : 'opacity-100'
+                           }`}
+                         >
+                           <img 
+                             src={donateImage} 
+                             alt="Donate 1"
+                             className="w-10 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
+                           />
+                           {duckProgress >= 1 && (
+                             <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
+                               <span className="text-xl">✅</span>
+                             </div>
+                           )}
+                         </div>
+                         <img 
+                           src={patitoPaso2} 
+                           alt="Patito Milagro - Paso 1" 
+                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                         />
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                           ETAPA 1
+                         </span>
+                       </div>
+                     </div>
                     
-                    {/* Punto 1 - Primera donación */}
-                    <div className="absolute left-[18%] bottom-6 transform">
-                      <div className="flex flex-col items-center gap-2">
-                        {/* Texto DONACION arriba */}
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
-                          DONACIÓN
-                        </span>
-                        {/* Imagen DONATE 1 */}
-                        <div
-                          onClick={() => setDuckProgress(1)}
-                          className={`relative cursor-pointer transition-all hover:scale-105 ${
-                            duckProgress >= 1 ? 'opacity-70' : 'opacity-100'
-                          }`}
-                        >
-                          <img 
-                            src={donateImage} 
-                            alt="Donate 1"
-                            className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
-                          />
-                          {duckProgress >= 1 && (
-                            <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
-                              <span className="text-2xl">✅</span>
-                            </div>
-                          )}
-                        </div>
-                        <img 
-                          src={patitoPaso2} 
-                          alt="Patito Milagro - Paso 1" 
-                          className="w-28 h-28 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                        />
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400">
-                          ETAPA 1
-                        </span>
-                      </div>
-                    </div>
+                     {/* Punto 2 - Segunda donación */}
+                     <div className="absolute left-[33%] top-1/2 transform -translate-y-1/2">
+                       <div className="flex flex-col items-center gap-1">
+                         {/* Texto DONACION arriba */}
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
+                           DONACIÓN
+                         </span>
+                         {/* Imagen DONATE 2 */}
+                         <div
+                           onClick={() => setDuckProgress(2)}
+                           className={`relative cursor-pointer transition-all hover:scale-105 ${
+                             duckProgress >= 2 ? 'opacity-70' : 'opacity-100'
+                           }`}
+                         >
+                           <img 
+                             src={donateImage} 
+                             alt="Donate 2"
+                             className="w-10 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
+                           />
+                           {duckProgress >= 2 && (
+                             <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
+                               <span className="text-xl">✅</span>
+                             </div>
+                           )}
+                         </div>
+                         <img 
+                           src={patitoPaso4} 
+                           alt="Patito Milagro - Paso 2" 
+                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                         />
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                           ETAPA 2
+                         </span>
+                       </div>
+                     </div>
                     
-                    {/* Punto 2 - Segunda donación */}
-                    <div className="absolute left-[33%] bottom-6 transform">
-                      <div className="flex flex-col items-center gap-2">
-                        {/* Texto DONACION arriba */}
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
-                          DONACIÓN
-                        </span>
-                        {/* Imagen DONATE 2 */}
-                        <div
-                          onClick={() => setDuckProgress(2)}
-                          className={`relative cursor-pointer transition-all hover:scale-105 ${
-                            duckProgress >= 2 ? 'opacity-70' : 'opacity-100'
-                          }`}
-                        >
-                          <img 
-                            src={donateImage} 
-                            alt="Donate 2"
-                            className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
-                          />
-                          {duckProgress >= 2 && (
-                            <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
-                              <span className="text-2xl">✅</span>
-                            </div>
-                          )}
-                        </div>
-                        <img 
-                          src={patitoPaso4} 
-                          alt="Patito Milagro - Paso 2" 
-                          className="w-28 h-28 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                        />
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400">
-                          ETAPA 2
-                        </span>
-                      </div>
-                    </div>
+                     {/* Punto 3 - Tercera donación */}
+                     <div className="absolute left-[48%] top-1/2 transform -translate-y-1/2">
+                       <div className="flex flex-col items-center gap-1">
+                         {/* Texto DONACION arriba */}
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
+                           DONACIÓN
+                         </span>
+                         {/* Imagen DONATE 3 */}
+                         <div
+                           onClick={() => setDuckProgress(3)}
+                           className={`relative cursor-pointer transition-all hover:scale-105 ${
+                             duckProgress >= 3 ? 'opacity-70' : 'opacity-100'
+                           }`}
+                         >
+                           <img 
+                             src={donateImage} 
+                             alt="Donate 3"
+                             className="w-10 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
+                           />
+                           {duckProgress >= 3 && (
+                             <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
+                               <span className="text-xl">✅</span>
+                             </div>
+                           )}
+                         </div>
+                         <img 
+                           src={patitoPaso3} 
+                           alt="Patito Milagro - Paso 3" 
+                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                         />
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                           ETAPA 3
+                         </span>
+                       </div>
+                     </div>
                     
-                    {/* Punto 3 - Tercera donación */}
-                    <div className="absolute left-[48%] bottom-6 transform">
-                      <div className="flex flex-col items-center gap-2">
-                        {/* Texto DONACION arriba */}
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
-                          DONACIÓN
-                        </span>
-                        {/* Imagen DONATE 3 */}
-                        <div
-                          onClick={() => setDuckProgress(3)}
-                          className={`relative cursor-pointer transition-all hover:scale-105 ${
-                            duckProgress >= 3 ? 'opacity-70' : 'opacity-100'
-                          }`}
-                        >
-                          <img 
-                            src={donateImage} 
-                            alt="Donate 3"
-                            className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
-                          />
-                          {duckProgress >= 3 && (
-                            <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
-                              <span className="text-2xl">✅</span>
-                            </div>
-                          )}
-                        </div>
-                        <img 
-                          src={patitoPaso3} 
-                          alt="Patito Milagro - Paso 3" 
-                          className="w-28 h-28 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                        />
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400">
-                          ETAPA 3
-                        </span>
-                      </div>
-                    </div>
+                     {/* Punto 4 - Cuarta donación */}
+                     <div className="absolute left-[63%] top-1/2 transform -translate-y-1/2">
+                       <div className="flex flex-col items-center gap-1">
+                         {/* Texto DONACION arriba */}
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
+                           DONACIÓN
+                         </span>
+                         {/* Imagen DONATE 4 */}
+                         <div
+                           onClick={() => setDuckProgress(4)}
+                           className={`relative cursor-pointer transition-all hover:scale-105 ${
+                             duckProgress >= 4 ? 'opacity-70' : 'opacity-100'
+                           }`}
+                         >
+                           <img 
+                             src={donateImage} 
+                             alt="Donate 4"
+                             className="w-10 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
+                           />
+                           {duckProgress >= 4 && (
+                             <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
+                               <span className="text-xl">✅</span>
+                             </div>
+                           )}
+                         </div>
+                         <img 
+                           src={patitoPaso5} 
+                           alt="Patito Milagro - Paso 4" 
+                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                         />
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                           ETAPA 4
+                         </span>
+                       </div>
+                     </div>
                     
-                    {/* Punto 4 - Cuarta donación */}
-                    <div className="absolute left-[63%] bottom-6 transform">
-                      <div className="flex flex-col items-center gap-2">
-                        {/* Texto DONACION arriba */}
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
-                          DONACIÓN
-                        </span>
-                        {/* Imagen DONATE 4 */}
-                        <div
-                          onClick={() => setDuckProgress(4)}
-                          className={`relative cursor-pointer transition-all hover:scale-105 ${
-                            duckProgress >= 4 ? 'opacity-70' : 'opacity-100'
-                          }`}
-                        >
-                          <img 
-                            src={donateImage} 
-                            alt="Donate 4"
-                            className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
-                          />
-                          {duckProgress >= 4 && (
-                            <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
-                              <span className="text-2xl">✅</span>
-                            </div>
-                          )}
-                        </div>
-                        <img 
-                          src={patitoPaso5} 
-                          alt="Patito Milagro - Paso 4" 
-                          className="w-28 h-28 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                        />
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400">
-                          ETAPA 4
-                        </span>
-                      </div>
-                    </div>
+                     {/* Punto 5 - Quinta donación */}
+                     <div className="absolute left-[78%] top-1/2 transform -translate-y-1/2">
+                       <div className="flex flex-col items-center gap-1">
+                         {/* Texto DONACION arriba */}
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
+                           DONACIÓN
+                         </span>
+                         {/* Imagen DONATE 5 */}
+                         <div
+                           onClick={() => setDuckProgress(5)}
+                           className={`relative cursor-pointer transition-all hover:scale-105 ${
+                             duckProgress >= 5 ? 'opacity-70' : 'opacity-100'
+                           }`}
+                         >
+                           <img 
+                             src={donateImage} 
+                             alt="Donate 5"
+                             className="w-10 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
+                           />
+                           {duckProgress >= 5 && (
+                             <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
+                               <span className="text-xl">✅</span>
+                             </div>
+                           )}
+                         </div>
+                         <img 
+                           src={patitoPaso6} 
+                           alt="Patito Milagro - Paso 5" 
+                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                         />
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                           ETAPA 5
+                         </span>
+                       </div>
+                     </div>
                     
-                    {/* Punto 5 - Quinta donación */}
-                    <div className="absolute left-[78%] bottom-6 transform">
-                      <div className="flex flex-col items-center gap-2">
-                        {/* Texto DONACION arriba */}
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
-                          DONACIÓN
-                        </span>
-                        {/* Imagen DONATE 5 */}
-                        <div
-                          onClick={() => setDuckProgress(5)}
-                          className={`relative cursor-pointer transition-all hover:scale-105 ${
-                            duckProgress >= 5 ? 'opacity-70' : 'opacity-100'
-                          }`}
-                        >
-                          <img 
-                            src={donateImage} 
-                            alt="Donate 5"
-                            className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
-                          />
-                          {duckProgress >= 5 && (
-                            <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
-                              <span className="text-2xl">✅</span>
-                            </div>
-                          )}
-                        </div>
-                        <img 
-                          src={patitoPaso6} 
-                          alt="Patito Milagro - Paso 5" 
-                          className="w-28 h-28 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                        />
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400">
-                          ETAPA 5
-                        </span>
-                      </div>
-                    </div>
-                    
-                    {/* Albergue (META) */}
-                    <div className="absolute right-4 bottom-6 transform">
-                      <div className="flex flex-col items-center gap-2">
-                        <img 
-                          src={albergueFinal} 
-                          alt="Albergue Patito Milagro" 
-                          className={`w-32 h-32 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
-                        />
-                        <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
-                          SUEÑO CUMPLIDO
-                        </span>
-                        {duckProgress === 5 && (
-                          <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                            <span className="text-2xl animate-bounce">🎉 ¡META! 🎉</span>
-                          </div>
-                        )}
-                      </div>
-                    </div>
+                     {/* Albergue (META) */}
+                     <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                       <div className="flex flex-col items-center gap-1">
+                         <img 
+                           src={albergueFinal} 
+                           alt="Albergue Patito Milagro" 
+                           className={`w-20 h-20 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
+                         />
+                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                           SUEÑO CUMPLIDO
+                         </span>
+                         {duckProgress === 5 && (
+                           <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                             <span className="text-xl animate-bounce">🎉 ¡META! 🎉</span>
+                           </div>
+                         )}
+                       </div>
+                     </div>
                   </div>
                   
                   {/* Contador de donativos */}
