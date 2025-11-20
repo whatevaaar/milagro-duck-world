@@ -39,6 +39,7 @@ import patitoVideo4 from "@/assets/patito-video-4.mp4";
 import patitoVideo5 from "@/assets/patito-video-5.mp4";
 import patitoInicio from "@/assets/patito-inicio.jpg";
 import patitoPaso2 from "@/assets/patito-paso-2.jpg";
+import patitoPaso3 from "@/assets/patito-paso-3.jpg";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -453,12 +454,26 @@ const Index = () => {
                       </div>
                     </div>
                     
-                    {/* Marcadores de progreso (puntos 3, 4, 5) */}
-                    {[2, 3, 4].map((step) => (
+                    {/* Punto 3 - Segunda donación */}
+                    <div className="absolute left-[48%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                      <div className="flex flex-col items-center">
+                        <img 
+                          src={patitoPaso3} 
+                          alt="Patito Milagro - Paso 2" 
+                          className="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                        />
+                        <span className="text-lg font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                          2
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {/* Marcadores de progreso (puntos 4, 5) */}
+                    {[3, 4].map((step) => (
                       <div
                         key={step}
                         className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2"
-                        style={{ left: `${(step + 1) * 18.75}%` }}
+                        style={{ left: `${48 + (step - 2) * 18}%` }}
                       >
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold transition-all ${
                           duckProgress >= step ? 'bg-yellow-400 text-white scale-110 border-4 border-yellow-500' : 'bg-gray-300 text-gray-500 border-2 border-gray-400'
