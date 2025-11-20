@@ -425,7 +425,7 @@ const Index = () => {
                   {/* Título del progreso ARRIBA */}
                   <h3 className="text-2xl md:text-3xl font-bold text-center mb-2 flex items-center justify-center gap-2">
                     <span>🏠</span>
-                    <span className="text-yellow-300">
+                    <span className="text-yellow-300 [text-shadow:_2px_2px_0_#1e3a8a,_-2px_-2px_0_#1e3a8a,_2px_-2px_0_#1e3a8a,_-2px_2px_0_#1e3a8a,_1px_1px_0_#1e3a8a,_-1px_-1px_0_#1e3a8a,_1px_-1px_0_#1e3a8a,_-1px_1px_0_#1e3a8a]">
                       Camino hacia EL MUNDO DE PATITO MILAGRO
                     </span>
                     <span>🏠</span>
