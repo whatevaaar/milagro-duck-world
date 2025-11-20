@@ -434,19 +434,14 @@ const Index = () => {
                     {/* INICIO - Patito en punto de partida */}
                     <div className="absolute left-4 bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
-                        {/* Imagen DONATE 0 (Inicio) */}
-                        <div
-                          className="relative transition-all"
-                        >
-                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
-                            INICIO
-                          </span>
-                        </div>
                         <img 
                           src={patitoInicio} 
                           alt="Patito Milagro - Inicio" 
                           className="w-28 h-28 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
                         />
+                        <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                          INICIO
+                        </span>
                       </div>
                     </div>
                     
