@@ -38,6 +38,7 @@ import patitoVideo3 from "@/assets/patito-video-3.mp4";
 import patitoVideo4 from "@/assets/patito-video-4.mp4";
 import patitoVideo5 from "@/assets/patito-video-5.mp4";
 import patitoInicio from "@/assets/patito-inicio.jpg";
+import patitoPaso2 from "@/assets/patito-paso-2.jpg";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -424,38 +425,52 @@ const Index = () => {
                     {/* Línea del camino */}
                     <div className="absolute top-1/2 left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
                     
-                    {/* Marcadores de progreso (5 puntos) */}
-                    {[0, 1, 2, 3, 4].map((step) => (
-                      <div
-                        key={step}
-                        className={`absolute top-1/2 transform -translate-y-1/2 w-3 h-3 rounded-full ${
-                          step < duckProgress ? 'bg-yellow-400' : 'bg-gray-300'
-                        }`}
-                        style={{ left: `calc(${(step * 20) + 10}% + ${step * 20}px)` }}
-                      />
-                    ))}
-                    
-                    {/* Patito caminando */}
-                    <div 
-                      className="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
-                      style={{ 
-                        left: `${(duckProgress * 20) + 5}%`,
-                        transform: `translateY(-50%) ${duckProgress === 5 ? 'scale(1.2)' : 'scale(1)'}`
-                      }}
-                    >
-                      <div className={`flex flex-col items-center ${duckProgress < 5 ? 'animate-bounce' : 'animate-pulse'}`}>
+                    {/* INICIO - Patito en punto de partida */}
+                    <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
+                      <div className="flex flex-col items-center">
                         <img 
                           src={patitoInicio} 
-                          alt="Patito Milagro" 
-                          className="w-16 h-16 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
+                          alt="Patito Milagro - Inicio" 
+                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
                         />
-                        {duckProgress === 0 && (
-                          <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-1">
-                            INICIO
-                          </span>
-                        )}
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                          INICIO
+                        </span>
                       </div>
                     </div>
+                    
+                    {/* Punto 2 - Primera donación */}
+                    <div className="absolute left-[25%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                      <div className="flex flex-col items-center">
+                        <img 
+                          src={patitoPaso2} 
+                          alt="Patito Milagro - Paso 1" 
+                          className={`w-20 h-20 object-cover rounded-full border-4 shadow-lg transition-all ${
+                            duckProgress >= 1 ? 'border-yellow-400 scale-110' : 'border-gray-400 opacity-50 grayscale'
+                          }`}
+                        />
+                        <span className={`text-lg font-bold mt-1 transition-colors ${
+                          duckProgress >= 1 ? 'text-yellow-600 dark:text-yellow-400' : 'text-gray-400'
+                        }`}>
+                          1
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {/* Marcadores de progreso (puntos 3, 4, 5) */}
+                    {[2, 3, 4].map((step) => (
+                      <div
+                        key={step}
+                        className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2"
+                        style={{ left: `${(step + 1) * 18.75}%` }}
+                      >
+                        <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold transition-all ${
+                          duckProgress >= step ? 'bg-yellow-400 text-white scale-110 border-4 border-yellow-500' : 'bg-gray-300 text-gray-500 border-2 border-gray-400'
+                        }`}>
+                          {step}
+                        </div>
+                      </div>
+                    ))}
                     
                     {/* Albergue (META) */}
                     <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
