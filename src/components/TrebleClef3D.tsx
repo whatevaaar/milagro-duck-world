@@ -77,46 +77,72 @@ function TrebleClefShape() {
         />
       </mesh>
       
-      {/* Notas musicales flotantes */}
-      {/* Primera nota */}
-      <mesh position={[0.8, 1.3, 0]}>
-        <sphereGeometry args={[0.08, 16, 16]} />
-        <meshStandardMaterial 
-          color="#C9A36A" 
-          metalness={0.9} 
-          roughness={0.1}
-          emissive="#B8860B"
-          emissiveIntensity={0.2}
-        />
-      </mesh>
-      <mesh position={[0.8, 1.5, 0]}>
-        <cylinderGeometry args={[0.02, 0.02, 0.4, 16]} />
-        <meshStandardMaterial 
-          color="#C9A36A" 
-          metalness={0.9} 
-          roughness={0.1}
-        />
-      </mesh>
+      {/* Notas musicales flotantes - mejoradas */}
+      {/* Primera nota - más grande y con más detalle */}
+      <group position={[0.7, 1.2, 0]}>
+        {/* Cabeza de la nota */}
+        <mesh rotation={[0, 0, -Math.PI / 6]}>
+          <sphereGeometry args={[0.12, 32, 32]} />
+          <meshStandardMaterial 
+            color="#C9A36A" 
+            metalness={0.95} 
+            roughness={0.05}
+            emissive="#D4AF37"
+            emissiveIntensity={0.3}
+          />
+        </mesh>
+        {/* Tallo de la nota */}
+        <mesh position={[0.08, 0.25, 0]}>
+          <cylinderGeometry args={[0.025, 0.025, 0.5, 16]} />
+          <meshStandardMaterial 
+            color="#C9A36A" 
+            metalness={0.95} 
+            roughness={0.05}
+          />
+        </mesh>
+        {/* Bandera de la nota */}
+        <mesh position={[0.08, 0.45, 0]} rotation={[0, 0, Math.PI / 4]}>
+          <boxGeometry args={[0.15, 0.08, 0.02]} />
+          <meshStandardMaterial 
+            color="#C9A36A" 
+            metalness={0.95} 
+            roughness={0.05}
+          />
+        </mesh>
+      </group>
       
-      {/* Segunda nota */}
-      <mesh position={[1.0, 1.5, 0]}>
-        <sphereGeometry args={[0.08, 16, 16]} />
-        <meshStandardMaterial 
-          color="#C9A36A" 
-          metalness={0.9} 
-          roughness={0.1}
-          emissive="#B8860B"
-          emissiveIntensity={0.2}
-        />
-      </mesh>
-      <mesh position={[1.0, 1.7, 0]}>
-        <cylinderGeometry args={[0.02, 0.02, 0.4, 16]} />
-        <meshStandardMaterial 
-          color="#C9A36A" 
-          metalness={0.9} 
-          roughness={0.1}
-        />
-      </mesh>
+      {/* Segunda nota - más grande y con más detalle */}
+      <group position={[0.95, 1.4, 0]}>
+        {/* Cabeza de la nota */}
+        <mesh rotation={[0, 0, -Math.PI / 6]}>
+          <sphereGeometry args={[0.12, 32, 32]} />
+          <meshStandardMaterial 
+            color="#C9A36A" 
+            metalness={0.95} 
+            roughness={0.05}
+            emissive="#D4AF37"
+            emissiveIntensity={0.3}
+          />
+        </mesh>
+        {/* Tallo de la nota */}
+        <mesh position={[0.08, 0.25, 0]}>
+          <cylinderGeometry args={[0.025, 0.025, 0.5, 16]} />
+          <meshStandardMaterial 
+            color="#C9A36A" 
+            metalness={0.95} 
+            roughness={0.05}
+          />
+        </mesh>
+        {/* Bandera de la nota */}
+        <mesh position={[0.08, 0.45, 0]} rotation={[0, 0, Math.PI / 4]}>
+          <boxGeometry args={[0.15, 0.08, 0.02]} />
+          <meshStandardMaterial 
+            color="#C9A36A" 
+            metalness={0.95} 
+            roughness={0.05}
+          />
+        </mesh>
+      </group>
     </group>
   );
 }
