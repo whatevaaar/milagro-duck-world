@@ -290,6 +290,7 @@ const Index = () => {
               </div>
               <Button 
                 size="lg" 
+                onClick={() => scrollToSection('funciones')}
                 className="w-full py-8 text-2xl font-bold bg-secondary hover:bg-secondary/90 rounded-3xl shadow-[0_8px_20px_-4px_hsl(33_100%_60%/0.4)] transform transition-all hover:scale-105"
               >
                 ¡Conoce más sobre la obra! 🎪
