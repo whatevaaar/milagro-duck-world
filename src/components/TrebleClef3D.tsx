@@ -4,64 +4,117 @@ import { Suspense } from 'react';
 
 function TrebleClefShape() {
   return (
-    <group rotation={[0, 0, 0]} scale={1.2}>
-      {/* Main spiral body - más grueso */}
-      <mesh position={[0, 0.5, 0]}>
-        <torusGeometry args={[0.3, 0.15, 32, 64, Math.PI * 1.5]} />
+    <group rotation={[0, 0, 0]} scale={1.3}>
+      {/* Spiral superior - parte característica de la clave de sol */}
+      <mesh position={[0, 1.2, 0]}>
+        <torusGeometry args={[0.25, 0.12, 32, 64, Math.PI * 2]} />
         <meshStandardMaterial 
-          color="#FFD700" 
-          metalness={0.8} 
+          color="#C9A36A" 
+          metalness={0.9} 
           roughness={0.1}
-          emissive="#FFA500"
-          emissiveIntensity={0.3}
+          emissive="#B8860B"
+          emissiveIntensity={0.2}
         />
       </mesh>
       
-      {/* Upper curve - más grueso */}
-      <mesh position={[0, 1, 0]} rotation={[0, 0, Math.PI]}>
-        <torusGeometry args={[0.2, 0.15, 32, 64, Math.PI]} />
+      {/* Curva superior derecha */}
+      <mesh position={[0.3, 1.5, 0]} rotation={[0, 0, Math.PI / 6]}>
+        <torusGeometry args={[0.15, 0.12, 32, 64, Math.PI]} />
         <meshStandardMaterial 
-          color="#FFD700" 
-          metalness={0.8} 
+          color="#C9A36A" 
+          metalness={0.9} 
           roughness={0.1}
-          emissive="#FFA500"
-          emissiveIntensity={0.3}
+          emissive="#B8860B"
+          emissiveIntensity={0.2}
         />
       </mesh>
       
-      {/* Vertical stem - más grueso */}
-      <mesh position={[0, 0, 0]}>
-        <cylinderGeometry args={[0.15, 0.15, 1.5, 32]} />
+      {/* Tallo vertical largo */}
+      <mesh position={[0.15, 0.3, 0]}>
+        <cylinderGeometry args={[0.12, 0.12, 2.2, 32]} />
         <meshStandardMaterial 
-          color="#FFD700" 
-          metalness={0.8} 
+          color="#C9A36A" 
+          metalness={0.9} 
           roughness={0.1}
-          emissive="#FFA500"
-          emissiveIntensity={0.3}
+          emissive="#B8860B"
+          emissiveIntensity={0.2}
         />
       </mesh>
       
-      {/* Bottom curve - más grueso */}
-      <mesh position={[0, -0.6, 0]} rotation={[0, 0, -Math.PI / 4]}>
-        <torusGeometry args={[0.15, 0.15, 32, 64, Math.PI * 1.2]} />
+      {/* Círculo central característico */}
+      <mesh position={[0.15, -0.1, 0]}>
+        <torusGeometry args={[0.35, 0.12, 32, 64]} />
         <meshStandardMaterial 
-          color="#FFD700" 
-          metalness={0.8} 
+          color="#C9A36A" 
+          metalness={0.9} 
           roughness={0.1}
-          emissive="#FFA500"
-          emissiveIntensity={0.3}
+          emissive="#B8860B"
+          emissiveIntensity={0.2}
         />
       </mesh>
       
-      {/* Dot at bottom - más grande */}
-      <mesh position={[0.15, -0.9, 0]}>
-        <sphereGeometry args={[0.15, 32, 32]} />
+      {/* Curva inferior */}
+      <mesh position={[0.2, -0.8, 0]} rotation={[0, 0, -Math.PI / 3]}>
+        <torusGeometry args={[0.2, 0.12, 32, 64, Math.PI * 1.3]} />
         <meshStandardMaterial 
-          color="#FFD700" 
-          metalness={0.8} 
+          color="#C9A36A" 
+          metalness={0.9} 
           roughness={0.1}
-          emissive="#FFA500"
-          emissiveIntensity={0.3}
+          emissive="#B8860B"
+          emissiveIntensity={0.2}
+        />
+      </mesh>
+      
+      {/* Bolita inferior */}
+      <mesh position={[0.35, -1.1, 0]}>
+        <sphereGeometry args={[0.18, 32, 32]} />
+        <meshStandardMaterial 
+          color="#C9A36A" 
+          metalness={0.9} 
+          roughness={0.1}
+          emissive="#B8860B"
+          emissiveIntensity={0.2}
+        />
+      </mesh>
+      
+      {/* Notas musicales flotantes */}
+      {/* Primera nota */}
+      <mesh position={[0.8, 1.3, 0]}>
+        <sphereGeometry args={[0.08, 16, 16]} />
+        <meshStandardMaterial 
+          color="#C9A36A" 
+          metalness={0.9} 
+          roughness={0.1}
+          emissive="#B8860B"
+          emissiveIntensity={0.2}
+        />
+      </mesh>
+      <mesh position={[0.8, 1.5, 0]}>
+        <cylinderGeometry args={[0.02, 0.02, 0.4, 16]} />
+        <meshStandardMaterial 
+          color="#C9A36A" 
+          metalness={0.9} 
+          roughness={0.1}
+        />
+      </mesh>
+      
+      {/* Segunda nota */}
+      <mesh position={[1.0, 1.5, 0]}>
+        <sphereGeometry args={[0.08, 16, 16]} />
+        <meshStandardMaterial 
+          color="#C9A36A" 
+          metalness={0.9} 
+          roughness={0.1}
+          emissive="#B8860B"
+          emissiveIntensity={0.2}
+        />
+      </mesh>
+      <mesh position={[1.0, 1.7, 0]}>
+        <cylinderGeometry args={[0.02, 0.02, 0.4, 16]} />
+        <meshStandardMaterial 
+          color="#C9A36A" 
+          metalness={0.9} 
+          roughness={0.1}
         />
       </mesh>
     </group>
