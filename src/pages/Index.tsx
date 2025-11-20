@@ -41,6 +41,8 @@ import patitoVideo6 from "@/assets/patito-video-6.mp4";
 import patitoVideo7 from "@/assets/patito-video-7.mp4";
 import patitoVideo8 from "@/assets/patito-video-8.mp4";
 import patitoVideo9 from "@/assets/patito-video-9.mp4";
+import patitoVideo10 from "@/assets/patito-video-10.mp4";
+import patitoVideo11 from "@/assets/patito-video-11.mp4";
 import patitoInicio from "@/assets/patito-inicio.jpg";
 import patitoPaso2 from "@/assets/patito-paso-2.jpg";
 import patitoPaso3 from "@/assets/patito-paso-3.jpg";
@@ -271,7 +273,7 @@ const Index = () => {
         <section id="videos" className="scroll-mt-20">
           <SectionCard title="🎬 Videos del Patito" description="¡Disfruta de los mejores momentos en video!">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[patitoVideo1, patitoVideo4, patitoVideo5, patitoVideo6, patitoVideo7, patitoVideo8, patitoVideo9].map((video, i) => (
+              {[patitoVideo1, patitoVideo4, patitoVideo5, patitoVideo6, patitoVideo7, patitoVideo8, patitoVideo9, patitoVideo10, patitoVideo11].map((video, i) => (
                 <div 
                   key={i}
                   className="aspect-video bg-muted rounded-3xl border-4 border-accent/30 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.4)]"
