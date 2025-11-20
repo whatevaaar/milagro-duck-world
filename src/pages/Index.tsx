@@ -656,7 +656,8 @@ const Index = () => {
                       <img 
                         src={cajaRegalo} 
                         alt="Caja de Regalo" 
-                        className="w-12 h-12 object-contain animate-bounce mix-blend-multiply brightness-110 contrast-125 saturate-150"
+                        className="w-12 h-12 object-contain animate-bounce mix-blend-multiply brightness-110 contrast-150 saturate-150 drop-shadow-[0_0_3px_rgba(0,0,0,0.8)]"
+                        style={{ filter: 'brightness(1.1) contrast(1.8) saturate(1.5) drop-shadow(0 0 2px rgba(0,0,0,0.9))' }}
                       />
                       <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
                     </div>
