@@ -21,7 +21,7 @@ export const DuckMenuButton = ({ icon: Icon, label, onClick, className }: DuckMe
       {/* Real Patito Milagro Image as Button */}
       <div className="relative w-16 h-20">
         {/* Patito Milagro Image */}
-        <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-[0_6px_16px_-4px_hsl(45_100%_51%/0.5)] border-3 border-white/40 group-hover:shadow-[0_10px_24px_-6px_hsl(45_100%_51%/0.7)] group-hover:border-primary/60 transition-all duration-300 bg-gradient-to-br from-primary/20 to-accent/20">
+        <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-[0_15px_30px_-8px_rgba(250,204,21,0.6)] border-4 border-yellow-400 group-hover:shadow-[0_20px_40px_-10px_rgba(250,204,21,0.8)] transition-all duration-300 bg-gradient-to-br from-primary/20 to-accent/20">
           <img 
             src={patitoButton} 
             alt="Patito Milagro" 
@@ -30,7 +30,7 @@ export const DuckMenuButton = ({ icon: Icon, label, onClick, className }: DuckMe
         </div>
         
         {/* Icon Badge below the image */}
-        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1.5 shadow-md group-hover:scale-110 transition-transform duration-300 border-2 border-primary/40 group-hover:border-primary/70">
+        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1.5 shadow-[0_8px_16px_-4px_rgba(250,204,21,0.5)] group-hover:scale-110 transition-transform duration-300 border-2 border-yellow-400">
           <Icon className="w-4 h-4 text-primary" />
         </div>
         
@@ -49,7 +49,7 @@ export const DuckMenuButton = ({ icon: Icon, label, onClick, className }: DuckMe
         <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 blur-xl -z-10" />
       </div>
       
-      <span className="font-bold text-[10px] text-foreground group-hover:text-primary transition-colors text-center whitespace-nowrap px-2 py-1 bg-white/90 rounded-full shadow-md group-hover:shadow-lg group-hover:scale-105 transition-all border border-primary/20 mt-0.5">
+      <span className="font-bold text-[10px] text-foreground group-hover:text-primary transition-colors text-center whitespace-nowrap px-2 py-1 bg-white/90 rounded-full shadow-[0_8px_16px_-4px_rgba(250,204,21,0.5)] group-hover:shadow-[0_12px_24px_-6px_rgba(250,204,21,0.7)] group-hover:scale-105 transition-all border-2 border-yellow-400 mt-0.5">
         {label}
       </span>
     </button>
