@@ -405,13 +405,13 @@ const Index = () => {
               </p>
               
               {/* Camino del Patito hacia su META */}
-              <div className="relative bg-gradient-to-r from-green-100 to-green-200 dark:from-green-900/20 dark:to-green-800/20 p-8 rounded-3xl border-4 border-yellow-400/50 overflow-hidden">
-                {/* Camino decorativo */}
-                <div className="absolute inset-0 opacity-30">
-                  <div className="h-full w-full" style={{
-                    backgroundImage: `repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(0,0,0,0.1) 20px, rgba(0,0,0,0.1) 40px)`
-                  }} />
-                </div>
+              <div className="relative p-8 rounded-3xl border-4 border-yellow-400/50 overflow-hidden">
+                {/* Fondo con imagen */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-40"
+                  style={{ backgroundImage: `url(${forestBackground})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/20 to-green-400/20" />
                 
                 <div className="relative space-y-6">
                   {/* Título del progreso */}
