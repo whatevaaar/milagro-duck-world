@@ -17,7 +17,7 @@ export default {
         sans: ["Fredoka", "sans-serif"],
         titan: ["Titan One", "cursive"],
         baloo: ["Baloo 2", "cursive"],
-        handwriting: ["Patrick Hand", "cursive"],
+        handwriting: ["Kalam", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",
