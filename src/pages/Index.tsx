@@ -650,7 +650,7 @@ const Index = () => {
                     <div className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-700/95 via-yellow-500/95 to-green-700/95 px-6 py-3 rounded-2xl border-2 border-yellow-400 shadow-2xl">
                       <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
                       <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(30,64,175,1)]">
-                        DONATIVOS RECIBIDOS: <span className="text-3xl md:text-4xl font-extrabold">{duckProgress}</span> / 5
+                        DONATIVOS RECIBIDOS
                       </p>
                       <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
                     </div>
