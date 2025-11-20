@@ -86,7 +86,7 @@ const Index = () => {
             </div>
             
             {/* Subtitle in bottom left corner */}
-            <div className="absolute bottom-[1%] left-[-0.5%] z-40 animate-float" style={{ animationDuration: '6s' }}>
+            <div className="absolute bottom-[-2%] left-[-0.5%] z-40 animate-float" style={{ animationDuration: '6s' }}>
               <p className="text-xs md:text-sm font-baloo font-bold text-yellow-400 px-4 py-2 inline-flex items-center gap-2 [text-shadow:_0_0_20px_rgba(253,224,71,1),_0_0_40px_rgba(234,179,8,0.8),_0_0_60px_rgba(234,179,8,0.6),_2px_2px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000] drop-shadow-[0_0_30px_rgba(253,224,71,1)]">
                 UN MUNDO DE FELICIDAD Y TERNURA 
                 <Sparkles className="w-3 h-3 md:w-4 md:h-4 inline-block text-orange-400 fill-orange-400 drop-shadow-[0_0_10px_rgba(251,146,60,1)]" />
