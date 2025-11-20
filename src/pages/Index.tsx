@@ -431,8 +431,8 @@ const Index = () => {
                      {/* Línea del camino - pasa por la mitad de las esferas */}
                      <div className="absolute top-[60%] left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
                      
-                    {/* INICIO - Patito en punto de partida */}
-                    <div className="absolute left-4 top-[60%] transform -translate-y-1/2">
+                     {/* INICIO - Patito en punto de partida */}
+                     <div className="absolute left-[2%] top-[60%] transform -translate-y-1/2">
                       <div className="flex flex-col items-center gap-1">
                         <img 
                           src={patitoInicio} 
@@ -445,8 +445,8 @@ const Index = () => {
                        </div>
                      </div>
                     
-                     {/* Punto 1 - Primera donación */}
-                     <div className="absolute left-[20%] top-1/2 transform -translate-y-1/2">
+                      {/* Punto 1 - Primera donación */}
+                      <div className="absolute left-[16%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
@@ -481,8 +481,8 @@ const Index = () => {
                        </div>
                      </div>
                     
-                     {/* Punto 2 - Segunda donación */}
-                     <div className="absolute left-[36%] top-1/2 transform -translate-y-1/2">
+                      {/* Punto 2 - Segunda donación */}
+                      <div className="absolute left-[30%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
@@ -517,8 +517,8 @@ const Index = () => {
                        </div>
                      </div>
                     
-                     {/* Punto 3 - Tercera donación */}
-                     <div className="absolute left-[52%] top-1/2 transform -translate-y-1/2">
+                      {/* Punto 3 - Tercera donación */}
+                      <div className="absolute left-[44%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
@@ -553,8 +553,8 @@ const Index = () => {
                        </div>
                      </div>
                     
-                     {/* Punto 4 - Cuarta donación */}
-                     <div className="absolute left-[68%] top-1/2 transform -translate-y-1/2">
+                      {/* Punto 4 - Cuarta donación */}
+                      <div className="absolute left-[58%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
@@ -589,8 +589,8 @@ const Index = () => {
                        </div>
                      </div>
                     
-                     {/* Punto 5 - Quinta donación */}
-                     <div className="absolute left-[84%] top-1/2 transform -translate-y-1/2">
+                      {/* Punto 5 - Quinta donación */}
+                      <div className="absolute left-[72%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
@@ -625,8 +625,8 @@ const Index = () => {
                        </div>
                      </div>
                     
-                     {/* Albergue (META) */}
-                     <div className="absolute right-4 top-[60%] transform -translate-y-1/2">
+                      {/* Albergue (META) */}
+                      <div className="absolute left-[86%] top-[60%] transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                           <img 
                             src={albergueFinal} 
