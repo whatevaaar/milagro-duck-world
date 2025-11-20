@@ -42,6 +42,7 @@ const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
   const [showGames, setShowGames] = useState(false);
   const [showColoring, setShowColoring] = useState(false);
+  const [duckProgress, setDuckProgress] = useState(0);
   
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -401,6 +402,103 @@ const Index = () => {
               <p className="text-xl text-foreground text-center leading-relaxed">
                 Patito Milagro tiene un gran sueño en donde tú eres el protagonista principal, ya que a través de tu donativo, podrá cumplir que su gran sueño, se vuelva realidad, ya que Patito Milagro quiere conseguir un espacio, para construir un hermoso albergue que se llamará <strong className="text-yellow-400">EL MUNDO DE PATITO MILAGRO</strong>, donde construirá un hermoso albergue donde todos los patitos que no tienen un hogar digno o un lugar donde vivir, puedan vivir, de una manera feliz y maravillosa, para que el ser pato se convierta en una verdadera experiencia de amor y ternura para los patitos que decidan vivir aquí, es por ello que gracias a tu donativo, el gran sueño de Patito Milagro, se convertirá en un verdadero MILAGRO de amor, ternura y esperanza para los patitos, si te gustaría ayudar a que Patito Milagro llegue a su meta de cumplir su gran sueño, te compartimos su número de cuenta de Patito Milagro para que Patito Milagro pueda llegar a su meta lo antes posible, de cumplirse su sueño, te invitará a que asistas y cortes el listón de la apertura del albergue: <strong className="text-yellow-400">EL MUNDO DE PATITO MILAGRO</strong>, ¿te animas?, ¡mil gracias!! por tu DONATIVO. 🦆💫💛
               </p>
+              
+              {/* Camino del Patito hacia su META */}
+              <div className="relative bg-gradient-to-r from-green-100 to-green-200 dark:from-green-900/20 dark:to-green-800/20 p-8 rounded-3xl border-4 border-yellow-400/50 overflow-hidden">
+                {/* Camino decorativo */}
+                <div className="absolute inset-0 opacity-30">
+                  <div className="h-full w-full" style={{
+                    backgroundImage: `repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(0,0,0,0.1) 20px, rgba(0,0,0,0.1) 40px)`
+                  }} />
+                </div>
+                
+                <div className="relative space-y-6">
+                  {/* Título del progreso */}
+                  <h3 className="text-2xl font-bold text-center text-yellow-600 dark:text-yellow-400 drop-shadow-lg">
+                    🏠 Camino hacia EL MUNDO DE PATITO MILAGRO 🏠
+                  </h3>
+                  
+                  {/* Área del camino con patito y albergue */}
+                  <div className="relative h-32 bg-yellow-100/50 dark:bg-yellow-900/20 rounded-2xl border-2 border-yellow-400/30 overflow-hidden">
+                    {/* Línea del camino */}
+                    <div className="absolute top-1/2 left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
+                    
+                    {/* Marcadores de progreso (5 puntos) */}
+                    {[0, 1, 2, 3, 4].map((step) => (
+                      <div
+                        key={step}
+                        className={`absolute top-1/2 transform -translate-y-1/2 w-3 h-3 rounded-full ${
+                          step < duckProgress ? 'bg-yellow-400' : 'bg-gray-300'
+                        }`}
+                        style={{ left: `calc(${(step * 20) + 10}% + ${step * 20}px)` }}
+                      />
+                    ))}
+                    
+                    {/* Patito caminando */}
+                    <div 
+                      className="absolute top-1/2 transform -translate-y-1/2 transition-all duration-700 ease-in-out"
+                      style={{ 
+                        left: `${(duckProgress * 20) + 5}%`,
+                        transform: `translateY(-50%) ${duckProgress === 5 ? 'scale(1.2)' : 'scale(1)'}`
+                      }}
+                    >
+                      <div className={`text-5xl ${duckProgress < 5 ? 'animate-bounce' : 'animate-pulse'}`}>
+                        🦆
+                      </div>
+                    </div>
+                    
+                    {/* Albergue (META) */}
+                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                      <div className={`text-6xl ${duckProgress === 5 ? 'animate-bounce' : ''}`}>
+                        🏠
+                      </div>
+                      {duckProgress === 5 && (
+                        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                          <span className="text-2xl animate-bounce">🎉 ¡META! 🎉</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  
+                  {/* Contador de donativos */}
+                  <div className="text-center">
+                    <p className="text-lg font-semibold text-foreground">
+                      Donativos recibidos: <span className="text-yellow-600 dark:text-yellow-400 text-2xl">{duckProgress}</span> / 5
+                    </p>
+                  </div>
+                  
+                  {/* Botones de donativo */}
+                  <div className="flex justify-center gap-3 flex-wrap">
+                    {[1, 2, 3, 4, 5].map((donation) => (
+                      <Button
+                        key={donation}
+                        onClick={() => setDuckProgress(donation)}
+                        disabled={duckProgress >= donation}
+                        size="sm"
+                        className={`px-6 py-6 text-lg font-bold rounded-2xl transition-all ${
+                          duckProgress >= donation
+                            ? 'bg-green-500 hover:bg-green-600 cursor-default'
+                            : 'bg-yellow-500 hover:bg-yellow-600 hover:scale-110'
+                        }`}
+                      >
+                        {duckProgress >= donation ? '✅' : '💛'} Donativo {donation}
+                      </Button>
+                    ))}
+                  </div>
+                  
+                  {duckProgress === 5 && (
+                    <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 p-6 rounded-2xl text-center animate-pulse">
+                      <p className="text-xl font-bold text-white drop-shadow-lg">
+                        🎊 ¡FELICIDADES! ¡Patito Milagro llegó a su META! 🎊
+                      </p>
+                      <p className="text-lg text-white mt-2">
+                        ¡Estás invitado a cortar el listón de inauguración! 🎀
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+              
               <Button 
                 size="lg" 
                 className="w-full py-8 text-2xl font-bold bg-secondary hover:bg-secondary/90 rounded-3xl shadow-[0_12px_30px_-8px_hsl(33_100%_60%/0.4)] transform transition-all hover:scale-105"
