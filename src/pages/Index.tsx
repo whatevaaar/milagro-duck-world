@@ -421,31 +421,32 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 to-green-400/10" />
                 
                 <div className="relative space-y-6">
-                  {/* Imagen de DONATE arriba */}
-                  <div className="flex justify-center">
-                    <img 
-                      src={donateImage} 
-                      alt="Donate" 
-                      className="w-full max-w-2xl rounded-3xl shadow-2xl border-4 border-yellow-400"
-                    />
-                  </div>
-                  
-                  {/* Botones de donativo */}
-                  <div className="flex justify-center gap-4 flex-wrap">
+                  {/* Imágenes de DONATE con números 1-5 */}
+                  <div className="flex justify-center gap-6 flex-wrap items-center">
                     {[1, 2, 3, 4, 5].map((donation) => (
-                      <Button
+                      <div
                         key={donation}
                         onClick={() => setDuckProgress(donation)}
-                        disabled={duckProgress >= donation}
-                        size="lg"
-                        className={`px-8 py-8 text-xl font-bold rounded-3xl transition-all shadow-lg ${
-                          duckProgress >= donation
-                            ? 'bg-green-500 hover:bg-green-600 cursor-default text-white'
-                            : 'bg-yellow-500 hover:bg-yellow-600 hover:scale-110 text-white'
+                        className={`relative cursor-pointer transition-all hover:scale-110 ${
+                          duckProgress >= donation ? 'opacity-70' : 'opacity-100'
                         }`}
                       >
-                        {duckProgress >= donation ? '✅ COMPLETADO' : '💛 DONATIVO'} {donation}
-                      </Button>
+                        <div className="relative">
+                          <img 
+                            src={donateImage} 
+                            alt={`Donate ${donation}`}
+                            className="w-40 h-auto rounded-2xl shadow-2xl border-4 border-yellow-400"
+                          />
+                          <div className="absolute -right-4 -top-4 bg-yellow-500 text-white font-bold text-3xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                            {donation}
+                          </div>
+                          {duckProgress >= donation && (
+                            <div className="absolute inset-0 bg-green-500/30 rounded-2xl flex items-center justify-center">
+                              <span className="text-6xl">✅</span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     ))}
                   </div>
                   
