@@ -627,7 +627,7 @@ const Index = () => {
                      </div>
                     
                       {/* Albergue (META) */}
-                      <div className="absolute left-[86%] top-[66%] transform -translate-y-1/2">
+                      <div className="absolute left-[86%] top-[65%] transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                           <img 
                             src={albergueFinal} 
