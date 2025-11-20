@@ -448,6 +448,10 @@ const Index = () => {
                     {/* Punto 1 - Primera donación */}
                     <div className="absolute left-[18%] bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
+                        {/* Texto DONACION arriba */}
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
+                          DONACIÓN
+                        </span>
                         {/* Imagen DONATE 1 */}
                         <div
                           onClick={() => setDuckProgress(1)}
@@ -460,9 +464,6 @@ const Index = () => {
                             alt="Donate 1"
                             className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
                           />
-                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
-                            1
-                          </div>
                           {duckProgress >= 1 && (
                             <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
                               <span className="text-2xl">✅</span>
@@ -483,6 +484,10 @@ const Index = () => {
                     {/* Punto 2 - Segunda donación */}
                     <div className="absolute left-[33%] bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
+                        {/* Texto DONACION arriba */}
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
+                          DONACIÓN
+                        </span>
                         {/* Imagen DONATE 2 */}
                         <div
                           onClick={() => setDuckProgress(2)}
@@ -495,9 +500,6 @@ const Index = () => {
                             alt="Donate 2"
                             className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
                           />
-                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
-                            2
-                          </div>
                           {duckProgress >= 2 && (
                             <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
                               <span className="text-2xl">✅</span>
@@ -518,6 +520,10 @@ const Index = () => {
                     {/* Punto 3 - Tercera donación */}
                     <div className="absolute left-[48%] bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
+                        {/* Texto DONACION arriba */}
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
+                          DONACIÓN
+                        </span>
                         {/* Imagen DONATE 3 */}
                         <div
                           onClick={() => setDuckProgress(3)}
@@ -530,9 +536,6 @@ const Index = () => {
                             alt="Donate 3"
                             className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
                           />
-                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
-                            3
-                          </div>
                           {duckProgress >= 3 && (
                             <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
                               <span className="text-2xl">✅</span>
@@ -553,6 +556,10 @@ const Index = () => {
                     {/* Punto 4 - Cuarta donación */}
                     <div className="absolute left-[63%] bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
+                        {/* Texto DONACION arriba */}
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
+                          DONACIÓN
+                        </span>
                         {/* Imagen DONATE 4 */}
                         <div
                           onClick={() => setDuckProgress(4)}
@@ -565,9 +572,6 @@ const Index = () => {
                             alt="Donate 4"
                             className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
                           />
-                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
-                            4
-                          </div>
                           {duckProgress >= 4 && (
                             <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
                               <span className="text-2xl">✅</span>
@@ -588,6 +592,10 @@ const Index = () => {
                     {/* Punto 5 - Quinta donación */}
                     <div className="absolute left-[78%] bottom-6 transform">
                       <div className="flex flex-col items-center gap-2">
+                        {/* Texto DONACION arriba */}
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
+                          DONACIÓN
+                        </span>
                         {/* Imagen DONATE 5 */}
                         <div
                           onClick={() => setDuckProgress(5)}
@@ -600,9 +608,6 @@ const Index = () => {
                             alt="Donate 5"
                             className="w-12 h-auto rounded-lg shadow-lg border-2 border-yellow-400"
                           />
-                          <div className="absolute -right-1 -top-1 bg-yellow-500 text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
-                            5
-                          </div>
                           {duckProgress >= 5 && (
                             <div className="absolute inset-0 bg-green-500/30 rounded-lg flex items-center justify-center">
                               <span className="text-2xl">✅</span>
