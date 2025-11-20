@@ -431,14 +431,14 @@ const Index = () => {
                      {/* Línea del camino - pasa por la mitad de las esferas */}
                      <div className="absolute top-1/2 left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
                      
-                     {/* INICIO - Patito en punto de partida */}
-                     <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
-                       <div className="flex flex-col items-center gap-1">
-                         <img 
-                           src={patitoInicio} 
-                           alt="Patito Milagro - Inicio" 
-                           className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
-                         />
+                    {/* INICIO - Patito en punto de partida */}
+                    <div className="absolute left-4 top-[52%] transform -translate-y-1/2">
+                      <div className="flex flex-col items-center gap-1">
+                        <img 
+                          src={patitoInicio} 
+                          alt="Patito Milagro - Inicio" 
+                          className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
+                        />
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            INICIO
                          </span>
