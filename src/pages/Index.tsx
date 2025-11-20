@@ -647,9 +647,9 @@ const Index = () => {
                   
                   {/* Contador de donativos */}
                   <div className="text-center">
-                    <div className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-900/90 via-purple-800/90 to-purple-900/90 px-6 py-3 rounded-2xl border-2 border-yellow-400 shadow-2xl">
+                    <div className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-700/95 via-yellow-500/95 to-green-700/95 px-6 py-3 rounded-2xl border-2 border-yellow-400 shadow-2xl">
                       <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
-                      <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(253,224,71,1)]">
+                      <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white via-yellow-100 to-white bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(253,224,71,1)]">
                         DONATIVOS RECIBIDOS: <span className="text-3xl md:text-4xl font-extrabold">{duckProgress}</span> / 5
                       </p>
                       <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
