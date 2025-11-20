@@ -421,13 +421,13 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 to-green-400/10" />
                 
                 <div className="relative space-y-6">
-                  {/* Imágenes de DONATE con números 1-5 */}
-                  <div className="flex justify-center gap-6 flex-wrap items-center">
+                  {/* Imágenes de DONATE con números 1-5 - más pequeñas y en línea */}
+                  <div className="flex justify-center gap-3 items-center">
                     {[1, 2, 3, 4, 5].map((donation) => (
                       <div
                         key={donation}
                         onClick={() => setDuckProgress(donation)}
-                        className={`relative cursor-pointer transition-all hover:scale-110 ${
+                        className={`relative cursor-pointer transition-all hover:scale-105 ${
                           duckProgress >= donation ? 'opacity-70' : 'opacity-100'
                         }`}
                       >
@@ -435,14 +435,14 @@ const Index = () => {
                           <img 
                             src={donateImage} 
                             alt={`Donate ${donation}`}
-                            className="w-40 h-auto rounded-2xl shadow-2xl border-4 border-yellow-400"
+                            className="w-24 h-auto rounded-xl shadow-xl border-3 border-yellow-400"
                           />
-                          <div className="absolute -right-4 -top-4 bg-yellow-500 text-white font-bold text-3xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                          <div className="absolute -right-2 -top-2 bg-yellow-500 text-white font-bold text-xl w-8 h-8 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
                             {donation}
                           </div>
                           {duckProgress >= donation && (
-                            <div className="absolute inset-0 bg-green-500/30 rounded-2xl flex items-center justify-center">
-                              <span className="text-6xl">✅</span>
+                            <div className="absolute inset-0 bg-green-500/30 rounded-xl flex items-center justify-center">
+                              <span className="text-4xl">✅</span>
                             </div>
                           )}
                         </div>
@@ -461,12 +461,12 @@ const Index = () => {
                     <div className="absolute top-1/2 left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
                     
                     {/* INICIO - Patito en punto de partida */}
-                    <div className="absolute left-[6%] top-1/2 transform -translate-y-1/2">
+                    <div className="absolute left-[5%] top-1/2 transform -translate-y-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoInicio} 
                           alt="Patito Milagro - Inicio" 
-                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
+                          className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
                         />
                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           INICIO
@@ -475,84 +475,84 @@ const Index = () => {
                     </div>
                     
                     {/* Punto 1 - Primera donación */}
-                    <div className="absolute left-[21%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[20%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso2} 
                           alt="Patito Milagro - Paso 1" 
-                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                          className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
-                        <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           ETAPA 1
                         </span>
                       </div>
                     </div>
                     
                     {/* Punto 2 - Segunda donación */}
-                    <div className="absolute left-[36%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[35%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso4} 
                           alt="Patito Milagro - Paso 2" 
-                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                          className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
-                        <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           ETAPA 2
                         </span>
                       </div>
                     </div>
                     
                     {/* Punto 3 - Tercera donación */}
-                    <div className="absolute left-[51%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[50%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso3} 
                           alt="Patito Milagro - Paso 3" 
-                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                          className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
-                        <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           ETAPA 3
                         </span>
                       </div>
                     </div>
                     
                     {/* Punto 4 - Cuarta donación */}
-                    <div className="absolute left-[66%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[65%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso5} 
                           alt="Patito Milagro - Paso 4" 
-                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                          className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
-                        <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           ETAPA 4
                         </span>
                       </div>
                     </div>
                     
                     {/* Punto 5 - Quinta donación */}
-                    <div className="absolute left-[81%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute left-[80%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={patitoPaso6} 
                           alt="Patito Milagro - Paso 5" 
-                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
+                          className="w-20 h-20 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
-                        <span className="text-base font-bold text-yellow-600 dark:text-yellow-400 mt-1">
+                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           ETAPA 5
                         </span>
                       </div>
                     </div>
                     
                     {/* Albergue (META) */}
-                    <div className="absolute right-[3%] top-1/2 transform -translate-y-1/2">
+                    <div className="absolute left-[95%] top-1/2 transform -translate-y-1/2 -translate-x-1/2">
                       <div className="flex flex-col items-center">
                         <img 
                           src={albergueFinal} 
                           alt="Albergue Patito Milagro" 
-                          className={`w-32 h-32 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
+                          className={`w-24 h-24 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
                         />
-                        <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-2">
+                        <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 mt-2">
                           SUEÑO CUMPLIDO
                         </span>
                         {duckProgress === 5 && (
