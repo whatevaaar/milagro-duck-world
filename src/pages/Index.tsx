@@ -280,11 +280,9 @@ const Index = () => {
           <SectionCard title="🎭 La Obra de Teatro" description="¡Una historia mágica que no te puedes perder!">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-8 rounded-3xl border-4 border-primary/30">
-                <h3 className="text-3xl font-bold text-primary mb-4">✨ El Viaje del Patito Milagro ✨</h3>
+                <h3 className="text-3xl font-bold text-primary mb-4">✨ Las Memorias de un Representante Médico ✨</h3>
                 <p className="text-xl text-foreground leading-relaxed">
-                  Una hermosa historia sobre amistad, valentía y amor. 
-                  El Patito Milagro emprende una aventura mágica para ayudar a sus amigos 
-                  y descubrir el verdadero significado de la felicidad. 
+                  Se trata de un rinconcito donde Patito Milagro decidió emprender su viaje artístico hacia una obra de teatro donde él participa como el patito que se recupera de una fuerte gripita y que su dueño Alets va por él muy feliz y contento para volverlo a cuidar con muchísimo amor y cariño. Esta obra donde participa Patito Milagro se llama Las Memorias de un Representante Médico. 
                   ¡Una experiencia inolvidable para toda la familia! 🌟
                 </p>
               </div>
