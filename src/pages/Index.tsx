@@ -423,7 +423,7 @@ const Index = () => {
                 
                 <div className="relative space-y-6">
                   {/* Título del progreso ARRIBA */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-center text-yellow-600 dark:text-yellow-400 drop-shadow-lg mb-2">
+                  <h3 className="text-2xl md:text-3xl font-bold text-center bg-gradient-to-r from-green-600 via-yellow-500 to-green-600 bg-clip-text text-transparent drop-shadow-lg mb-2">
                     🏠 Camino hacia EL MUNDO DE PATITO MILAGRO 🏠
                   </h3>
                   
