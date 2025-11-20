@@ -431,7 +431,7 @@ const Index = () => {
                         <img 
                           src={patitoInicio} 
                           alt="Patito Milagro - Inicio" 
-                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
+                          className="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
                         />
                         <span className="text-sm font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           INICIO
@@ -445,13 +445,9 @@ const Index = () => {
                         <img 
                           src={patitoPaso2} 
                           alt="Patito Milagro - Paso 1" 
-                          className={`w-20 h-20 object-cover rounded-full border-4 shadow-lg transition-all ${
-                            duckProgress >= 1 ? 'border-yellow-400 scale-110' : 'border-gray-400 opacity-50 grayscale'
-                          }`}
+                          className="w-32 h-32 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
                         />
-                        <span className={`text-lg font-bold mt-1 transition-colors ${
-                          duckProgress >= 1 ? 'text-yellow-600 dark:text-yellow-400' : 'text-gray-400'
-                        }`}>
+                        <span className="text-lg font-bold text-yellow-600 dark:text-yellow-400 mt-1">
                           1
                         </span>
                       </div>
