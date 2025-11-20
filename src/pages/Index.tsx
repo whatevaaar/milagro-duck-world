@@ -647,9 +647,13 @@ const Index = () => {
                   
                   {/* Contador de donativos */}
                   <div className="text-center">
-                    <p className="text-xl font-bold text-yellow-600 dark:text-yellow-400">
-                      Donativos recibidos: <span className="text-yellow-600 dark:text-yellow-400 text-2xl">{duckProgress}</span> / 5
-                    </p>
+                    <div className="flex items-center justify-center gap-2">
+                      <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+                      <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(250,204,21,0.8)] animate-pulse">
+                        DONATIVOS RECIBIDOS: <span className="text-3xl md:text-4xl">{duckProgress}</span> / 5
+                      </p>
+                      <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+                    </div>
                   </div>
                   
                   {duckProgress === 5 && (
