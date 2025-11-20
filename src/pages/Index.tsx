@@ -86,8 +86,8 @@ const Index = () => {
             </div>
             
             {/* Subtitle in bottom left corner */}
-            <div className="absolute bottom-[8%] left-[-0.5%] z-40">
-              <p className="text-lg md:text-xl font-titan text-yellow-400 px-4 py-2 inline-block drop-shadow-[0_0_20px_rgba(255,215,0,0.8)] [text-shadow:_2px_2px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000]">
+            <div className="absolute bottom-[2%] left-[-0.5%] z-40">
+              <p className="text-base md:text-lg font-titan text-yellow-400 px-4 py-2 inline-block drop-shadow-[0_0_20px_rgba(255,215,0,0.8)] [text-shadow:_2px_2px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000]">
                 Un mundo de felicidad y ternura ✨🦆💛
               </p>
             </div>
