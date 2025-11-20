@@ -429,10 +429,10 @@ const Index = () => {
                    {/* Área del camino con patito y albergue */}
                    <div className="relative h-64 bg-yellow-100/50 dark:bg-yellow-900/20 rounded-2xl border-2 border-yellow-400/30 overflow-hidden">
                      {/* Línea del camino - pasa por la mitad de las esferas */}
-                     <div className="absolute top-1/2 left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
+                     <div className="absolute top-[60%] left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
                      
                     {/* INICIO - Patito en punto de partida */}
-                    <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
+                    <div className="absolute left-4 top-[60%] transform -translate-y-1/2">
                       <div className="flex flex-col items-center gap-1">
                         <img 
                           src={patitoInicio} 
@@ -626,7 +626,7 @@ const Index = () => {
                      </div>
                     
                      {/* Albergue (META) */}
-                     <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                     <div className="absolute right-4 top-[60%] transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          <img 
                            src={albergueFinal} 
