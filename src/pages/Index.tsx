@@ -58,7 +58,7 @@ const Index = () => {
   const [showGames, setShowGames] = useState(false);
   const [showColoring, setShowColoring] = useState(false);
   const [duckProgress, setDuckProgress] = useState(0);
-  const [isGreenLightActive, setIsGreenLightActive] = useState(false);
+  const [activeStageLight, setActiveStageLight] = useState<number | null>(null);
   
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -93,22 +93,11 @@ const Index = () => {
             
             {/* Central Patito Logo - GRANDE CENTRADO */}
             <div className="relative z-10 flex flex-col items-center -mt-16">
-              <div className="relative animate-float">
-                {/* Green phosphorescent glow when active */}
-                {isGreenLightActive && (
-                  <>
-                    <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                    <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
-                  </>
-                )}
+              <div className="animate-float">
                 <img 
                   src={patitoHero} 
                   alt="Patito Milagro"
-                  className={`w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full border-8 bg-white/90 transition-all duration-300 ${
-                    isGreenLightActive 
-                      ? 'shadow-[0_30px_60px_-15px_rgba(74,222,128,0.9),0_0_80px_20px_rgba(74,222,128,0.6)] border-green-400' 
-                      : 'shadow-[0_30px_60px_-15px_rgba(250,204,21,0.9)] border-yellow-400'
-                  }`}
+                  className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-[0_30px_60px_-15px_rgba(250,204,21,0.9)] border-8 border-yellow-400 bg-white/90"
                 />
               </div>
             </div>
@@ -248,28 +237,6 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Green Light Activation Button */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40">
-              <button
-                onClick={() => setIsGreenLightActive(!isGreenLightActive)}
-                className={`relative px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
-                  isGreenLightActive
-                    ? 'bg-green-400 text-green-900 shadow-[0_8px_30px_-4px_rgba(74,222,128,0.9),0_0_60px_10px_rgba(74,222,128,0.6)] border-4 border-green-300'
-                    : 'bg-green-200 text-green-800 shadow-[0_8px_20px_-4px_rgba(134,239,172,0.6)] border-4 border-green-300 hover:bg-green-300'
-                }`}
-              >
-                {isGreenLightActive && (
-                  <>
-                    <div className="absolute inset-0 rounded-full bg-green-400 blur-xl opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                    <div className="absolute inset-0 rounded-full bg-green-300 blur-lg opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
-                  </>
-                )}
-                <span className="relative z-10">
-                  {isGreenLightActive ? '✨ Luz Activada ✨' : '💡 Activar Luz Verde'}
-                </span>
-              </button>
             </div>
           </div>
         </div>
@@ -515,14 +482,46 @@ const Index = () => {
                              </div>
                            )}
                          </div>
-                          <img 
-                            src={patitoPaso2} 
-                            alt="Patito Milagro - Paso 1" 
-                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                          />
+                         <div className="relative">
+                           {/* Green phosphorescent glow when active */}
+                           {activeStageLight === 1 && (
+                             <>
+                               <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                             </>
+                           )}
+                           <img 
+                             src={patitoPaso2} 
+                             alt="Patito Milagro - Paso 1" 
+                             className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
+                               activeStageLight === 1 
+                                 ? 'border-green-400 shadow-[0_0_40px_10px_rgba(74,222,128,0.8)]' 
+                                 : 'border-yellow-400'
+                             }`}
+                           />
+                         </div>
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 1
                          </span>
+                         {/* Green Light Button */}
+                         <button
+                           onClick={() => setActiveStageLight(activeStageLight === 1 ? null : 1)}
+                           className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
+                             activeStageLight === 1
+                               ? 'bg-green-400 text-green-900 shadow-[0_4px_20px_-2px_rgba(74,222,128,0.9),0_0_30px_5px_rgba(74,222,128,0.6)]'
+                               : 'bg-green-200 text-green-800 shadow-[0_4px_15px_-2px_rgba(134,239,172,0.6)] hover:bg-green-300'
+                           }`}
+                         >
+                           {activeStageLight === 1 && (
+                             <>
+                               <div className="absolute inset-0 rounded-full bg-green-400 blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-green-300 blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                             </>
+                           )}
+                           <span className="relative z-10">
+                             {activeStageLight === 1 ? '✨' : '💡'}
+                           </span>
+                         </button>
                        </div>
                      </div>
                     
@@ -551,14 +550,44 @@ const Index = () => {
                              </div>
                            )}
                          </div>
-                          <img 
-                            src={patitoPaso4} 
-                            alt="Patito Milagro - Paso 2" 
-                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                          />
+                         <div className="relative">
+                           {activeStageLight === 2 && (
+                             <>
+                               <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                             </>
+                           )}
+                           <img 
+                             src={patitoPaso4} 
+                             alt="Patito Milagro - Paso 2" 
+                             className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
+                               activeStageLight === 2 
+                                 ? 'border-green-400 shadow-[0_0_40px_10px_rgba(74,222,128,0.8)]' 
+                                 : 'border-yellow-400'
+                             }`}
+                           />
+                         </div>
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 2
                          </span>
+                         <button
+                           onClick={() => setActiveStageLight(activeStageLight === 2 ? null : 2)}
+                           className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
+                             activeStageLight === 2
+                               ? 'bg-green-400 text-green-900 shadow-[0_4px_20px_-2px_rgba(74,222,128,0.9),0_0_30px_5px_rgba(74,222,128,0.6)]'
+                               : 'bg-green-200 text-green-800 shadow-[0_4px_15px_-2px_rgba(134,239,172,0.6)] hover:bg-green-300'
+                           }`}
+                         >
+                           {activeStageLight === 2 && (
+                             <>
+                               <div className="absolute inset-0 rounded-full bg-green-400 blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-green-300 blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                             </>
+                           )}
+                           <span className="relative z-10">
+                             {activeStageLight === 2 ? '✨' : '💡'}
+                           </span>
+                         </button>
                        </div>
                      </div>
                     
@@ -587,14 +616,44 @@ const Index = () => {
                              </div>
                            )}
                          </div>
-                          <img 
-                            src={patitoPaso3} 
-                            alt="Patito Milagro - Paso 3" 
-                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                          />
+                         <div className="relative">
+                           {activeStageLight === 3 && (
+                             <>
+                               <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                             </>
+                           )}
+                           <img 
+                             src={patitoPaso3} 
+                             alt="Patito Milagro - Paso 3" 
+                             className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
+                               activeStageLight === 3 
+                                 ? 'border-green-400 shadow-[0_0_40px_10px_rgba(74,222,128,0.8)]' 
+                                 : 'border-yellow-400'
+                             }`}
+                           />
+                         </div>
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 3
                          </span>
+                         <button
+                           onClick={() => setActiveStageLight(activeStageLight === 3 ? null : 3)}
+                           className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
+                             activeStageLight === 3
+                               ? 'bg-green-400 text-green-900 shadow-[0_4px_20px_-2px_rgba(74,222,128,0.9),0_0_30px_5px_rgba(74,222,128,0.6)]'
+                               : 'bg-green-200 text-green-800 shadow-[0_4px_15px_-2px_rgba(134,239,172,0.6)] hover:bg-green-300'
+                           }`}
+                         >
+                           {activeStageLight === 3 && (
+                             <>
+                               <div className="absolute inset-0 rounded-full bg-green-400 blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-green-300 blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                             </>
+                           )}
+                           <span className="relative z-10">
+                             {activeStageLight === 3 ? '✨' : '💡'}
+                           </span>
+                         </button>
                        </div>
                      </div>
                     
@@ -623,14 +682,44 @@ const Index = () => {
                              </div>
                            )}
                          </div>
-                          <img 
-                            src={patitoPaso5} 
-                            alt="Patito Milagro - Paso 4" 
-                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                          />
+                         <div className="relative">
+                           {activeStageLight === 4 && (
+                             <>
+                               <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                             </>
+                           )}
+                           <img 
+                             src={patitoPaso5} 
+                             alt="Patito Milagro - Paso 4" 
+                             className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
+                               activeStageLight === 4 
+                                 ? 'border-green-400 shadow-[0_0_40px_10px_rgba(74,222,128,0.8)]' 
+                                 : 'border-yellow-400'
+                             }`}
+                           />
+                         </div>
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 4
                          </span>
+                         <button
+                           onClick={() => setActiveStageLight(activeStageLight === 4 ? null : 4)}
+                           className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
+                             activeStageLight === 4
+                               ? 'bg-green-400 text-green-900 shadow-[0_4px_20px_-2px_rgba(74,222,128,0.9),0_0_30px_5px_rgba(74,222,128,0.6)]'
+                               : 'bg-green-200 text-green-800 shadow-[0_4px_15px_-2px_rgba(134,239,172,0.6)] hover:bg-green-300'
+                           }`}
+                         >
+                           {activeStageLight === 4 && (
+                             <>
+                               <div className="absolute inset-0 rounded-full bg-green-400 blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-green-300 blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                             </>
+                           )}
+                           <span className="relative z-10">
+                             {activeStageLight === 4 ? '✨' : '💡'}
+                           </span>
+                         </button>
                        </div>
                      </div>
                     
@@ -659,14 +748,44 @@ const Index = () => {
                              </div>
                            )}
                          </div>
-                          <img 
-                            src={patitoPaso6} 
-                            alt="Patito Milagro - Paso 5" 
-                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg transition-all"
-                          />
+                         <div className="relative">
+                           {activeStageLight === 5 && (
+                             <>
+                               <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                             </>
+                           )}
+                           <img 
+                             src={patitoPaso6} 
+                             alt="Patito Milagro - Paso 5" 
+                             className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
+                               activeStageLight === 5 
+                                 ? 'border-green-400 shadow-[0_0_40px_10px_rgba(74,222,128,0.8)]' 
+                                 : 'border-yellow-400'
+                             }`}
+                           />
+                         </div>
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 5
                          </span>
+                         <button
+                           onClick={() => setActiveStageLight(activeStageLight === 5 ? null : 5)}
+                           className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
+                             activeStageLight === 5
+                               ? 'bg-green-400 text-green-900 shadow-[0_4px_20px_-2px_rgba(74,222,128,0.9),0_0_30px_5px_rgba(74,222,128,0.6)]'
+                               : 'bg-green-200 text-green-800 shadow-[0_4px_15px_-2px_rgba(134,239,172,0.6)] hover:bg-green-300'
+                           }`}
+                         >
+                           {activeStageLight === 5 && (
+                             <>
+                               <div className="absolute inset-0 rounded-full bg-green-400 blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-green-300 blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                             </>
+                           )}
+                           <span className="relative z-10">
+                             {activeStageLight === 5 ? '✨' : '💡'}
+                           </span>
+                         </button>
                        </div>
                      </div>
                     
