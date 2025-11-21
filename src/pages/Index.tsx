@@ -53,7 +53,7 @@ import albergueFinal from "@/assets/albergue-final.jpg";
 import donateImage from "@/assets/donate-image.jpg";
 import cajaRegalo from "@/assets/caja-regalo.jpg";
 import botonSeleccion from "@/assets/boton-seleccion.jpg";
-import botonDorado from "@/assets/boton-dorado-sin-fondo.png";
+import botonDorado from "@/assets/boton-dorado-transparente.png";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -800,7 +800,8 @@ const Index = () => {
                            <img 
                              src={botonDorado} 
                              alt="Botón dorado" 
-                             className="relative w-10 h-10 object-contain"
+                             className="relative w-10 h-10 object-contain mix-blend-multiply"
+                             style={{ filter: 'drop-shadow(0 0 10px rgba(234, 179, 8, 0.6))' }}
                            />
                          </button>
                        </div>
