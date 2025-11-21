@@ -54,6 +54,7 @@ import donateImage from "@/assets/donate-image.jpg";
 import cajaRegalo from "@/assets/caja-regalo.jpg";
 import botonSeleccion from "@/assets/boton-seleccion.jpg";
 import botonDorado from "@/assets/boton-dorado-nuevo-2.png";
+import victoriaDorada from "@/assets/victoria-dorada.jpg";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -764,47 +765,47 @@ const Index = () => {
                     
                      {/* Albergue (META) */}
                        <div className="absolute left-[86%] top-1/2 transform -translate-y-1/2">
-                       <div className="flex flex-col items-center gap-1">
-                          <img 
-                            src={albergueFinal} 
-                            alt="Albergue Patito Milagro" 
-                            className={`w-24 h-24 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
-                          />
-                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
-                           SUEÑO CUMPLIDO
-                         </span>
-                         {duckProgress === 5 && (
-                           <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                             <span className="text-xl animate-bounce">🎉 ¡META! 🎉</span>
-                           </div>
-                         )}
-                         {/* Golden Button */}
-                         <button
-                           onClick={() => setIsGoldenLightActive(!isGoldenLightActive)}
-                           className={`relative mt-1 transition-all duration-300 transform hover:scale-110 ${
-                             isGoldenLightActive ? 'opacity-100' : 'opacity-70 hover:opacity-90'
-                           }`}
-                         >
-                           {isGoldenLightActive && (
-                             <>
-                               {/* Golden glow effect */}
-                               <div className="absolute inset-0 rounded-full bg-yellow-400 blur-xl opacity-70 animate-pulse" style={{ animationDuration: '1.5s' }} />
-                               <div className="absolute inset-0 rounded-full bg-amber-500 blur-lg opacity-50 animate-pulse" style={{ animationDuration: '2s', animationDelay: '0.3s' }} />
-                               {/* Sparkles */}
-                               <div className="absolute -top-2 -left-2 text-yellow-300 animate-ping" style={{ animationDuration: '1s' }}>✨</div>
-                               <div className="absolute -top-2 -right-2 text-amber-400 animate-ping" style={{ animationDuration: '1.2s', animationDelay: '0.2s' }}>⭐</div>
-                               <div className="absolute -bottom-2 -left-2 text-yellow-400 animate-ping" style={{ animationDuration: '1.4s', animationDelay: '0.4s' }}>✨</div>
-                               <div className="absolute -bottom-2 -right-2 text-amber-300 animate-ping" style={{ animationDuration: '1.6s', animationDelay: '0.6s' }}>⭐</div>
-                             </>
-                           )}
+                        <div className="flex flex-col items-center gap-1">
                            <img 
-                             src={botonDorado} 
-                             alt="Botón dorado" 
-                             className="relative w-10 h-10 object-contain"
+                             src={albergueFinal} 
+                             alt="Albergue Patito Milagro" 
+                             className={`w-24 h-24 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
                            />
-                         </button>
-                       </div>
-                     </div>
+                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                            SUEÑO CUMPLIDO
+                          </span>
+                          {duckProgress === 5 && (
+                            <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                              <span className="text-xl animate-bounce">🎉 ¡META! 🎉</span>
+                            </div>
+                          )}
+                          {/* Golden Button */}
+                          <button
+                            onClick={() => setIsGoldenLightActive(!isGoldenLightActive)}
+                            className={`relative mt-1 transition-all duration-300 transform hover:scale-110 ${
+                              isGoldenLightActive ? 'opacity-100' : 'opacity-70 hover:opacity-90'
+                            }`}
+                          >
+                            {isGoldenLightActive && (
+                              <>
+                                {/* Golden glow effect */}
+                                <div className="absolute inset-0 rounded-full bg-yellow-400 blur-xl opacity-70 animate-pulse" style={{ animationDuration: '1.5s' }} />
+                                <div className="absolute inset-0 rounded-full bg-amber-500 blur-lg opacity-50 animate-pulse" style={{ animationDuration: '2s', animationDelay: '0.3s' }} />
+                                {/* Sparkles */}
+                                <div className="absolute -top-2 -left-2 text-yellow-300 animate-ping" style={{ animationDuration: '1s' }}>✨</div>
+                                <div className="absolute -top-2 -right-2 text-amber-400 animate-ping" style={{ animationDuration: '1.2s', animationDelay: '0.2s' }}>⭐</div>
+                                <div className="absolute -bottom-2 -left-2 text-yellow-400 animate-ping" style={{ animationDuration: '1.4s', animationDelay: '0.4s' }}>✨</div>
+                                <div className="absolute -bottom-2 -right-2 text-amber-300 animate-ping" style={{ animationDuration: '1.6s', animationDelay: '0.6s' }}>⭐</div>
+                              </>
+                            )}
+                            <img 
+                              src={victoriaDorada} 
+                              alt="Victoria dorada" 
+                              className="relative w-10 h-10 object-contain"
+                            />
+                          </button>
+                        </div>
+                      </div>
                   </div>
                   
                   {/* Contador de donativos */}
