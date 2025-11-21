@@ -53,7 +53,7 @@ import albergueFinal from "@/assets/albergue-final.jpg";
 import donateImage from "@/assets/donate-image.jpg";
 import cajaRegalo from "@/assets/caja-regalo.jpg";
 import botonSeleccion from "@/assets/boton-seleccion.jpg";
-import botonDorado from "@/assets/boton-dorado.jpg";
+import botonDorado from "@/assets/boton-dorado-sin-fondo.png";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
