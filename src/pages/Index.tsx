@@ -114,10 +114,10 @@ const Index = () => {
             
             {/* Title above the duck */}
             <div className="absolute -top-8 sm:-top-12 left-1/2 transform -translate-x-1/2 text-center z-40 w-full px-2">
-              <h1 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-titan text-yellow-400 drop-shadow-[0_0_30px_rgba(255,215,0,0.9)] [text-shadow:_2px_2px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000] px-3 sm:px-6 py-2 sm:py-3 inline-block">
+              <h1 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-titan text-yellow-400 drop-shadow-[0_0_30px_rgba(255,215,0,0.9)] [text-shadow:_2px_2px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000] px-3 sm:px-6 py-2 sm:py-3 block">
                 EL MUNDO DE PATITO
               </h1>
-              <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-titan text-yellow-400 drop-shadow-[0_0_30px_rgba(255,215,0,0.9)] [text-shadow:_2px_2px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000] px-3 sm:px-6 py-1 sm:py-2 inline-block mt-1">
+              <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-titan text-yellow-400 drop-shadow-[0_0_30px_rgba(255,215,0,0.9)] [text-shadow:_2px_2px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000] px-3 sm:px-6 py-1 sm:py-2 block mt-0">
                 MILAGRO
               </h2>
             </div>
