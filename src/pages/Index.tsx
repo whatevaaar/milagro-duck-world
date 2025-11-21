@@ -42,6 +42,10 @@ import patitoNavidad7 from "@/assets/patito-navidad-7.jpg";
 import patitoNavidad8 from "@/assets/patito-navidad-8.jpg";
 import patitoNavidad9 from "@/assets/patito-navidad-9.jpg";
 import patitoNavidad10 from "@/assets/patito-navidad-10.jpg";
+import patitoNavidad11 from "@/assets/patito-navidad-11.jpg";
+import patitoNavidad12 from "@/assets/patito-navidad-12.jpg";
+import patitoNavidad13 from "@/assets/patito-navidad-13.jpg";
+import patitoNavidad14 from "@/assets/patito-navidad-14.jpg";
 import patitoVideo1 from "@/assets/patito-video-1.mp4";
 import patitoVideo2 from "@/assets/patito-video-2.mp4";
 import patitoVideo3 from "@/assets/patito-video-3.mp4";
@@ -268,7 +272,7 @@ const Index = () => {
         <section id="fotos" className="scroll-mt-20">
           <SectionCard title="📸 Galería de Fotos" description="¡Mira todas las aventuras del Patito Milagro!">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {[patito1, patito2, patito3, patito4, patito5, patito6, patito7, patito8, patito9, patitoNavidad1, patitoNavidad2, patitoNavidad3, patitoNavidad4, patitoNavidad5, patitoNavidad6, patitoNavidad7, patitoNavidad8, patitoNavidad9, patitoNavidad10].map((img, i) => (
+              {[patito1, patito2, patito3, patito4, patito5, patito6, patito7, patito8, patito9, patitoNavidad1, patitoNavidad2, patitoNavidad3, patitoNavidad4, patitoNavidad5, patitoNavidad6, patitoNavidad7, patitoNavidad8, patitoNavidad9, patitoNavidad10, patitoNavidad11, patitoNavidad12, patitoNavidad13, patitoNavidad14].map((img, i) => (
                 <div 
                   key={i}
                   className="aspect-square bg-muted rounded-3xl border-4 border-primary/20 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.4)] cursor-pointer"
