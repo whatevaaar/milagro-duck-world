@@ -443,19 +443,19 @@ const Index = () => {
                      {/* Línea del camino - pasa por la mitad de las esferas */}
                      <div className="absolute top-[60%] left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
                      
-                     {/* INICIO - Patito en punto de partida */}
-                     <div className="absolute left-[2%] top-[65%] transform -translate-y-1/2">
-                      <div className="flex flex-col items-center gap-1">
-                        <img 
-                          src={patitoInicio} 
-                          alt="Patito Milagro - Inicio" 
-                          className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
-                        />
-                         <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
-                           INICIO
-                         </span>
-                       </div>
-                     </div>
+                      {/* INICIO - Patito en punto de partida */}
+                      <div className="absolute left-[2%] top-1/2 transform -translate-y-1/2">
+                       <div className="flex flex-col items-center gap-1">
+                         <img 
+                           src={patitoInicio} 
+                           alt="Patito Milagro - Inicio" 
+                           className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
+                         />
+                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                            INICIO
+                          </span>
+                        </div>
+                      </div>
                     
                       {/* Punto 1 - Primera donación */}
                       <div className="absolute left-[16%] top-1/2 transform -translate-y-1/2">
@@ -486,8 +486,8 @@ const Index = () => {
                            {/* Green phosphorescent glow when active */}
                            {activeStageLight === 1 && (
                              <>
-                               <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
                            <img 
@@ -495,7 +495,7 @@ const Index = () => {
                              alt="Patito Milagro - Paso 1" 
                              className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
                                activeStageLight === 1 
-                                 ? 'border-green-400 shadow-[0_0_40px_10px_rgba(74,222,128,0.8)]' 
+                                 ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
                                  : 'border-yellow-400'
                              }`}
                            />
@@ -508,14 +508,14 @@ const Index = () => {
                            onClick={() => setActiveStageLight(activeStageLight === 1 ? null : 1)}
                            className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
                              activeStageLight === 1
-                               ? 'bg-green-400 text-green-900 shadow-[0_4px_20px_-2px_rgba(74,222,128,0.9),0_0_30px_5px_rgba(74,222,128,0.6)]'
-                               : 'bg-green-200 text-green-800 shadow-[0_4px_15px_-2px_rgba(134,239,172,0.6)] hover:bg-green-300'
+                               ? 'bg-[rgb(124,179,66)] text-white shadow-[0_4px_20px_-2px_rgba(106,176,76,0.9),0_0_30px_5px_rgba(102,255,102,0.6)]'
+                               : 'bg-[rgb(156,204,101)] text-green-900 shadow-[0_4px_15px_-2px_rgba(139,195,74,0.6)] hover:bg-[rgb(139,195,74)]'
                            }`}
                          >
                            {activeStageLight === 1 && (
                              <>
-                               <div className="absolute inset-0 rounded-full bg-green-400 blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-green-300 blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
                            <span className="relative z-10">
@@ -553,8 +553,8 @@ const Index = () => {
                          <div className="relative">
                            {activeStageLight === 2 && (
                              <>
-                               <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
                            <img 
@@ -562,7 +562,7 @@ const Index = () => {
                              alt="Patito Milagro - Paso 2" 
                              className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
                                activeStageLight === 2 
-                                 ? 'border-green-400 shadow-[0_0_40px_10px_rgba(74,222,128,0.8)]' 
+                                 ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
                                  : 'border-yellow-400'
                              }`}
                            />
@@ -574,14 +574,14 @@ const Index = () => {
                            onClick={() => setActiveStageLight(activeStageLight === 2 ? null : 2)}
                            className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
                              activeStageLight === 2
-                               ? 'bg-green-400 text-green-900 shadow-[0_4px_20px_-2px_rgba(74,222,128,0.9),0_0_30px_5px_rgba(74,222,128,0.6)]'
-                               : 'bg-green-200 text-green-800 shadow-[0_4px_15px_-2px_rgba(134,239,172,0.6)] hover:bg-green-300'
+                               ? 'bg-[rgb(124,179,66)] text-white shadow-[0_4px_20px_-2px_rgba(106,176,76,0.9),0_0_30px_5px_rgba(102,255,102,0.6)]'
+                               : 'bg-[rgb(156,204,101)] text-green-900 shadow-[0_4px_15px_-2px_rgba(139,195,74,0.6)] hover:bg-[rgb(139,195,74)]'
                            }`}
                          >
                            {activeStageLight === 2 && (
                              <>
-                               <div className="absolute inset-0 rounded-full bg-green-400 blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-green-300 blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
                            <span className="relative z-10">
@@ -619,8 +619,8 @@ const Index = () => {
                          <div className="relative">
                            {activeStageLight === 3 && (
                              <>
-                               <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
                            <img 
@@ -628,7 +628,7 @@ const Index = () => {
                              alt="Patito Milagro - Paso 3" 
                              className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
                                activeStageLight === 3 
-                                 ? 'border-green-400 shadow-[0_0_40px_10px_rgba(74,222,128,0.8)]' 
+                                 ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
                                  : 'border-yellow-400'
                              }`}
                            />
@@ -640,14 +640,14 @@ const Index = () => {
                            onClick={() => setActiveStageLight(activeStageLight === 3 ? null : 3)}
                            className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
                              activeStageLight === 3
-                               ? 'bg-green-400 text-green-900 shadow-[0_4px_20px_-2px_rgba(74,222,128,0.9),0_0_30px_5px_rgba(74,222,128,0.6)]'
-                               : 'bg-green-200 text-green-800 shadow-[0_4px_15px_-2px_rgba(134,239,172,0.6)] hover:bg-green-300'
+                               ? 'bg-[rgb(124,179,66)] text-white shadow-[0_4px_20px_-2px_rgba(106,176,76,0.9),0_0_30px_5px_rgba(102,255,102,0.6)]'
+                               : 'bg-[rgb(156,204,101)] text-green-900 shadow-[0_4px_15px_-2px_rgba(139,195,74,0.6)] hover:bg-[rgb(139,195,74)]'
                            }`}
                          >
                            {activeStageLight === 3 && (
                              <>
-                               <div className="absolute inset-0 rounded-full bg-green-400 blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-green-300 blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
                            <span className="relative z-10">
@@ -685,8 +685,8 @@ const Index = () => {
                          <div className="relative">
                            {activeStageLight === 4 && (
                              <>
-                               <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
                            <img 
@@ -694,7 +694,7 @@ const Index = () => {
                              alt="Patito Milagro - Paso 4" 
                              className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
                                activeStageLight === 4 
-                                 ? 'border-green-400 shadow-[0_0_40px_10px_rgba(74,222,128,0.8)]' 
+                                 ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
                                  : 'border-yellow-400'
                              }`}
                            />
@@ -706,14 +706,14 @@ const Index = () => {
                            onClick={() => setActiveStageLight(activeStageLight === 4 ? null : 4)}
                            className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
                              activeStageLight === 4
-                               ? 'bg-green-400 text-green-900 shadow-[0_4px_20px_-2px_rgba(74,222,128,0.9),0_0_30px_5px_rgba(74,222,128,0.6)]'
-                               : 'bg-green-200 text-green-800 shadow-[0_4px_15px_-2px_rgba(134,239,172,0.6)] hover:bg-green-300'
+                               ? 'bg-[rgb(124,179,66)] text-white shadow-[0_4px_20px_-2px_rgba(106,176,76,0.9),0_0_30px_5px_rgba(102,255,102,0.6)]'
+                               : 'bg-[rgb(156,204,101)] text-green-900 shadow-[0_4px_15px_-2px_rgba(139,195,74,0.6)] hover:bg-[rgb(139,195,74)]'
                            }`}
                          >
                            {activeStageLight === 4 && (
                              <>
-                               <div className="absolute inset-0 rounded-full bg-green-400 blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-green-300 blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
                            <span className="relative z-10">
@@ -751,8 +751,8 @@ const Index = () => {
                          <div className="relative">
                            {activeStageLight === 5 && (
                              <>
-                               <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-3xl opacity-70 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
                            <img 
@@ -760,7 +760,7 @@ const Index = () => {
                              alt="Patito Milagro - Paso 5" 
                              className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
                                activeStageLight === 5 
-                                 ? 'border-green-400 shadow-[0_0_40px_10px_rgba(74,222,128,0.8)]' 
+                                 ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
                                  : 'border-yellow-400'
                              }`}
                            />
@@ -772,14 +772,14 @@ const Index = () => {
                            onClick={() => setActiveStageLight(activeStageLight === 5 ? null : 5)}
                            className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
                              activeStageLight === 5
-                               ? 'bg-green-400 text-green-900 shadow-[0_4px_20px_-2px_rgba(74,222,128,0.9),0_0_30px_5px_rgba(74,222,128,0.6)]'
-                               : 'bg-green-200 text-green-800 shadow-[0_4px_15px_-2px_rgba(134,239,172,0.6)] hover:bg-green-300'
+                               ? 'bg-[rgb(124,179,66)] text-white shadow-[0_4px_20px_-2px_rgba(106,176,76,0.9),0_0_30px_5px_rgba(102,255,102,0.6)]'
+                               : 'bg-[rgb(156,204,101)] text-green-900 shadow-[0_4px_15px_-2px_rgba(139,195,74,0.6)] hover:bg-[rgb(139,195,74)]'
                            }`}
                          >
                            {activeStageLight === 5 && (
                              <>
-                               <div className="absolute inset-0 rounded-full bg-green-400 blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-green-300 blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
                            <span className="relative z-10">
@@ -790,7 +790,7 @@ const Index = () => {
                      </div>
                     
                       {/* Albergue (META) */}
-                      <div className="absolute left-[86%] top-[64.5%] transform -translate-y-1/2">
+                      <div className="absolute left-[86%] top-1/2 transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                           <img 
                             src={albergueFinal} 
