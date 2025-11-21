@@ -88,7 +88,7 @@ export default {
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-5px)" },
+          "50%": { transform: "translateY(-3px)" },
         },
         bounce: {
           "0%, 100%": { transform: "scale(1)" },
