@@ -448,7 +448,7 @@ const Index = () => {
                      <div className="absolute top-[60%] left-4 right-4 h-1 bg-yellow-400/50 transform -translate-y-1/2" />
                      
                        {/* INICIO - Patito en punto de partida */}
-                       <div className="absolute left-[2%] top-[60%] transform -translate-y-1/2">
+                       <div className="absolute left-[2%] top-[56%] transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          <img 
                            src={patitoInicio} 
@@ -771,9 +771,9 @@ const Index = () => {
                              alt="Albergue Patito Milagro" 
                              className={`w-24 h-24 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
                            />
-                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
-                            SUEÑO CUMPLIDO
-                          </span>
+                           <span className="-mt-1 text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                             SUEÑO CUMPLIDO
+                           </span>
                           {duckProgress === 5 && (
                             <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
                               <span className="text-xl animate-bounce">🎉 ¡META! 🎉</span>
