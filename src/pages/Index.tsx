@@ -52,6 +52,7 @@ import patitoPaso6 from "@/assets/patito-paso-6.jpg";
 import albergueFinal from "@/assets/albergue-final.jpg";
 import donateImage from "@/assets/donate-image.jpg";
 import cajaRegalo from "@/assets/caja-regalo.jpg";
+import botonSeleccion from "@/assets/boton-seleccion.jpg";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -506,21 +507,15 @@ const Index = () => {
                          {/* Green Light Button */}
                          <button
                            onClick={() => setActiveStageLight(activeStageLight === 1 ? null : 1)}
-                           className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
-                             activeStageLight === 1
-                               ? 'bg-[rgb(124,179,66)] text-white shadow-[0_4px_20px_-2px_rgba(106,176,76,0.9),0_0_30px_5px_rgba(102,255,102,0.6)]'
-                               : 'bg-[rgb(156,204,101)] text-green-900 shadow-[0_4px_15px_-2px_rgba(139,195,74,0.6)] hover:bg-[rgb(139,195,74)]'
+                           className={`relative mt-1 transition-all duration-300 transform hover:scale-110 ${
+                             activeStageLight === 1 ? 'opacity-100' : 'opacity-70 hover:opacity-90'
                            }`}
                          >
-                           {activeStageLight === 1 && (
-                             <>
-                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
-                             </>
-                           )}
-                           <span className="relative z-10">
-                             {activeStageLight === 1 ? '✨' : '💡'}
-                           </span>
+                           <img 
+                             src={botonSeleccion} 
+                             alt="Botón de selección" 
+                             className="w-8 h-8 object-contain"
+                           />
                          </button>
                        </div>
                      </div>
@@ -572,21 +567,15 @@ const Index = () => {
                          </span>
                          <button
                            onClick={() => setActiveStageLight(activeStageLight === 2 ? null : 2)}
-                           className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
-                             activeStageLight === 2
-                               ? 'bg-[rgb(124,179,66)] text-white shadow-[0_4px_20px_-2px_rgba(106,176,76,0.9),0_0_30px_5px_rgba(102,255,102,0.6)]'
-                               : 'bg-[rgb(156,204,101)] text-green-900 shadow-[0_4px_15px_-2px_rgba(139,195,74,0.6)] hover:bg-[rgb(139,195,74)]'
+                           className={`relative mt-1 transition-all duration-300 transform hover:scale-110 ${
+                             activeStageLight === 2 ? 'opacity-100' : 'opacity-70 hover:opacity-90'
                            }`}
                          >
-                           {activeStageLight === 2 && (
-                             <>
-                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
-                             </>
-                           )}
-                           <span className="relative z-10">
-                             {activeStageLight === 2 ? '✨' : '💡'}
-                           </span>
+                           <img 
+                             src={botonSeleccion} 
+                             alt="Botón de selección" 
+                             className="w-8 h-8 object-contain"
+                           />
                          </button>
                        </div>
                      </div>
@@ -638,21 +627,15 @@ const Index = () => {
                          </span>
                          <button
                            onClick={() => setActiveStageLight(activeStageLight === 3 ? null : 3)}
-                           className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
-                             activeStageLight === 3
-                               ? 'bg-[rgb(124,179,66)] text-white shadow-[0_4px_20px_-2px_rgba(106,176,76,0.9),0_0_30px_5px_rgba(102,255,102,0.6)]'
-                               : 'bg-[rgb(156,204,101)] text-green-900 shadow-[0_4px_15px_-2px_rgba(139,195,74,0.6)] hover:bg-[rgb(139,195,74)]'
+                           className={`relative mt-1 transition-all duration-300 transform hover:scale-110 ${
+                             activeStageLight === 3 ? 'opacity-100' : 'opacity-70 hover:opacity-90'
                            }`}
                          >
-                           {activeStageLight === 3 && (
-                             <>
-                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
-                             </>
-                           )}
-                           <span className="relative z-10">
-                             {activeStageLight === 3 ? '✨' : '💡'}
-                           </span>
+                           <img 
+                             src={botonSeleccion} 
+                             alt="Botón de selección" 
+                             className="w-8 h-8 object-contain"
+                           />
                          </button>
                        </div>
                      </div>
@@ -704,21 +687,15 @@ const Index = () => {
                          </span>
                          <button
                            onClick={() => setActiveStageLight(activeStageLight === 4 ? null : 4)}
-                           className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
-                             activeStageLight === 4
-                               ? 'bg-[rgb(124,179,66)] text-white shadow-[0_4px_20px_-2px_rgba(106,176,76,0.9),0_0_30px_5px_rgba(102,255,102,0.6)]'
-                               : 'bg-[rgb(156,204,101)] text-green-900 shadow-[0_4px_15px_-2px_rgba(139,195,74,0.6)] hover:bg-[rgb(139,195,74)]'
+                           className={`relative mt-1 transition-all duration-300 transform hover:scale-110 ${
+                             activeStageLight === 4 ? 'opacity-100' : 'opacity-70 hover:opacity-90'
                            }`}
                          >
-                           {activeStageLight === 4 && (
-                             <>
-                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
-                             </>
-                           )}
-                           <span className="relative z-10">
-                             {activeStageLight === 4 ? '✨' : '💡'}
-                           </span>
+                           <img 
+                             src={botonSeleccion} 
+                             alt="Botón de selección" 
+                             className="w-8 h-8 object-contain"
+                           />
                          </button>
                        </div>
                      </div>
@@ -770,21 +747,15 @@ const Index = () => {
                          </span>
                          <button
                            onClick={() => setActiveStageLight(activeStageLight === 5 ? null : 5)}
-                           className={`relative mt-1 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 transform hover:scale-105 ${
-                             activeStageLight === 5
-                               ? 'bg-[rgb(124,179,66)] text-white shadow-[0_4px_20px_-2px_rgba(106,176,76,0.9),0_0_30px_5px_rgba(102,255,102,0.6)]'
-                               : 'bg-[rgb(156,204,101)] text-green-900 shadow-[0_4px_15px_-2px_rgba(139,195,74,0.6)] hover:bg-[rgb(139,195,74)]'
+                           className={`relative mt-1 transition-all duration-300 transform hover:scale-110 ${
+                             activeStageLight === 5 ? 'opacity-100' : 'opacity-70 hover:opacity-90'
                            }`}
                          >
-                           {activeStageLight === 5 && (
-                             <>
-                               <div className="absolute inset-0 rounded-full bg-[rgb(102,255,102)] blur-lg opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
-                               <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-md opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
-                             </>
-                           )}
-                           <span className="relative z-10">
-                             {activeStageLight === 5 ? '✨' : '💡'}
-                           </span>
+                           <img 
+                             src={botonSeleccion} 
+                             alt="Botón de selección" 
+                             className="w-8 h-8 object-contain"
+                           />
                          </button>
                        </div>
                      </div>
