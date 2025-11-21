@@ -450,11 +450,12 @@ const Index = () => {
                        {/* INICIO - Patito en punto de partida */}
                        <div className="absolute left-[2%] top-[56%] transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
-                         <img 
-                           src={patitoInicio} 
-                           alt="Patito Milagro - Inicio" 
-                           className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg"
-                         />
+                          <img 
+                            src={patitoInicio} 
+                            alt="Patito Milagro - Inicio" 
+                            className="w-24 h-24 object-cover rounded-full border-4 border-yellow-400 shadow-lg animate-float"
+                            style={{ animationDelay: '0s', animationDuration: '3s' }}
+                          />
                           <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                             INICIO
                           </span>
@@ -494,15 +495,16 @@ const Index = () => {
                                <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
-                           <img 
-                             src={patitoPaso2} 
-                             alt="Patito Milagro - Paso 1" 
-                             className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
-                               activeStageLight === 1 
-                                 ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
-                                 : 'border-yellow-400'
-                             }`}
-                           />
+                            <img 
+                              src={patitoPaso2} 
+                              alt="Patito Milagro - Paso 1" 
+                              className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 animate-float ${
+                                activeStageLight === 1 
+                                  ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
+                                  : 'border-yellow-400'
+                              }`}
+                              style={{ animationDelay: '0.5s', animationDuration: '3.2s' }}
+                            />
                          </div>
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 1
@@ -555,15 +557,16 @@ const Index = () => {
                                <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
-                           <img 
-                             src={patitoPaso4} 
-                             alt="Patito Milagro - Paso 2" 
-                             className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
-                               activeStageLight === 2 
-                                 ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
-                                 : 'border-yellow-400'
-                             }`}
-                           />
+                            <img 
+                              src={patitoPaso4} 
+                              alt="Patito Milagro - Paso 2" 
+                              className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 animate-float ${
+                                activeStageLight === 2 
+                                  ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
+                                  : 'border-yellow-400'
+                              }`}
+                              style={{ animationDelay: '1s', animationDuration: '3.4s' }}
+                            />
                          </div>
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 2
@@ -615,15 +618,16 @@ const Index = () => {
                                <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
-                           <img 
-                             src={patitoPaso3} 
-                             alt="Patito Milagro - Paso 3" 
-                             className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
-                               activeStageLight === 3 
-                                 ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
-                                 : 'border-yellow-400'
-                             }`}
-                           />
+                            <img 
+                              src={patitoPaso3} 
+                              alt="Patito Milagro - Paso 3" 
+                              className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 animate-float ${
+                                activeStageLight === 3 
+                                  ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
+                                  : 'border-yellow-400'
+                              }`}
+                              style={{ animationDelay: '1.5s', animationDuration: '3.6s' }}
+                            />
                          </div>
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 3
@@ -675,15 +679,16 @@ const Index = () => {
                                <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
-                           <img 
-                             src={patitoPaso5} 
-                             alt="Patito Milagro - Paso 4" 
-                             className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
-                               activeStageLight === 4 
-                                 ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
-                                 : 'border-yellow-400'
-                             }`}
-                           />
+                            <img 
+                              src={patitoPaso5} 
+                              alt="Patito Milagro - Paso 4" 
+                              className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 animate-float ${
+                                activeStageLight === 4 
+                                  ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
+                                  : 'border-yellow-400'
+                              }`}
+                              style={{ animationDelay: '2s', animationDuration: '3.8s' }}
+                            />
                          </div>
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 4
@@ -735,15 +740,16 @@ const Index = () => {
                                <div className="absolute inset-0 rounded-full bg-[rgb(139,195,74)] blur-2xl opacity-50 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
                              </>
                            )}
-                           <img 
-                             src={patitoPaso6} 
-                             alt="Patito Milagro - Paso 5" 
-                             className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 ${
-                               activeStageLight === 5 
-                                 ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
-                                 : 'border-yellow-400'
-                             }`}
-                           />
+                            <img 
+                              src={patitoPaso6} 
+                              alt="Patito Milagro - Paso 5" 
+                              className={`relative w-24 h-24 object-cover rounded-full border-4 shadow-lg transition-all duration-300 animate-float ${
+                                activeStageLight === 5 
+                                  ? 'border-[rgb(106,176,76)] shadow-[0_0_40px_10px_rgba(106,176,76,0.8)]' 
+                                  : 'border-yellow-400'
+                              }`}
+                              style={{ animationDelay: '2.5s', animationDuration: '4s' }}
+                            />
                          </div>
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400">
                            ETAPA 5
@@ -769,7 +775,8 @@ const Index = () => {
                            <img 
                              src={albergueFinal} 
                              alt="Albergue Patito Milagro" 
-                             className={`w-24 h-24 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : ''}`}
+                             className={`w-24 h-24 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl transition-all ${duckProgress === 5 ? 'animate-bounce' : 'animate-float'}`}
+                             style={{ animationDelay: '0.3s', animationDuration: '3.5s' }}
                            />
                            <span className="-mt-1 text-xs font-bold text-yellow-600 dark:text-yellow-400">
                              SUEÑO CUMPLIDO
