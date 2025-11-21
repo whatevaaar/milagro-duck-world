@@ -53,7 +53,7 @@ import albergueFinal from "@/assets/albergue-final.jpg";
 import donateImage from "@/assets/donate-image.jpg";
 import cajaRegalo from "@/assets/caja-regalo.jpg";
 import botonSeleccion from "@/assets/boton-seleccion.jpg";
-import botonDorado from "@/assets/boton-dorado-frente.png";
+import botonDorado from "@/assets/boton-dorado-sin-fondo.png";
 
 const Index = () => {
   const [activeGame, setActiveGame] = useState<"memorama" | "guess" | "count" | "adventure">("memorama");
@@ -461,7 +461,7 @@ const Index = () => {
                       </div>
                     
                       {/* Punto 1 - Primera donación */}
-                      <div className="absolute left-[16%] top-[58%] transform -translate-y-1/2">
+                      <div className="absolute left-[16%] top-[68%] transform -translate-y-1/2">
                        <div className="flex flex-col items-center gap-1">
                          {/* Texto DONACION arriba */}
                          <span className="text-xs font-bold text-yellow-600 dark:text-yellow-400 tracking-wide">
