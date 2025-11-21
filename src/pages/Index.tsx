@@ -58,6 +58,7 @@ const Index = () => {
   const [showGames, setShowGames] = useState(false);
   const [showColoring, setShowColoring] = useState(false);
   const [duckProgress, setDuckProgress] = useState(0);
+  const [isGreenLightActive, setIsGreenLightActive] = useState(false);
   
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -92,11 +93,22 @@ const Index = () => {
             
             {/* Central Patito Logo - GRANDE CENTRADO */}
             <div className="relative z-10 flex flex-col items-center -mt-16">
-              <div className="animate-float">
+              <div className="relative animate-float">
+                {/* Green phosphorescent glow when active */}
+                {isGreenLightActive && (
+                  <>
+                    <div className="absolute inset-0 rounded-full bg-green-400 blur-3xl opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                    <div className="absolute inset-0 rounded-full bg-green-300 blur-2xl opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                  </>
+                )}
                 <img 
                   src={patitoHero} 
                   alt="Patito Milagro"
-                  className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-[0_30px_60px_-15px_rgba(250,204,21,0.9)] border-8 border-yellow-400 bg-white/90"
+                  className={`w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full border-8 bg-white/90 transition-all duration-300 ${
+                    isGreenLightActive 
+                      ? 'shadow-[0_30px_60px_-15px_rgba(74,222,128,0.9),0_0_80px_20px_rgba(74,222,128,0.6)] border-green-400' 
+                      : 'shadow-[0_30px_60px_-15px_rgba(250,204,21,0.9)] border-yellow-400'
+                  }`}
                 />
               </div>
             </div>
@@ -236,6 +248,28 @@ const Index = () => {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Green Light Activation Button */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40">
+              <button
+                onClick={() => setIsGreenLightActive(!isGreenLightActive)}
+                className={`relative px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
+                  isGreenLightActive
+                    ? 'bg-green-400 text-green-900 shadow-[0_8px_30px_-4px_rgba(74,222,128,0.9),0_0_60px_10px_rgba(74,222,128,0.6)] border-4 border-green-300'
+                    : 'bg-green-200 text-green-800 shadow-[0_8px_20px_-4px_rgba(134,239,172,0.6)] border-4 border-green-300 hover:bg-green-300'
+                }`}
+              >
+                {isGreenLightActive && (
+                  <>
+                    <div className="absolute inset-0 rounded-full bg-green-400 blur-xl opacity-60 animate-pulse" style={{ animationDuration: '2s' }} />
+                    <div className="absolute inset-0 rounded-full bg-green-300 blur-lg opacity-40 animate-pulse" style={{ animationDuration: '3s', animationDelay: '0.5s' }} />
+                  </>
+                )}
+                <span className="relative z-10">
+                  {isGreenLightActive ? '✨ Luz Activada ✨' : '💡 Activar Luz Verde'}
+                </span>
+              </button>
             </div>
           </div>
         </div>
