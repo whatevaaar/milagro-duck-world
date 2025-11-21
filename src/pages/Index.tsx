@@ -50,6 +50,7 @@ import patitoNavidad15 from "@/assets/patito-navidad-15.png";
 import patitoNavidad16 from "@/assets/patito-navidad-16.jpg";
 import patitoNavidad17 from "@/assets/patito-navidad-17.jpg";
 import patitoNavidad18 from "@/assets/patito-navidad-18.jpg";
+import patitoNavidad19 from "@/assets/patito-navidad-19.png";
 import patitoVideo1 from "@/assets/patito-video-1.mp4";
 import patitoVideo2 from "@/assets/patito-video-2.mp4";
 import patitoVideo3 from "@/assets/patito-video-3.mp4";
@@ -64,6 +65,8 @@ import patitoVideo11 from "@/assets/patito-video-11.mp4";
 import patitoVideo12 from "@/assets/patito-video-12.mp4";
 import patitoVideo13 from "@/assets/patito-video-13.mp4";
 import patitoVideo14 from "@/assets/patito-video-14.mp4";
+import patitoVideo15 from "@/assets/patito-video-15.mp4";
+import patitoVideo16 from "@/assets/patito-video-16.mp4";
 import patitoInicio from "@/assets/patito-inicio.jpg";
 import patitoPaso2 from "@/assets/patito-paso-2.jpg";
 import patitoPaso3 from "@/assets/patito-paso-3.jpg";
@@ -279,7 +282,7 @@ const Index = () => {
         <section id="fotos" className="scroll-mt-20">
           <SectionCard title="📸 Galería de Fotos" description="¡Mira todas las aventuras del Patito Milagro!">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {[patito1, patito2, patito3, patito4, patito5, patito6, patito7, patito8, patito9, patitoNavidad1, patitoNavidad2, patitoNavidad3, patitoNavidad4, patitoNavidad5, patitoNavidad6, patitoNavidad7, patitoNavidad8, patitoNavidad9, patitoNavidad10, patitoNavidad11, patitoNavidad12, patitoNavidad15, patitoNavidad16, patitoNavidad17, patitoNavidad18, patitoNavidad13, patitoNavidad14].map((img, i) => (
+              {[patito1, patito2, patito3, patito4, patito5, patito6, patito7, patito8, patito9, patitoNavidad1, patitoNavidad2, patitoNavidad3, patitoNavidad4, patitoNavidad5, patitoNavidad6, patitoNavidad7, patitoNavidad8, patitoNavidad9, patitoNavidad10, patitoNavidad11, patitoNavidad12, patitoNavidad15, patitoNavidad16, patitoNavidad17, patitoNavidad18, patitoNavidad19, patitoNavidad13, patitoNavidad14].map((img, i) => (
                 <div 
                   key={i}
                   className="aspect-square bg-muted rounded-3xl border-4 border-primary/20 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.4)] cursor-pointer"
@@ -299,7 +302,7 @@ const Index = () => {
         <section id="videos" className="scroll-mt-20">
           <SectionCard title="🎬 Videos del Patito" description="¡Disfruta de los mejores momentos en video!">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[patitoVideo1, patitoVideo4, patitoVideo5, patitoVideo6, patitoVideo7, patitoVideo8, patitoVideo9, patitoVideo10, patitoVideo11, patitoVideo12, patitoVideo13, patitoVideo14].map((video, i) => (
+              {[patitoVideo1, patitoVideo4, patitoVideo5, patitoVideo6, patitoVideo7, patitoVideo8, patitoVideo9, patitoVideo10, patitoVideo11, patitoVideo12, patitoVideo13, patitoVideo14, patitoVideo15, patitoVideo16].map((video, i) => (
                 <div 
                   key={i}
                   className="aspect-video bg-muted rounded-3xl border-4 border-accent/30 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_30px_-8px_hsl(199_89%_48%/0.4)]"
